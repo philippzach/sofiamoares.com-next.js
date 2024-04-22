@@ -1,6 +1,6 @@
-import { Image as DatocmsImage } from "react-datocms";
-import cn from "classnames";
-import Link from "next/link";
+import { Image as DatocmsImage } from 'react-datocms';
+import cn from 'classnames';
+import Link from 'next/link';
 
 export default function CoverImage({ title, responsiveImage, slug }) {
   const image = (
@@ -9,18 +9,21 @@ export default function CoverImage({ title, responsiveImage, slug }) {
         ...responsiveImage,
         alt: `Cover Image for ${title}`,
       }}
-      className={cn("shadow-small", {
-        "hover:shadow-medium transition-shadow duration-200": slug,
-      })}
+      className={cn(
+        'h-full object-contain object-position-bottom object-position-left w-auto'
+      )}
     />
   );
   return (
-    <div className="-mx-5 sm:mx-0">
-      {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>{image}</Link>
+    <div className='flex items-end h-full justify-center'>
+      {image}
+      {/* {slug ? (
+        <Link href={`/work/${slug}`} aria-label={title}>
+          {image}
+        </Link>
       ) : (
         image
-      )}
+      )} */}
     </div>
   );
 }

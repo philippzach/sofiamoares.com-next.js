@@ -1,13 +1,13 @@
-import { buildClient } from "@datocms/cma-client-node";
-import { JSDOM } from "jsdom";
-import { NextResponse } from "next/server";
-import { draftMode, cookies } from "next/headers";
+import { buildClient } from '@datocms/cma-client-node';
+import { JSDOM } from 'jsdom';
+import { NextResponse } from 'next/server';
+import { draftMode, cookies } from 'next/headers';
 
 const corsInitOptions = {
   headers: {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization",
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
   },
 };
 
@@ -19,8 +19,8 @@ const baseUrl = process.env.VERCEL_BRANCH_URL
 
 const findSlugAndUrlForItem = (item, itemTypeApiKey) => {
   switch (itemTypeApiKey) {
-    case "post":
-      return [item.slug, `/posts/${item.slug}`];
+    case 'post':
+      return [item.slug, `/work/${item.slug}`];
     default:
       return null;
   }
@@ -35,21 +35,21 @@ export async function GET(request) {
 
   const client = buildClient({
     apiToken: process.env.NEXT_DATOCMS_API_TOKEN,
-    environment: searchParams.get("sandboxEnvironmentId"),
+    environment: searchParams.get('sandboxEnvironmentId'),
   });
 
-  const item = await client.items.find(searchParams.get("itemId"));
+  const item = await client.items.find(searchParams.get('itemId'));
 
   const result = findSlugAndUrlForItem(
     item,
-    searchParams.get("itemTypeApiKey")
+    searchParams.get('itemTypeApiKey')
   );
 
   if (!result) {
     return NextResponse.json(
       {
         error: `Record #${searchParams.get(
-          "itemId"
+          'itemId'
         )} does not have a route on the frontend!`,
       },
       { ...corsInitOptions, status: 422 }
@@ -63,9 +63,9 @@ export async function GET(request) {
   draftMode().enable();
 
   const cookie = cookies()
-    .getAll("Set-Cookie")
-    .map((cookie) => cookie.value.split(";")[0])
-    .join(";");
+    .getAll('Set-Cookie')
+    .map((cookie) => cookie.value.split(';')[0])
+    .join(';');
 
   draftMode().disable();
 
@@ -80,7 +80,7 @@ export async function GET(request) {
 
   const { document } = new JSDOM(body).window;
 
-  const contentEl = document.getElementById("main-content");
+  const contentEl = document.getElementById('main-content');
 
   if (!contentEl) {
     return NextResponse.json(
@@ -92,11 +92,11 @@ export async function GET(request) {
   }
 
   const content = contentEl.innerHTML;
-  const locale = document.querySelector("html").getAttribute("lang") || "en";
-  const title = document.querySelector("title").textContent;
+  const locale = document.querySelector('html').getAttribute('lang') || 'en';
+  const title = document.querySelector('title').textContent;
   const description = document
     .querySelector('meta[name="description"]')
-    .getAttribute("content");
+    .getAttribute('content');
 
   return NextResponse.json(
     {

@@ -1,8 +1,8 @@
-import { draftMode } from 'next/headers'
-import { toNextMetadata } from "react-datocms";
+import { draftMode } from 'next/headers';
+import { toNextMetadata } from 'react-datocms';
 
-import { performRequest } from "@/lib/datocms";
-import { metaTagsFragment, responsiveImageFragment } from "@/lib/fragments";
+import { performRequest } from '@/lib/datocms';
+import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments';
 
 import { DraftPostPage } from '@/components/draft-post-page';
 import { PostPage } from '@/components/post-page';
@@ -87,13 +87,17 @@ const PAGE_CONTENT_QUERY = `
 function getPageRequest(slug) {
   const { isEnabled } = draftMode();
 
-  return { query: PAGE_CONTENT_QUERY, includeDrafts: isEnabled, variables: { slug } };
+  return {
+    query: PAGE_CONTENT_QUERY,
+    includeDrafts: isEnabled,
+    variables: { slug },
+  };
 }
 
 export async function generateMetadata({ params }) {
-  const { site, post } = await performRequest(getPageRequest(params.slug))
+  const { site, post } = await performRequest(getPageRequest(params.slug));
 
-  return toNextMetadata([ ...site.favicon, ...post.seo ])
+  return toNextMetadata([...site.favicon, ...post.seo]);
 }
 
 export default async function Page({ params }) {

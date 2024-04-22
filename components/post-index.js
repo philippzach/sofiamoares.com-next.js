@@ -1,27 +1,21 @@
-import HeroPost from "./hero-post";
-import Intro from "./intro";
-import MoreStories from "./more-stories";
+import PostPreview from './post-preview';
 
 export function PostIndex({ data }) {
   const { allPosts } = data;
 
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
-
   return (
-    <>
-      <Intro />
-      {heroPost && (
-        <HeroPost
-          title={heroPost.title}
-          coverImage={heroPost.coverImage}
-          date={heroPost.date}
-          author={heroPost.author}
-          slug={heroPost.slug}
-          excerpt={heroPost.excerpt}
+    <div className='grid grid-cols-2 gap-6 gap-y-28 md:grid-cols-3 md:gap-20 mb-32'>
+      {allPosts.map((post) => (
+        <PostPreview
+          key={post.slug}
+          title={post.title}
+          coverImage={post.coverImage}
+          date={post.date}
+          author={post.author}
+          slug={post.slug}
+          excerpt={post.excerpt}
         />
-      )}
-      {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-    </>
+      ))}
+    </div>
   );
 }
