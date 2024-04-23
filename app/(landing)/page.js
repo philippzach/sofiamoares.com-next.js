@@ -3,6 +3,8 @@ import { toNextMetadata } from 'react-datocms';
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
 
+import LandingLogic from '@/components/landing-logic';
+
 const PAGE_CONTENT_QUERY = `
   {
     site: _site {
@@ -13,6 +15,16 @@ const PAGE_CONTENT_QUERY = `
     blog {
       seo: _seoMetaTags {
         ...metaTagsFragment
+      }
+    }
+    allCarousels {
+      id
+      isblack
+      isvideo
+      client
+      description
+      media {
+        id
       }
     }
   }
@@ -35,10 +47,7 @@ export default async function Page() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
 
-  return (
-    <div className='min-h-screen flex justify-center flex-col items-center'>
-      <h1>Contact</h1>
-      <p>Send us a message</p>
-    </div>
-  );
+  const carousels = data.allCarousels;
+
+  return <LandingLogic data={carousels} />;
 }

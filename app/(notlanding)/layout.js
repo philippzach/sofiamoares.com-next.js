@@ -1,7 +1,6 @@
-import './globals.css';
+import '../globals.css';
 
-import Alert from '@/components/alert';
-import Navigation from '@/components/navigation';
+import NavigationNl from '@/components/navigation-nl';
 
 import { draftMode } from 'next/headers';
 
@@ -11,9 +10,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className='text-prim-grey'>
-        <Navigation />
-        {/* <Alert preview={isEnabled} /> */}
-        <main>{children}</main>
+        <NavigationNl />
+        {children}
       </body>
     </html>
   );

@@ -5,7 +5,8 @@ import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments';
 
 import { DraftPostIndex } from '@/components/draft-post-index';
-import { PostIndex } from '@/components/post-index';
+import { WorkIndex } from '@/components/work-index';
+import Footer from '@/components/footer';
 
 const PAGE_CONTENT_QUERY = `
   {
@@ -76,10 +77,11 @@ export default async function Page() {
   }
 
   return (
-    <div className='pt-72 pr-6 pl-6 pb-6'>
+    <div className='pt-[120px] lg:pt-[200px] pr-4 pl-4 pb-6'>
       <section className='min-h-screen'>
-        <PostIndex data={data} />
+        <WorkIndex data={data} />
       </section>
+      <Footer />
     </div>
   );
 }

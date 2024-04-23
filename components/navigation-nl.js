@@ -2,18 +2,16 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function Navigation({ isBlack }) {
+export default function NavigationNl() {
   const pathname = usePathname();
   const isActive = (href) => pathname === href;
-  const textColor = isBlack ? 'text-white' : '';
 
   return (
     <header className=' left-0 top-0 right-0 z-[100] select-none fixed p-3'>
       <nav className='flex items-center justify-between '>
         <Link
           href='/'
-          className={`text-xl font-bold tracking-tighter leading-tight md:pr-8 hover:opacity-30 duration-150
-          ${textColor}`}
+          className='text-xl font-bold tracking-tighter leading-tight md:pr-8 hover:opacity-30 duration-150'
           aria-current='page'
         >
           Sofia Moræs.
@@ -25,7 +23,7 @@ export default function Navigation({ isBlack }) {
                 href='/work'
                 className={`text-xl font-bold mr-2 hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/work') ? 'opacity-30' : ''}
-                ${textColor}
+                
                 `}
               >
                 Work,
@@ -36,7 +34,7 @@ export default function Navigation({ isBlack }) {
                 href='/studio'
                 className={`text-xl font-bold hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/studio') ? 'opacity-30' : ''}
-                ${textColor}
+                
                 `}
               >
                 Studio

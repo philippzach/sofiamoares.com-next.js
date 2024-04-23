@@ -25,7 +25,9 @@ const PAGE_CONTENT_QUERY = `
         ...metaTagsFragment
       }
       title
+      excerpt
       slug
+      role
       content {
         value
         blocks {
@@ -105,19 +107,6 @@ export default async function Page({ params }) {
 
   const pageRequest = getPageRequest(params.slug);
   const data = await performRequest(pageRequest);
-
-  if (isEnabled) {
-    return (
-      <DraftPostPage
-        subscription={{
-          ...pageRequest,
-          initialData: data,
-          token: process.env.NEXT_DATOCMS_API_TOKEN,
-          environment: process.env.NEXT_DATOCMS_ENVIRONMENT || null,
-        }}
-      />
-    );
-  }
 
   return <PostPage data={data} />;
 }

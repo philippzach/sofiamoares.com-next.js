@@ -36,8 +36,9 @@ export default async function Page() {
   const data = await performRequest(pageRequest);
 
   return (
-    <main className='min-h-screen flex justify-center flex-col items-center'>
-      <p>VIDEO HERE/ Projects</p>
-    </main>
+    <div className='min-h-screen flex justify-center flex-col items-center animate-fadeIn'>
+      <h1>Studio</h1>
+      <p>Send us a message</p>
+    </div>
   );
 }
