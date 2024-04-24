@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@supports (-webkit-touch-callout: none) {
+  .h-screen {
+    height: 100vh;
+    max-height: -webkit-fill-available !important;
+  }
+}
+
 mux-player {
   aspect-ratio: 16 / 9;
   --media-object-fit: cover;
