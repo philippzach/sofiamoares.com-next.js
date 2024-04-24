@@ -9,10 +9,6 @@ export default function LandingLogic({ data }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    console.log('called after first render');
-  }, []);
-
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
       prevIndex === data.length - 1 ? 0 : prevIndex + 1
@@ -31,66 +27,59 @@ export default function LandingLogic({ data }) {
   const textColor = isBlack ? 'text-white' : '';
   return (
     <>
-      {/* <div style={{ display: loader, position: 'absolute', top: 30 }}>
-        Loading...
-      </div> */}
-      <div>
-        <Navigation isBlack={data[activeIndex].isblack} />
-        <div className='h-screen w-screen absolute left-0 top-0'>
-          <div
-            role='button'
-            aria-label='previous'
-            className='absolute w-[50%] z-10 bottom-0 top-0 cursor-w-resize left-0'
-            onClick={prevSlide}
-          ></div>
-          <div
-            role='button'
-            aria-label='next'
-            className='absolute w-[50%] z-10 bottom-0 top-0 cursor-e-resize right-0'
-            onClick={nextSlide}
-          ></div>
-        </div>
-        <div className='h-screen w-screen items-center flex justify-center absolute left-0 top-0  animate-fadeIn'>
-          {isVideo ? (
-            <MuxPlayer
-              playbackId={data[activeIndex].media.video.muxPlaybackId}
-              metadata={{}}
-              autoPlay='muted'
-              loop
-              preload='auto'
-              className='w-full h-full object-contain object-center'
-              onLoadedData={() => console.log('loaded video')}
-            />
-          ) : (
-            <DatocmsImage
-              data={{
-                ...responsiveImage,
-                alt: `Cover Image for ${title}`,
-              }}
-              className='w-full h-full object-contain object-center'
-              onLoad={() => console.log('loaded image')}
-            />
-          )}
-        </div>
+      <Navigation isBlack={data[activeIndex].isblack} />
+      <div className='h-screen w-screen absolute left-0 top-0'>
         <div
-          className={`text-base bottom-3 cursor-text left-3 absolute z-20 tracking-tighter leading-tight ${textColor}`}
-        >
-          <p>{client}</p>
-          <p>{description}</p>
-        </div>
-        <ul
-          className={`text-base invisible md:visible flex items-end bottom-3 right-3 absolute z-20 ${textColor}`}
-        >
-          <li className='pr-8 font-bold tracking-tighter leading-tight'>
-            <span className='font-light'>Studio</span> Madeira, Portugal
-          </li>
-          <li className='cursor-pointer font-bold tracking-tighter leading-tight hover:underline'>
-            <a className='' href='mailto:sofiamoraes@gmail.com'>
-              hello@sofiamoraes.com
-            </a>
-          </li>
-        </ul>
+          role='button'
+          aria-label='previous'
+          className='absolute w-[50%] z-10 bottom-0 top-0 cursor-w-resize left-0'
+          onClick={prevSlide}
+        ></div>
+        <div
+          role='button'
+          aria-label='next'
+          className='absolute w-[50%] z-10 bottom-0 top-0 cursor-e-resize right-0'
+          onClick={nextSlide}
+        ></div>
       </div>
+      <div className='h-screen w-screen items-center flex justify-center absolute left-0 top-0  animate-fadeIn'>
+        {isVideo ? (
+          <MuxPlayer
+            playbackId={data[activeIndex].media.video.muxPlaybackId}
+            metadata={{}}
+            autoPlay='muted'
+            loop
+            preload='auto'
+            className='w-full h-full object-contain object-center'
+          />
+        ) : (
+          <DatocmsImage
+            data={{
+              ...responsiveImage,
+              alt: `Cover Image for ${title}`,
+            }}
+            className='w-full h-full object-contain object-center'
+          />
+        )}
+      </div>
+      <div
+        className={`text-base bottom-3 cursor-text left-3 absolute z-20 tracking-tighter leading-tight ${textColor}`}
+      >
+        <p>{client}</p>
+        <p>{description}</p>
+      </div>
+      <ul
+        className={`text-base invisible md:visible flex items-end bottom-3 right-3 absolute z-20 ${textColor}`}
+      >
+        <li className='pr-8 font-bold tracking-tighter leading-tight'>
+          <span className='font-light'>Studio</span> Madeira, Portugal
+        </li>
+        <li className='cursor-pointer font-bold tracking-tighter leading-tight hover:underline'>
+          <a className='' href='mailto:sofiamoraes@gmail.com'>
+            hello@sofiamoraes.com
+          </a>
+        </li>
+      </ul>
     </>
   );
 }
