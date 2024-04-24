@@ -1,18 +1,17 @@
 'use client';
 
 import Navigation from './navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Image as DatocmsImage } from 'react-datocms';
-import Image from 'next/image';
 import MuxPlayer from '@mux/mux-player-react';
-import Footer from './footer';
-import { set } from 'date-fns';
 
 export default function LandingLogic({ data }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [reveal, setReveal] = useState(false);
-  const visibility = reveal ? 'visible' : 'hidden';
-  const loader = reveal ? 'none' : 'inline-block';
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    console.log('called after first render');
+  }, []);
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
@@ -24,6 +23,7 @@ export default function LandingLogic({ data }) {
       prevIndex === 0 ? data.length - 1 : prevIndex - 1
     );
   };
+  //Setting up IsBlack and IsVideo and changing textColor to white if isBlack is true
   const isBlack = data[activeIndex].isblack;
   const isVideo = data[activeIndex].isvideo;
   const { responsiveImage, title } = data[activeIndex].media;
@@ -31,10 +31,10 @@ export default function LandingLogic({ data }) {
   const textColor = isBlack ? 'text-white' : '';
   return (
     <>
-      <div style={{ display: loader, position: 'absolute', top: 30 }}>
+      {/* <div style={{ display: loader, position: 'absolute', top: 30 }}>
         Loading...
-      </div>
-      <div style={{ visibility }}>
+      </div> */}
+      <div>
         <Navigation isBlack={data[activeIndex].isblack} />
         <div className='h-screen w-screen absolute left-0 top-0'>
           <div
@@ -59,20 +59,16 @@ export default function LandingLogic({ data }) {
               loop
               preload='auto'
               className='w-full h-full object-contain object-center'
+              onLoadedData={() => console.log('loaded video')}
             />
           ) : (
-            <Image
-              src={responsiveImage.src}
-              alt={title}
-              layout='fill'
-              objectFit='contain'
-              style={{ visibility }}
-              onError={() => {
-                setReveal(true);
+            <DatocmsImage
+              data={{
+                ...responsiveImage,
+                alt: `Cover Image for ${title}`,
               }}
-              onLoad={() => {
-                setReveal(true);
-              }}
+              className='w-full h-full object-contain object-center'
+              onLoad={() => console.log('loaded image')}
             />
           )}
         </div>

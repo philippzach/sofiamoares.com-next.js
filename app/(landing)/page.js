@@ -4,6 +4,7 @@ import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
 
 import LandingLogic from '@/components/landing-logic';
+import shuffle from '@/lib/helper';
 
 const PAGE_CONTENT_QUERY = `
   {
@@ -67,7 +68,7 @@ export default async function Page() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
 
-  const carousels = data.allCarousels;
+  const carousels = shuffle(data.allCarousels);
 
   return <LandingLogic data={carousels} />;
 }
