@@ -2,6 +2,9 @@
 
 import Navigation from './navigation';
 import { useState } from 'react';
+import { Image as DatocmsImage } from 'react-datocms';
+import MuxPlayer from '@mux/mux-player-react';
+import Footer from './footer';
 
 export default function LandingLogic({ data }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,6 +18,11 @@ export default function LandingLogic({ data }) {
       prevIndex === 0 ? data.length - 1 : prevIndex - 1
     );
   };
+  const isBlack = data[activeIndex].isblack;
+  const isVideo = data[activeIndex].isvideo;
+  const { responsiveImage, title } = data[activeIndex].media;
+  const { client, description } = data[activeIndex];
+  const textColor = isBlack ? 'text-white' : '';
   return (
     <>
       <Navigation isBlack={data[activeIndex].isblack} />
@@ -32,10 +40,43 @@ export default function LandingLogic({ data }) {
           onClick={nextSlide}
         ></div>
       </div>
-      <div className='min-h-screen flex justify-center flex-col items-center animate-fadeIn'>
-        <p>{data[activeIndex].client}</p>
-        <p>{data[activeIndex].description}</p>
+      <div className='h-screen w-screen items-center flex justify-center absolute left-0 top-0  animate-fadeIn'>
+        {isVideo ? (
+          <MuxPlayer
+            playbackId={data[activeIndex].media.video.muxPlaybackId}
+            metadata={{}}
+            autoPlay='muted'
+            loop
+            className='w-full h-full object-contain object-center'
+          />
+        ) : (
+          <DatocmsImage
+            data={{
+              ...responsiveImage,
+              alt: `Cover Image for ${title}`,
+            }}
+            className='w-full h-full object-contain object-center'
+          />
+        )}
       </div>
+      <div
+        className={`text-base bottom-3 cursor-text left-3 absolute z-20 tracking-tighter leading-tight ${textColor}`}
+      >
+        <p>{client}</p>
+        <p>{description}</p>
+      </div>
+      <ul
+        className={`text-base invisible md:visible flex items-end bottom-3 right-3 absolute z-20 ${textColor}`}
+      >
+        <li className='pr-8 font-bold tracking-tighter leading-tight'>
+          <span className='font-light'>Studio</span> Madeira, Portugal
+        </li>
+        <li className='cursor-pointer font-bold tracking-tighter leading-tight hover:underline'>
+          <a className='' href='mailto:sofiamoraes@gmail.com'>
+            hello@sofiamoraes.com
+          </a>
+        </li>
+      </ul>
     </>
   );
 }

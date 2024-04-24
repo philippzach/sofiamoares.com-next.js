@@ -7,7 +7,7 @@ export default function Footer() {
         <h3 className='text-xl font-bold tracking-tighter leading-tight text-center md:text-left mb-10 md:mb-0 lg:pr-4 md:w-1/2'>
           <span className='font-light'>Studio</span> Madeira, Portugal
         </h3>
-        <div className='flex flex-row justify-center items-center md:pl-4 md:w-1/2'>
+        <div className='flex flex-row justify-end items-center md:pl-4 md:w-1/2'>
           <a
             href='https://www.behance.net/sofiamoraes'
             className='mx-3 font-bold hover:underline'

@@ -19,13 +19,33 @@ const PAGE_CONTENT_QUERY = `
     }
     allCarousels {
       id
-      isblack
-      isvideo
       client
       description
       media {
         id
+        alt
+        url
+        video {
+          muxAssetId
+          muxPlaybackId
+          streamingUrl
+          thumbnailUrl(format: png)
+          thumbhash
+        }
+        responsiveImage {
+          alt
+          base64
+          bgColor
+          title
+          src
+          height
+          sizes
+          aspectRatio
+          width
+        }
       }
+      isblack
+      isvideo
     }
   }
 

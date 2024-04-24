@@ -14,16 +14,5 @@ export default function CoverImage({ title, responsiveImage, slug }) {
       )}
     />
   );
-  return (
-    <div className='flex items-end h-full justify-center'>
-      {image}
-      {/* {slug ? (
-        <Link href={`/work/${slug}`} aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )} */}
-    </div>
-  );
+  return <div className='flex items-end h-full justify-center'>{image}</div>;
 }

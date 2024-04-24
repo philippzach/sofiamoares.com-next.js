@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+mux-player {
+  aspect-ratio: 16 / 9;
+  --media-object-fit: cover;
+  --media-object-position: center;
+  /* Hide all controls at once */
+  --controls: none;
+  /* Hide the error dialog */
+  --dialog: none;
+  /* Hide the loading indicator */
+  --loading-indicator: none;
+}
