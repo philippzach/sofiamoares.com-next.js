@@ -2,9 +2,9 @@ import { toNextMetadata } from 'react-datocms';
 
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
+import { validateCookie } from '@/lib/actions';
 
 import LandingLogic from '@/components/landing-logic';
-import shuffle from '@/lib/helper';
 
 const PAGE_CONTENT_QUERY = `
   {
@@ -67,8 +67,9 @@ export async function generateMetadata() {
 export default async function Page() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
+  const carousels = data.allCarousels;
 
-  const carousels = shuffle(data.allCarousels);
+  const hasVisited = await validateCookie();
 
-  return <LandingLogic data={carousels} />;
+  return <LandingLogic dataUnshuffled={carousels} hasVisited={hasVisited} />;
 }
