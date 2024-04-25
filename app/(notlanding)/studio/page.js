@@ -50,12 +50,12 @@ export default async function Page() {
 
   return (
     <main className='p-3'>
-      <div className='text-xl sm:text-2xl md:text-4xl lg:text-5xl pt-20 pb-20 animate-fadeIn tracking-tighter leading-tight'>
+      <div className='text-xl sm:text-2xl md:text-4xl lg:text-5xl pt-20 pb-20 animate-fadeIn tracking-tight leading-tight'>
         <section className='mb-24 pr-4 md:mb-56 md:max-w-screen-2xl md:pr-20'>
           {description}
         </section>
         <section className='mb-20 md:mb-40'>
-          <p className='font-secondary text-base md:text-base'>Contact</p>
+          <p className='font-secondary text-base md:text-lg'>Contact</p>
           <a
             href='mailto:sofiamoraes@gmail.com'
             className='cursor-pointer hover:underline'
@@ -67,7 +67,7 @@ export default async function Page() {
         <div className='md:flex md:items-start md:gap-5 w-full'>
           <div className='w-full md:w-1/2'>
             <section className='mb-4 md:mb-8'>
-              <p className='font-secondary text-base md:text-base'>Services</p>
+              <p className='font-secondary text-base md:text-lg'>Services</p>
               <ul>
                 {services.map((service) => (
                   <li key={service}>{service}</li>
@@ -75,9 +75,7 @@ export default async function Page() {
               </ul>
             </section>
             <section className='mb-20 md:mb-40'>
-              <p className='font-secondary text-base md:text-base'>
-                Industries
-              </p>
+              <p className='font-secondary text-base md:text-lg'>Industries</p>
               <ul>
                 {industries.map((ind) => (
                   <li key={ind}>{ind}</li>
@@ -87,7 +85,7 @@ export default async function Page() {
           </div>
           <div className='w-full md:w-1/2'>
             <section className=''>
-              <p className='font-secondary text-base md:text-base'>Clients</p>
+              <p className='font-secondary text-base md:text-lg'>Clients</p>
               <ul>
                 {clients.map((client) => (
                   <li key={client.name}>

@@ -83,7 +83,7 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
           )}
         </div>
         <div
-          className={`font-secondary text-base bottom-3 cursor-text left-3 absolute z-20 tracking-tighter leading-tight ${textColor}`}
+          className={`font-secondary text-sm bottom-3 cursor-text left-3 absolute z-20 tracking-tight leading-tight ${textColor}`}
         >
           <p>{client}</p>
           <p>{description}</p>
@@ -91,10 +91,10 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
         <ul
           className={`text-lg invisible md:visible flex items-end bottom-3 right-3 absolute z-20 ${textColor}`}
         >
-          <li className='pr-8 font-bold tracking-tighter leading-tight'>
+          <li className='pr-8 font-bold tracking-tight leading-tight'>
             <span className='font-light'>Studio</span> Madeira, Portugal
           </li>
-          <li className='cursor-pointer font-bold tracking-tighter leading-tight hover:underline'>
+          <li className='cursor-pointer font-bold tracking-tight leading-tight hover:underline'>
             <a className='' href='mailto:sofiamoraes@gmail.com'>
               hello@sofiamoraes.com
             </a>

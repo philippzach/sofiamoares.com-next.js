@@ -4,7 +4,7 @@ import CoverImage from './cover-image';
 export default function PostHeader({ title, coverImage, date, role, excerpt }) {
   return (
     <>
-      <section className='block leading-[1] mb-10 md:mb-32 text-3xl md:text-6xl lg:text-7xl font-semibold'>
+      <section className='block leading-[1] tracking-tight mb-10 md:mb-32 text-3xl md:text-6xl lg:text-7xl font-semibold'>
         <h1>{title},</h1>
         <div className='max-w-md md:max-w-2xl lg:max-w-5xl text-balance'>
           <p>{excerpt}</p>

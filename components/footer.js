@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className='bg-accent-1 border-t border-accent-2'>
       <div className='py-2 flex flex-col md:flex-row items-center'>
-        <h3 className='text-xl font-bold tracking-tighter leading-tight text-center md:text-left mb-10 md:mb-0 lg:pr-4 md:w-1/2'>
+        <h3 className='text-xl font-bold tracking-tight leading-tight text-center md:text-left mb-10 md:mb-0 lg:pr-4 md:w-1/2'>
           <span className='font-light'>Studio</span> Madeira, Portugal
         </h3>
         <div className='flex flex-row justify-end items-center md:pl-4 md:w-1/2'>

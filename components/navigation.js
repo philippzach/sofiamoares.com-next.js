@@ -12,7 +12,7 @@ export default function Navigation({ isBlack }) {
       <nav className='flex items-center justify-between '>
         <Link
           href='/'
-          className={`text-xl font-bold tracking-tighter leading-tight md:pr-8 hover:opacity-30 duration-150
+          className={`text-xl font-bold tracking-tight leading-tight md:pr-8 hover:opacity-30 duration-150
           ${textColor}`}
           aria-current='page'
         >
@@ -23,7 +23,7 @@ export default function Navigation({ isBlack }) {
             <li>
               <Link
                 href='/work'
-                className={`text-xl font-bold mr-2 hover:opacity-30 active:opacity-30 duration-150
+                className={`text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/work') ? 'opacity-30' : ''}
                 ${textColor}
                 `}
@@ -34,7 +34,7 @@ export default function Navigation({ isBlack }) {
             <li>
               <Link
                 href='/studio'
-                className={`text-xl font-bold hover:opacity-30 active:opacity-30 duration-150
+                className={`text-xl font-bold tracking-tight hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/studio') ? 'opacity-30' : ''}
                 ${textColor}
                 `}
