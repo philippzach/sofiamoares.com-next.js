@@ -16,7 +16,7 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
   useEffect(() => {
     if (hasVisited === false) {
       const timer = setTimeout(() => {
-        Cookies.set('animation', 'true', { expires: 0.5 });
+        Cookies.set('animation', 'true', { expires: 0.007 });
         setLoading(false);
       }, 2000);
       return () => clearTimeout(timer);
