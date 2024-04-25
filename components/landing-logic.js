@@ -68,7 +68,7 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
               playbackId={data[activeIndex].media.video.muxPlaybackId}
               metadata={{}}
               autoPlay='muted'
-              loop
+              loop='true'
               preload='auto'
               className='w-full h-full object-contain object-center'
             />

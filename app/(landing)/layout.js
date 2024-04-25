@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   const { isEnabled } = draftMode();
 
   return (
-    <html lang='en'>
+    <html lang='en' className='overflow-hidden'>
       <body className='text-prim-grey'>{children}</body>
     </html>
   );
