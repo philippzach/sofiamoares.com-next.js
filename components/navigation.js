@@ -16,7 +16,7 @@ export default function Navigation({ isBlack }) {
           ${textColor}`}
           aria-current='page'
         >
-          Sofia Moræs.
+          Sofia Moraes.
         </Link>
         <div role='navigation' className='flex justify-between w-[40%]'>
           <ul className='flex flex-wrap m-0 p-0 '>

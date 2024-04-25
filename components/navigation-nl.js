@@ -14,7 +14,7 @@ export default function NavigationNl() {
           className='text-xl font-bold tracking-tighter leading-tight md:pr-8 hover:opacity-30 duration-150'
           aria-current='page'
         >
-          Sofia Moræs.
+          Sofia Moraes.
         </Link>
         <div role='navigation' className='flex justify-between w-[40%]'>
           <ul className='flex flex-wrap m-0 p-0 '>

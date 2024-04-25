@@ -1,8 +1,16 @@
 module.exports = {
   mode: 'jit',
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        primary: ['var(--font-aeonik)'],
+        secondary: ['var(--font-officeTimes)'],
+      },
       colors: {
         'prim-white': '#FAFAFA',
         'prim-grey': 'rgb(66, 66, 66)',

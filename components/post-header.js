@@ -12,17 +12,17 @@ export default function PostHeader({ title, coverImage, date, role, excerpt }) {
       </section>
       <section className='flex mb-1 justify-between md:flex-row md:item-start md:items-center '>
         <div className='flex order-1 items-baseline flex-col lg:gap-1 md:flex-col lg:flex-row md:w-2/12'>
-          <h2 className='font-extralight text-sm'>Client</h2>
+          <h2 className='font-secondary font-extralight text-sm'>Client</h2>
           <p className=' font-semibold'>{title}</p>
         </div>
         <div className='flex order-2 items-baseline flex-col lg:gap-1 md:flex-col lg:flex-row md:w-2/12'>
-          <h2 className='font-extralight text-sm'>Year</h2>
+          <h2 className='font-secondary font-extralight text-sm'>Year</h2>
           <p className=' font-semibold'>
             <Date dateString={date} />
           </p>
         </div>
         <div className='flex order-3 items-baseline  flex-col lg:gap-1 md:flex-col lg:flex-row md:w-2/3'>
-          <h2 className='font-extralight text-sm'>Role</h2>
+          <h2 className='font-secondary font-extralight text-sm'>Role</h2>
           <ul className='flex flex-wrap font-semibold'>
             <li className='flex relative whitespace-nowrap pr-1'>{role}</li>
             {/* <li className='flex relative whitespace-nowrap pr-1'>Branding,</li>
