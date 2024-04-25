@@ -6,6 +6,7 @@ import { Image as DatocmsImage } from 'react-datocms';
 import MuxPlayer from '@mux/mux-player-react';
 import shuffle from '@/lib/helper';
 import Cookies from 'js-cookie';
+import Loading from './loading';
 
 export default function LandingLogic({ dataUnshuffled, hasVisited }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,12 +18,10 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
       const timer = setTimeout(() => {
         Cookies.set('animation', 'true', { expires: 0.5 });
         setLoading(false);
-      }, 750);
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, []);
-
-  console.log(loading);
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
@@ -44,10 +43,8 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
   const loadingFalse = loading ? 'hidden' : 'visible';
   return (
     <>
-      <div
-        className={`h-screen w-screen flex items-center justify-center ${loadingTrue}`}
-      >
-        <p>Loading...</p>
+      <div className={`${loadingTrue}`}>
+        <Loading />
       </div>
       <div className={loadingFalse}>
         <Navigation isBlack={data[activeIndex].isblack} />
@@ -81,7 +78,7 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
                 ...responsiveImage,
                 alt: `Cover Image for ${title}`,
               }}
-              className='w-full h-full object-contain object-center'
+              className='w-full h-full object-center'
             />
           )}
         </div>
