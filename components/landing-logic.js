@@ -18,7 +18,7 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
       const timer = setTimeout(() => {
         Cookies.set('animation', 'true', { expires: 0.007 });
         setLoading(false);
-      }, 2000);
+      }, 2500);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -46,7 +46,7 @@ export default function LandingLogic({ dataUnshuffled, hasVisited }) {
       <div className={`${loadingTrue}`}>
         <Loading />
       </div>
-      <div className={loadingFalse}>
+      <div className={`fade-in ${loadingFalse}`}>
         <Navigation isBlack={data[activeIndex].isblack} />
         <div className='h-screen w-screen absolute left-0 top-0'>
           <div
