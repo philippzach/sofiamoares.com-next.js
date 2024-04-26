@@ -6,7 +6,7 @@ import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments';
 
 import { DraftPostIndex } from '@/components/draft-post-index';
 import { WorkIndex } from '@/components/work-index';
-import Footer from '@/components/footer';
+import Link from 'next/link';
 
 const PAGE_CONTENT_QUERY = `
   {
@@ -77,11 +77,19 @@ export default async function Page() {
   }
 
   return (
-    <div className='pt-[120px] lg:pt-[200px] pr-4 pl-4 pb-6'>
+    <div className='pt-[120px] lg:pt-[200px] pb-6'>
       <section className='min-h-screen'>
         <WorkIndex data={data} />
+        <p className='group text-stone-300 font-bold text-3xl mt-44 mb-32 md:text-5xl lg:text-6xl leading-[0.95]'>
+          <Link
+            href='/archive'
+            className='group-hover:text-stone-700 underline underline-offset-1 '
+          >
+            View project index{' '}
+          </Link>
+          containing +48 additional works.
+        </p>
       </section>
-      <Footer />
     </div>
   );
 }

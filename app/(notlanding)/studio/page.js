@@ -2,7 +2,6 @@ import { toNextMetadata } from 'react-datocms';
 
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
-import Footer from '@/components/footer';
 
 const PAGE_CONTENT_QUERY = `
   {
@@ -49,7 +48,7 @@ export default async function Page() {
   const { services, industries, clients } = data.studio.info;
 
   return (
-    <main className='p-3'>
+    <main className=''>
       <div className='text-xl sm:text-2xl md:text-4xl lg:text-5xl pt-20 pb-20 animate-fadeIn tracking-tight leading-tight'>
         <section className='mb-24 pr-4 md:mb-56 md:max-w-screen-2xl md:pr-20'>
           {description}
@@ -102,7 +101,6 @@ export default async function Page() {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
