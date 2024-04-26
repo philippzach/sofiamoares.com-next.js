@@ -4,7 +4,6 @@ import { toNextMetadata } from 'react-datocms';
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments';
 
-import { DraftPostPage } from '@/components/draft-post-page';
 import { PostPage } from '@/components/post-page';
 
 export async function generateStaticParams() {
