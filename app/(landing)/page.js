@@ -3,6 +3,8 @@ import { toNextMetadata } from 'react-datocms';
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
 import { validateCookie } from '@/lib/actions';
+import { revalidatePath } from 'next/cache';
+import shuffle from '@/lib/helper';
 
 import LandingLogic from '@/components/landing-logic';
 
@@ -67,7 +69,8 @@ export async function generateMetadata() {
 export default async function Page() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
-  const carousels = data.allCarousels;
+  const carousels = shuffle(data.allCarousels);
+  revalidatePath('/');
 
   const hasVisited = await validateCookie();
 

@@ -12,18 +12,21 @@ export default function Navigation({ isBlack }) {
       <nav className='flex items-center justify-between '>
         <Link
           href='/'
-          className={`text-xl font-bold tracking-tight leading-tight md:pr-8 hover:opacity-30 duration-150
+          className={`text-base md:text-xl font-bold tracking-tight leading-tight md:pr-8 hover:opacity-30 duration-150
           ${textColor}`}
           aria-current='page'
         >
           Sofia Moraes.
         </Link>
-        <div role='navigation' className='flex justify-between w-[40%]'>
+        <div
+          role='navigation'
+          className='flex justify-between w-[55%] md:w-[40%]'
+        >
           <ul className='flex flex-wrap m-0 p-0 '>
             <li>
               <Link
                 href='/work'
-                className={`text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
+                className={`text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/work') ? 'opacity-30' : ''}
                 ${textColor}
                 `}
@@ -34,12 +37,25 @@ export default function Navigation({ isBlack }) {
             <li>
               <Link
                 href='/studio'
-                className={`text-xl font-bold tracking-tight hover:opacity-30 active:opacity-30 duration-150
+                className={`text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/studio') ? 'opacity-30' : ''}
                 ${textColor}
                 `}
               >
-                Studio
+                Studio,
+              </Link>
+            </li>
+            <li>
+              <Link
+                href='/concept'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={`text-base md:text-xl font-bold tracking-tight hover:opacity-30 md:hover:after:content-['_↳'] hover:underline active:opacity-30 duration-150
+                ${isActive('/studio') ? 'opacity-30' : ''}
+                ${textColor}
+                `}
+              >
+                Concept
               </Link>
             </li>
           </ul>

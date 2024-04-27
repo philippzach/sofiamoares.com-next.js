@@ -4,8 +4,6 @@ import { draftMode } from 'next/headers';
 import { officeTimes, aeonik } from 'app/styles/fonts';
 
 export default function RootLayout({ children }) {
-  const { isEnabled } = draftMode();
-
   return (
     <html
       lang='en'

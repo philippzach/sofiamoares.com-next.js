@@ -4,7 +4,7 @@ import Navigation from './navigation';
 import { useState, useEffect } from 'react';
 import { Image as DatocmsImage } from 'react-datocms';
 import MuxPlayer from '@mux/mux-player-react';
-import shuffle from '@/lib/helper';
+
 import Cookies from 'js-cookie';
 import Loading from './loading';
 
