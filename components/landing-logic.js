@@ -4,6 +4,7 @@ import Navigation from './navigation';
 import { useState, useEffect } from 'react';
 import { Image as DatocmsImage } from 'react-datocms';
 import MuxPlayer from '@mux/mux-player-react';
+import Link from 'next/link';
 
 import Cookies from 'js-cookie';
 import Loading from './loading';
@@ -35,6 +36,7 @@ export default function LandingLogic({ data, hasVisited }) {
   //Setting up IsBlack and IsVideo and changing textColor to white if isBlack is true
   const isBlack = data[activeIndex].isblack;
   const isVideo = data[activeIndex].isvideo;
+  const url = data[activeIndex].urltoproject;
   const { responsiveImage, title } = data[activeIndex].media;
   const { client, description } = data[activeIndex];
   const textColor = isBlack ? 'text-white' : '';
@@ -84,7 +86,9 @@ export default function LandingLogic({ data, hasVisited }) {
         <div
           className={`font-secondary text-sm bottom-3 cursor-text left-3 absolute z-20 tracking-tight leading-tight ${textColor}`}
         >
-          <p>{client}</p>
+          <Link href={`/work/${url}`} className='hover:underline'>
+            <p>{client}</p>
+          </Link>
           <p>{description}</p>
         </div>
         <ul

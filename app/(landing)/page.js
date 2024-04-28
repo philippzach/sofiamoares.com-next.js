@@ -24,6 +24,7 @@ const PAGE_CONTENT_QUERY = `
       id
       client
       description
+      urltoproject
       media {
         id
         alt

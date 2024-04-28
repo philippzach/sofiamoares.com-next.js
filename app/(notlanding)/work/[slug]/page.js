@@ -45,9 +45,34 @@ const PAGE_CONTENT_QUERY = `
       ogImage: coverImage{
         url(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 })
       }
+      isvideo
       headerimage {
         responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2500, h: 1250 }) {
           ...responsiveImageFragment
+        }
+        video {
+          muxAssetId
+          muxPlaybackId
+          streamingUrl
+          blurUpThumb
+          thumbnailUrl(format: png)
+          thumbhash
+        }
+      }
+      maincontent {
+        ... on RecordInterface {
+          id 
+          _modelApiKey
+        }
+        __typename
+        ... on ImageBlockRecord {
+          id
+          image {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+              ...responsiveImageFragment
+            }
+          }
+        
         }
       }
       coverImage {
