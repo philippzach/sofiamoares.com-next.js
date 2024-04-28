@@ -1,4 +1,4 @@
-import CoverImage from './cover-image';
+import CoverImage from './image-preview';
 import Link from 'next/link';
 
 export default function WorkPreview({

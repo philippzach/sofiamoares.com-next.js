@@ -74,5 +74,5 @@ export default async function Page() {
 
   const hasVisited = await validateCookie();
 
-  return <LandingLogic dataUnshuffled={carousels} hasVisited={hasVisited} />;
+  return <LandingLogic data={carousels} hasVisited={hasVisited} />;
 }

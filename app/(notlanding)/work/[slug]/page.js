@@ -45,6 +45,11 @@ const PAGE_CONTENT_QUERY = `
       ogImage: coverImage{
         url(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 })
       }
+      headerimage {
+        responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2500, h: 1250 }) {
+          ...responsiveImageFragment
+        }
+      }
       coverImage {
         responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
           ...responsiveImageFragment
@@ -60,7 +65,7 @@ const PAGE_CONTENT_QUERY = `
       }
     }
 
-    morePosts: allPosts(orderBy: date_DESC, first: 2, filter: {slug: {neq: $slug}}) {
+    morePosts: allPosts {
       title
       slug
       excerpt

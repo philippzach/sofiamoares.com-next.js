@@ -1,5 +1,5 @@
 import Date from './date';
-import CoverImage from './cover-image';
+import CoverImage from './image-preview';
 
 export default function PostHeader({ title, coverImage, date, role, excerpt }) {
   return (
@@ -25,8 +25,6 @@ export default function PostHeader({ title, coverImage, date, role, excerpt }) {
           <h2 className='font-secondary font-extralight text-sm'>Role</h2>
           <ul className='flex flex-wrap font-semibold'>
             <li className='flex relative whitespace-nowrap pr-1'>{role}</li>
-            {/* <li className='flex relative whitespace-nowrap pr-1'>Branding,</li>
-            <li className='flex relative whitespace-nowrap pr-1'>Strategy</li> */}
           </ul>
         </div>
       </section>

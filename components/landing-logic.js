@@ -8,10 +8,9 @@ import MuxPlayer from '@mux/mux-player-react';
 import Cookies from 'js-cookie';
 import Loading from './loading';
 
-export default function LandingLogic({ dataUnshuffled, hasVisited }) {
+export default function LandingLogic({ data, hasVisited }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(!hasVisited);
-  const data = dataUnshuffled;
 
   useEffect(() => {
     if (hasVisited === false) {
