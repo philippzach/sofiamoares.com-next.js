@@ -19,7 +19,7 @@ export default function PostHeader({
         </div>
       </section>
       <section className='flex flex-col mb-1 justify-between md:flex-row md:item-start md:items-center '>
-        <div className='flex order-1 items-baseline flex-col lg:gap-1 md:flex-col lg:flex-row md:w-2/12'>
+        <div className='flex order-1 items-end  flex-col lg:gap-1 md:flex-col lg:items-baseline lg:flex-row md:w-2/12'>
           <h2 className='font-secondary font-extralight text-sm'>Client</h2>
           <p className=' font-semibold'>{title}</p>
         </div>

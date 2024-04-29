@@ -67,12 +67,76 @@ const PAGE_CONTENT_QUERY = `
         __typename
         ... on ImageBlockRecord {
           id
+          _createdAt
           image {
-            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 }) {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2500, h: 1250 }) {
               ...responsiveImageFragment
             }
           }
-        
+        }
+        ... on VideoblockRecord {
+          id
+        singlevideo {
+          video {
+            alt
+            blurUpThumb
+            blurhash
+            thumbhash
+            title
+            muxPlaybackId
+          }
+        }
+        _createdAt
+        }
+        ... on BigtextblockRecord {
+          id
+          _createdAt
+          smalltext
+          text
+        }
+        ... on ImagetextblockRecord {
+          id
+          _createdAt
+          flip
+          image {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }) {
+              ...responsiveImageFragment
+            }
+          }
+          description
+        }
+        ... on ImageimageblockRecord {
+          id
+          _createdAt
+          imageone {
+            id
+            responsiveImage{
+              ...responsiveImageFragment
+            }
+          }
+          imagetwo {
+            id
+            responsiveImage{
+              ...responsiveImageFragment
+            }
+          }
+        }
+        ... on ImagevideoblockRecord {
+          id
+          flip
+          _createdAt
+          image {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1200, h: 1200 }){
+              ...responsiveImageFragment
+            }
+          }
+          video {
+            id
+            video {
+              muxPlaybackId
+              blurUpThumb
+            }
+          }
         }
       }
       coverImage {

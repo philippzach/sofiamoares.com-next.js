@@ -1,9 +1,10 @@
 import { Image as DatocmsImage } from 'react-datocms';
 
-export default function FullImage({ title, responsiveImage, slug }) {
+export default function FullImage({ image }) {
+  const { responsiveImage, title } = image;
   return (
     <>
-      {/* <DatocmsImage
+      <DatocmsImage
         data={{
           ...responsiveImage,
           alt: `Cover Image for ${title}`,
@@ -11,7 +12,7 @@ export default function FullImage({ title, responsiveImage, slug }) {
         pictureClassName='h-auto object-contain object-left-bottom w-full block'
         placeholderClassName='h-auto object-contain object-left-bottom w-full block'
         className='flex flex-end h-full justify-center'
-      /> */}
+      />
     </>
   );
 }
