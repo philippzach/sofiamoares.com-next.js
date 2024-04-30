@@ -53,16 +53,28 @@ export default function LandingLogic({ data, hasVisited }) {
           <div
             role='button'
             aria-label='previous'
-            className='absolute w-[50%] z-10 bottom-0 top-0 cursor-w-resize left-0'
+            className='absolute w-[50%] z-20 bottom-0 top-0 cursor-w-resize left-0'
             onClick={prevSlide}
           ></div>
           <div
             role='button'
             aria-label='next'
-            className='absolute w-[50%] z-10 bottom-0 top-0 cursor-e-resize right-0'
+            className='absolute w-[50%] z-20 bottom-0 top-0 cursor-e-resize right-0'
             onClick={nextSlide}
           ></div>
+          <ul className='absolute z-10 bottom-16 top-0 right-0 left-0 flex flex-row items-end justify-center gap-2'>
+            {data.map((_, index) => (
+              <li
+                key={index}
+                className={`h-2.5 w-2.5 rounded-full ${
+                  index === activeIndex ? 'opacity-30' : 'opacity-100'
+                }
+                ${isBlack ? 'bg-gray-200' : 'bg-stone-700'}`}
+              ></li>
+            ))}
+          </ul>
         </div>
+
         <div className='h-screen w-screen items-center flex justify-center absolute left-0 top-0  animate-fadeIn'>
           {isVideo ? (
             <MuxPlayer
@@ -83,6 +95,7 @@ export default function LandingLogic({ data, hasVisited }) {
             />
           )}
         </div>
+
         <div
           className={`font-secondary text-sm bottom-3 cursor-text left-3 absolute z-20 tracking-tight leading-tight ${textColor}`}
         >

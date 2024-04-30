@@ -2,6 +2,7 @@ import NextPrev from './next-prev';
 import PostBody from './post-body';
 import PostHeader from './post-header';
 import Blocks from './blocks/blocks';
+import Date from './date';
 
 export function PostPage({ data }) {
   const { post, morePosts } = data;
@@ -31,8 +32,29 @@ export function PostPage({ data }) {
           <Blocks key={index} block={block} />
         ))}
       </section>
-      <section className='pt-32'>
-        <PostBody content={post.content} />
+      <section className='md:flex md:items-start md:justify-between w-full pt-32'>
+        <div className='md:w-[60%] md:pr-20'>
+          <PostBody content={post.content} />
+        </div>
+        <div
+          id='sticky'
+          className='mt-20 mb-20 md:mb-0 md:mt-0 md:w-[40%] flex flex-col text-2xl sticky top-20'
+        >
+          <div className=''>
+            <h2 className='font-secondary font-extralight text-sm'>Client</h2>
+            <p className=' font-semibold'>{post.title}</p>
+          </div>
+          <div className=''>
+            <h2 className='font-secondary font-extralight text-sm'>Role</h2>
+            <p className=' font-semibold'>{post.role}</p>
+          </div>
+          <div className=''>
+            <h2 className='font-secondary font-extralight text-sm'>Year</h2>
+            <p className=' font-semibold'>
+              <Date dateString={post.date} />
+            </p>
+          </div>
+        </div>
       </section>
       {morePosts.length > 0 && <NextPrev posts={randomPosts} />}
     </article>

@@ -89,6 +89,8 @@ export default async function Page() {
                 {clients.map((client) => (
                   <li key={client.name}>
                     <a
+                      target='_blank'
+                      rel='noreferrer noopener'
                       className='cursor-pointer hover:underline'
                       href={client.link}
                     >

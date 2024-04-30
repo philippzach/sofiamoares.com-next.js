@@ -15,6 +15,10 @@ module.exports = {
         'prim-white': '#FAFAFA',
         'prim-grey': 'rgb(66, 66, 66)',
       },
+      width: {
+        customLg: 'calc(100% - 100px)',
+        customSm: 'calc(100% - 24px)',
+      },
       spacing: {
         28: '7rem',
       },

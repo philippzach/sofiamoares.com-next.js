@@ -16,10 +16,7 @@ export default function NavigationNl() {
         >
           Sofia Moraes.
         </Link>
-        <div
-          role='navigation'
-          className='flex justify-between w-[55%] md:w-[40%]'
-        >
+        <div role='navigation' className='flex justify-between md:w-[40%]'>
           <ul className='flex flex-wrap m-0 p-0 '>
             <li>
               <Link
