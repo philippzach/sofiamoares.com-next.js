@@ -3,6 +3,7 @@ import PostBody from './post-body';
 import PostHeader from './post-header';
 import Blocks from './blocks/blocks';
 import Date from './date';
+import Link from 'next/link';
 
 export function PostPage({ data }) {
   const { post, morePosts } = data;
@@ -25,6 +26,7 @@ export function PostPage({ data }) {
         excerpt={post.excerpt}
         role={post.role}
         isVideo={post.isvideo}
+        urlToClient={post.urltoclient}
       />
       <section className='flex flex-col gap-8'>
         {sortedBlocks.map((block, index) => (
@@ -42,11 +44,31 @@ export function PostPage({ data }) {
         >
           <div className=''>
             <h2 className='font-secondary font-extralight text-sm'>Client</h2>
-            <p className=' font-semibold'>{post.title}</p>
+            <Link
+              href={post.urltoclient}
+              target='blank'
+              rel='noopener noreferrer'
+              className='hover:underline'
+            >
+              <p className=' font-semibold'>{post.title}</p>
+            </Link>
           </div>
           <div className=''>
             <h2 className='font-secondary font-extralight text-sm'>Role</h2>
-            <p className=' font-semibold'>{post.role}</p>
+            <ul className='flex flex-wrap font-semibold'>
+              {post.role.map((singleRole, index, array) => (
+                <Link
+                  key={singleRole}
+                  href={`/archive/${singleRole.slug}`}
+                  className='hover:underline'
+                >
+                  <li className='flex relative whitespace-nowrap pr-1'>
+                    {singleRole.name}
+                    {index === array.length - 1 ? '' : ','}
+                  </li>
+                </Link>
+              ))}
+            </ul>
           </div>
           <div className=''>
             <h2 className='font-secondary font-extralight text-sm'>Year</h2>

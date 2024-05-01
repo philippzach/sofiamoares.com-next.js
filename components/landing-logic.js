@@ -66,10 +66,10 @@ export default function LandingLogic({ data, hasVisited }) {
             {data.map((_, index) => (
               <li
                 key={index}
-                className={`h-2.5 w-2.5 rounded-full ${
-                  index === activeIndex ? 'opacity-30' : 'opacity-100'
-                }
-                ${isBlack ? 'bg-gray-200' : 'bg-stone-700'}`}
+                className={`h-2.5 w-2.5 rounded-full border-2 
+                ${index === activeIndex && !isBlack ? 'bg-slate-700' : ''}
+                ${index === activeIndex && isBlack ? 'bg-gray-200' : ''}
+                ${isBlack ? 'border-gray-200' : 'border-slate-700'}`}
               ></li>
             ))}
           </ul>

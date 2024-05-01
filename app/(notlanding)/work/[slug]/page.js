@@ -26,7 +26,11 @@ const PAGE_CONTENT_QUERY = `
       title
       excerpt
       slug
-      role
+      urltoclient
+      role {
+        name
+        slug
+      }
       content {
         value
         blocks {

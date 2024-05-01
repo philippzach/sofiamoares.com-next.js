@@ -1,14 +1,50 @@
-import TransitionLink from '@/components/animation/transitionlink';
+import { toNextMetadata } from 'react-datocms';
 
-export default function Page() {
+import { performRequest } from '@/lib/datocms';
+import { metaTagsFragment, responsiveImageFragment } from '@/lib/fragments';
+import Animation from '@/components/animation/animation';
+
+const PAGE_CONTENT_QUERY = `
+  {
+    site: _site {
+      favicon: faviconMetaTags {
+        ...metaTagsFragment
+      }
+    }
+   
+    concept {
+      profile {
+        id
+        responsiveImage(imgixParams: {fm: png, fit: crop, w: 200, h: 200 }) {
+            ...responsiveImageFragment
+        }
+      }
+    }
+  }
+
+  ${metaTagsFragment}
+  ${responsiveImageFragment}
+  
+`;
+
+function getPageRequest() {
+  return { query: PAGE_CONTENT_QUERY };
+}
+
+export async function generateMetadata() {
+  const { site } = await performRequest(getPageRequest());
+
+  return toNextMetadata([...site.favicon]);
+}
+
+export default async function Page() {
+  const pageRequest = getPageRequest();
+  const data = await performRequest(pageRequest);
+  const profilePic = data.concept.profile;
+
   return (
-    <main className='pt-16 h-screen flex flex-col gap-5 items-center justify-center leading-[0.95]'>
-      <h1 className='text-6xl'>Adopting new technologies as they merge</h1>
-      <TransitionLink
-        href='/concept/technology'
-        label='Go Forward'
-        className='text-2xl'
-      />
-    </main>
+    <>
+      <Animation profilePic={profilePic} />
+    </>
   );
 }

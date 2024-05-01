@@ -1,6 +1,7 @@
 import Date from './date';
 import CoverImage from './image-preview';
 import PostHeaderVideo from './post-header-video';
+import Link from 'next/link';
 
 export default function PostHeader({
   title,
@@ -9,6 +10,7 @@ export default function PostHeader({
   role,
   excerpt,
   isVideo,
+  urlToClient,
 }) {
   return (
     <>
@@ -21,7 +23,14 @@ export default function PostHeader({
       <section className='flex flex-col mb-1 justify-between md:flex-row md:item-start md:items-center '>
         <div className='flex order-1 items-end  flex-col lg:gap-1 md:flex-col lg:items-baseline lg:flex-row md:w-2/12'>
           <h2 className='font-secondary font-extralight text-sm'>Client</h2>
-          <p className=' font-semibold'>{title}</p>
+          <Link
+            href={urlToClient}
+            target='blank'
+            rel='noopener noreferrer'
+            className='hover:underline'
+          >
+            <p className=' font-semibold'>{title}</p>
+          </Link>
         </div>
         <div className='flex order-2 items-end  flex-col lg:gap-1 md:flex-col lg:items-baseline lg:flex-row md:w-2/12'>
           <h2 className='font-secondary font-extralight text-sm'>Year</h2>
@@ -32,12 +41,23 @@ export default function PostHeader({
         <div className='flex order-3 items-end flex-col lg:gap-1 md:flex-col lg:items-baseline lg:flex-row md:w-2/3'>
           <h2 className='font-secondary font-extralight text-sm'>Role</h2>
           <ul className='flex flex-wrap font-semibold'>
-            <li className='flex relative whitespace-nowrap pr-1'>{role}</li>
+            {role.map((singleRole, index, array) => (
+              <Link
+                key={singleRole}
+                href={`/archive/${singleRole.slug}`}
+                className='hover:underline'
+              >
+                <li className='flex relative whitespace-nowrap pr-1'>
+                  {singleRole.name}
+                  {index === array.length - 1 ? '' : ','}
+                </li>
+              </Link>
+            ))}
           </ul>
         </div>
       </section>
 
-      <div className='mb-8 md:mb-16 -mx-5 sm:mx-0 aspect-video'>
+      <div className='mb-8 md:mb-8 -mx-5 aspect-video'>
         {isVideo ? (
           <PostHeaderVideo data={coverImage} />
         ) : (
