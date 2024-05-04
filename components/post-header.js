@@ -40,20 +40,18 @@ export default function PostHeader({
         </div>
         <div className='flex order-3 items-end flex-col lg:gap-1 md:flex-col lg:items-baseline lg:flex-row md:w-2/3'>
           <h2 className='font-secondary font-extralight text-sm'>Role</h2>
-          <ul className='flex flex-wrap font-semibold'>
+          <p className='flex flex-wrap font-semibold justify-end'>
             {role.map((singleRole, index, array) => (
               <Link
                 key={singleRole}
                 href={`/archive/${singleRole.slug}`}
-                className='hover:underline'
+                className='hover:underline whitespace-pre-wrap pl-1'
               >
-                <li className='flex relative whitespace-nowrap pr-1'>
-                  {singleRole.name}
-                  {index === array.length - 1 ? '' : ','}
-                </li>
+                {singleRole.name}
+                {index === array.length - 1 ? '' : ','}
               </Link>
             ))}
-          </ul>
+          </p>
         </div>
       </section>
 
