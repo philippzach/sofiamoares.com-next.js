@@ -71,7 +71,7 @@ export default async function Page() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
   const carousels = shuffle(data.allCarousels);
-  revalidatePath('/');
+  //revalidatePath('/');
 
   const hasVisited = await validateCookie();
 
