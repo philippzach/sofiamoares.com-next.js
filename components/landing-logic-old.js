@@ -75,33 +75,26 @@ export default function LandingLogic({ data, hasVisited }) {
           </ul>
         </div>
 
-        {data.map((_, index) => (
-          <div
-            key={index}
-            className={`h-screen w-screen items-center flex justify-center absolute left-0 top-0 animate-fadeIn ${
-              index !== activeIndex ? 'hidden' : ''
-            }`}
-          >
-            {isVideo ? (
-              <MuxPlayer
-                playbackId={data[activeIndex].media.video.muxPlaybackId}
-                metadata={{}}
-                autoPlay='muted'
-                loop='true'
-                preload='auto'
-                className='w-full h-full object-contain object-center'
-              />
-            ) : (
-              <DatocmsImage
-                data={{
-                  ...responsiveImage,
-                  alt: `Cover Image for ${title}`,
-                }}
-                className='w-full h-full object-center'
-              />
-            )}
-          </div>
-        ))}
+        <div className='h-screen w-screen items-center flex justify-center absolute left-0 top-0  animate-fadeIn'>
+          {isVideo ? (
+            <MuxPlayer
+              playbackId={data[activeIndex].media.video.muxPlaybackId}
+              metadata={{}}
+              autoPlay='muted'
+              loop='true'
+              preload='auto'
+              className='w-full h-full object-contain object-center'
+            />
+          ) : (
+            <DatocmsImage
+              data={{
+                ...responsiveImage,
+                alt: `Cover Image for ${title}`,
+              }}
+              className='w-full h-full object-center'
+            />
+          )}
+        </div>
 
         <div
           className={`font-secondary text-sm bottom-3 cursor-text left-3 absolute z-20 tracking-tight leading-tight ${textColor}`}

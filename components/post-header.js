@@ -55,7 +55,7 @@ export default function PostHeader({
         </div>
       </section>
 
-      <div className='mb-8 md:mb-8 -mx-5 aspect-video'>
+      <div className='mb-4 md:mb-4 -mx-5 aspect-video'>
         {isVideo ? (
           <PostHeaderVideo data={coverImage} />
         ) : (

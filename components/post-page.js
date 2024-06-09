@@ -28,7 +28,7 @@ export function PostPage({ data }) {
         isVideo={post.isvideo}
         urlToClient={post.urltoclient}
       />
-      <section className='flex flex-col gap-8'>
+      <section className='flex flex-col gap-4'>
         {sortedBlocks.map((block, index) => (
           // Render your block component based on the block type
           <Blocks key={index} block={block} />

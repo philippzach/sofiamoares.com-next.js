@@ -78,6 +78,15 @@ const PAGE_CONTENT_QUERY = `
             }
           }
         }
+        ... on Image2xlongRecord {
+          id
+          _createdAt
+          image {
+            responsiveImage(imgixParams: {fm: jpg}) {
+              ...responsiveImageFragment
+            }
+          }
+        }
         ... on VideoblockRecord {
           id
         singlevideo {
@@ -121,6 +130,91 @@ const PAGE_CONTENT_QUERY = `
           imagetwo {
             id
             responsiveImage{
+              ...responsiveImageFragment
+            }
+          }
+        }
+        ... on DifferentsizeRecord { id _createdAt flip end longimage { id responsiveImage(imgixParams: {fm: jpg }){ ...responsiveImageFragment } } squareimage { id responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1200, h: 1200 }) { ...responsiveImageFragment } } }
+        ... on Differentsize3imgRecord {
+          id
+          flip
+          end
+          _createdAt
+          longimage {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1200, h: 2400}){
+              ...responsiveImageFragment
+            }
+          }
+           squareimageone {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1200, h: 1200 }){
+              ...responsiveImageFragment
+            }
+          }
+          squareimagetwo {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1200, h: 1200 }){
+              ...responsiveImageFragment
+            }
+          }
+        }
+        ... on ImageoffcenterRecord {
+          id
+          image {
+            id
+            responsiveImage (imgixParams: {fm: jpg}){
+              ...responsiveImageFragment
+            }
+          }
+
+        }
+        ... on VideooffcenterRecord {
+          id
+          video {
+            id
+            video {
+              muxPlaybackId
+              blurUpThumb
+            }
+          }
+        }
+        ... on HalfvideovideoRecord {
+          id
+          videoone {
+            id
+            video {
+              muxPlaybackId
+              blurUpThumb
+            }
+          }
+          videotwo {
+            id
+            video {
+              muxPlaybackId
+              blurUpThumb
+            }
+          }
+        }
+        ... on Differentsize3imgfixedRecord {
+          id
+          flip
+          _createdAt
+          longimage {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 2000}){
+              ...responsiveImageFragment
+            }
+          }
+           squareimageone {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+              ...responsiveImageFragment
+            }
+          }
+          squareimagetwo {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
               ...responsiveImageFragment
             }
           }

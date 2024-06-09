@@ -1,7 +1,7 @@
 export default function withFlip(ComponentLeft, ComponentRight, flip) {
   return function Flip(props) {
     return (
-      <div className='grid grid-cols-1 md:grid-cols-2'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         {flip ? (
           <>
             <div className='order-2 md:order-1 '>
