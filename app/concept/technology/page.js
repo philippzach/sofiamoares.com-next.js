@@ -12,18 +12,10 @@ const PAGE_CONTENT_QUERY = `
       }
     }
    
-    concept {
-      galery {
-        id
-        responsiveImage(imgixParams: {fm: png, fit: crop, w: 400, h: 400 }) {
-            ...responsiveImageFragment
-        }
-      }
-    }
   }
 
   ${metaTagsFragment}
-  ${responsiveImageFragment}
+
   
 `;
 
@@ -40,11 +32,11 @@ export async function generateMetadata() {
 export default async function Tech() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
-  const imageGalery = data.concept.galery;
+  //const imageGalery = data.concept.galery;
   return (
     <main className='pt-4 h-screen animate-fadeIn'>
       <ul className='flex flex-wrap items-center justify-center gap-3'>
-        {imageGalery.map((image, i) => (
+        {/* {imageGalery.map((image, i) => (
           <li key={i} className='h-96 max-w-96'>
             <div>
               <DatocmsImage
@@ -55,7 +47,7 @@ export default async function Tech() {
               />
             </div>
           </li>
-        ))}
+        ))} */}
       </ul>
     </main>
   );

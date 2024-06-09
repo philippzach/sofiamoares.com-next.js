@@ -11,19 +11,10 @@ const PAGE_CONTENT_QUERY = `
         ...metaTagsFragment
       }
     }
-   
-    concept {
-      profile {
-        id
-        responsiveImage(imgixParams: {fm: png, fit: crop, w: 200, h: 200 }) {
-            ...responsiveImageFragment
-        }
-      }
-    }
   }
 
   ${metaTagsFragment}
-  ${responsiveImageFragment}
+
   
 `;
 
@@ -40,11 +31,7 @@ export async function generateMetadata() {
 export default async function Page() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
-  const profilePic = data.concept.profile;
+  //const profilePic = data.concept.profile;
 
-  return (
-    <>
-      <Animation profilePic={profilePic} />
-    </>
-  );
+  return <>{/* <Animation profilePic={profilePic} /> */}</>;
 }
