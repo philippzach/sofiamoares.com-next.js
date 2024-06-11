@@ -196,6 +196,74 @@ const PAGE_CONTENT_QUERY = `
             }
           }
         }
+        ... on CarouselimageRecord {
+          id
+          flip
+          image {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+              ...responsiveImageFragment
+          }
+        }
+          carousel {
+            id
+            responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+              ...responsiveImageFragment
+          }
+        }
+      }
+      ... on CarouselvideoRecord {
+        id
+        flip
+        carousel {
+          id
+          responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+            ...responsiveImageFragment
+        }
+      }
+      video {
+        id
+        video {
+          muxPlaybackId
+          blurUpThumb
+        }
+      }
+      }
+      ... on DifferentsizeimagevideoRecord {
+        id
+        flip
+        end
+        image {
+          id
+          responsiveImage (imgixParams: {fm: jpg}){
+            ...responsiveImageFragment
+          }
+        }
+        video {
+          id
+          video {
+            muxPlaybackId
+            blurUpThumb
+          }
+        }
+      }
+      ... on DifferentsizeimagecarouselRecord {
+        id
+        flip
+        end
+        image {
+          id
+          responsiveImage (imgixParams: {fm: jpg}){
+            ...responsiveImageFragment
+          }
+        }
+        carousel {
+          id
+          responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+            ...responsiveImageFragment
+          }
+        }
+      }
         ... on Differentsize3imgfixedRecord {
           id
           flip

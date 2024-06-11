@@ -5,9 +5,11 @@ import BigText from './bigtext';
 import withFlip from './flip';
 import offCenter from './offcenter';
 import DifferentSize from './differentsize';
+import differentSized from './differentsizealt';
 import DifferentSize3img from './differentsize3img';
 import DifferentSize3imgfixed from './differentsize3imgfixed';
 import SquareImage from './squareimage';
+import SquareCarousel from './squarecarousel';
 import SquareText from './squaretext';
 import ImageImage from './imageimage';
 import VideoVideo from './videovideo';
@@ -52,6 +54,36 @@ const Blocks = ({ block }) => {
         return <OffcenteredVideo {...block.video} />;
       case 'HalfvideovideoRecord':
         return <VideoVideo {...block} />;
+      case 'CarouselimageRecord':
+        const FlippedCarouselImage = withFlip(
+          SquareCarousel,
+          SquareImage,
+          block.flip
+        );
+        return <FlippedCarouselImage {...block} />;
+      case 'CarouselvideoRecord':
+        const FlippedCarouselVideo = withFlip(
+          SquareCarousel,
+          SquareVideo,
+          block.flip
+        );
+        return <FlippedCarouselVideo {...block} />;
+      case 'DifferentsizeimagevideoRecord':
+        const FlippedDifferentSizeImageVideo = differentSized(
+          FullImage,
+          SquareVideo,
+          block.flip,
+          block.end
+        );
+        return <FlippedDifferentSizeImageVideo {...block} />;
+      case 'DifferentsizeimagecarouselRecord':
+        const FlippedDifferentSizeImageCarousel = differentSized(
+          FullImage,
+          SquareCarousel,
+          block.flip,
+          block.end
+        );
+        return <FlippedDifferentSizeImageCarousel {...block} />;
       default:
         return null;
     }
