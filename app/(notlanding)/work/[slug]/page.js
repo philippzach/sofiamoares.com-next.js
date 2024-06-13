@@ -87,6 +87,15 @@ const PAGE_CONTENT_QUERY = `
             }
           }
         }
+        ... on EmptyimageblockRecord {
+          id 
+          flip
+          image {
+            responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }) {
+              ...responsiveImageFragment
+            }
+          }
+        }
         ... on VideoblockRecord {
           id
         singlevideo {
@@ -104,6 +113,11 @@ const PAGE_CONTENT_QUERY = `
         ... on BigtextblockRecord {
           id
           _createdAt
+          smalltext
+          text
+        }
+        ... on SmalltextRecord {
+          id
           smalltext
           text
         }
@@ -247,6 +261,77 @@ const PAGE_CONTENT_QUERY = `
           }
         }
       }
+      ... on Differentsize3videoRecord {
+        id
+        flip
+        end
+        longimage {
+          id
+          responsiveImage (imgixParams: {fm: jpg}){
+            ...responsiveImageFragment
+          }
+        }
+        squareimageone {
+          id
+          responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+            ...responsiveImageFragment
+          }
+        }
+        video {
+          id
+          video {
+            muxPlaybackId
+            blurUpThumb
+          }
+        }
+      }
+      ... on Differentsize3carouselRecord {
+        id
+        flip
+        end
+        longimage {
+          id
+          responsiveImage (imgixParams: {fm: jpg}){
+            ...responsiveImageFragment
+          }
+        }
+        squareimageone {
+          id
+          responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+            ...responsiveImageFragment
+          }
+        }
+        carousel {
+          id
+          responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+            ...responsiveImageFragment
+          }
+      }
+    }
+    ... on Differentsize3videocarouselRecord {
+      id 
+      flip
+      end
+      longimage {
+        id
+        responsiveImage (imgixParams: {fm: jpg}){
+          ...responsiveImageFragment
+        }
+      }
+      video {
+        id
+        video {
+          muxPlaybackId
+          blurUpThumb
+        }
+      }
+      carousel {
+        id
+        responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
+          ...responsiveImageFragment
+        }
+      }
+    }
       ... on DifferentsizeimagecarouselRecord {
         id
         flip
@@ -264,6 +349,7 @@ const PAGE_CONTENT_QUERY = `
           }
         }
       }
+
         ... on Differentsize3imgfixedRecord {
           id
           flip

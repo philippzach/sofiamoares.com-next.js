@@ -13,6 +13,11 @@ import SquareCarousel from './squarecarousel';
 import SquareText from './squaretext';
 import ImageImage from './imageimage';
 import VideoVideo from './videovideo';
+import DifferentSize3Video from './differentsize3video';
+import DifferentSize3Carousel from './differentsize3carousel';
+import DifferentSize3VideoCarousel from './differentsize3videocarousel';
+import EmptyImage from './emptyimageblock';
+import Smalltext from './smalltext';
 
 const Blocks = ({ block }) => {
   // Determine the type of block and render the corresponding component
@@ -28,6 +33,8 @@ const Blocks = ({ block }) => {
         return <FullVideo video={block.singlevideo.video} />;
       case 'BigtextblockRecord':
         return <BigText textBlock={block} />;
+      case 'SmalltextRecord':
+        return <Smalltext textBlock={block} />;
       /* case 'ImagetextblockRecord':
         const FlippedImageText = withFlip(SquareImage, SquareText, block.flip);
         return <FlippedImageText {...block} />; */
@@ -84,6 +91,14 @@ const Blocks = ({ block }) => {
           block.end
         );
         return <FlippedDifferentSizeImageCarousel {...block} />;
+      case 'Differentsize3videoRecord':
+        return <DifferentSize3Video {...block} />;
+      case 'Differentsize3carouselRecord':
+        return <DifferentSize3Carousel {...block} />;
+      case 'Differentsize3videocarouselRecord':
+        return <DifferentSize3VideoCarousel {...block} />;
+      case 'EmptyimageblockRecord':
+        return <EmptyImage {...block} />;
       default:
         return null;
     }
