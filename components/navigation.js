@@ -18,7 +18,7 @@ export default function Navigation({ isBlack }) {
         >
           Sofia Moraes.
         </Link>
-        <div role='navigation' className='flex justify-between md:w-[40%]'>
+        <div role='navigation' className='flex justify-between md:w-[33%]'>
           <ul className='flex flex-wrap m-0 p-0 '>
             <li>
               <Link
@@ -39,10 +39,10 @@ export default function Navigation({ isBlack }) {
                 ${textColor}
                 `}
               >
-                Studio,
+                Studio
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href='/concept'
                 target='_blank'
@@ -54,7 +54,7 @@ export default function Navigation({ isBlack }) {
               >
                 Concept
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

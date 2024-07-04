@@ -92,13 +92,15 @@ export default function LandingLogic({ data, hasVisited }) {
                 className='w-full h-full object-contain object-center'
               />
             ) : (
-              <DatocmsImage
-                data={{
-                  ...responsiveImage,
-                  alt: `Cover Image for ${title}`,
-                }}
-                className='w-full h-full object-center'
-              />
+              <div className='p-10 md:p-48'>
+                <DatocmsImage
+                  data={{
+                    ...responsiveImage,
+                    alt: `Cover Image for ${title}`,
+                  }}
+                  className='w-full h-full object-contain object-center'
+                />
+              </div>
             )}
           </div>
         ))}

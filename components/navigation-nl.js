@@ -16,7 +16,7 @@ export default function NavigationNl() {
         >
           Sofia Moraes.
         </Link>
-        <div role='navigation' className='flex justify-between md:w-[40%]'>
+        <div role='navigation' className='flex justify-between md:w-[33%]'>
           <ul className='flex flex-wrap m-0 p-0 '>
             <li>
               <Link
@@ -37,10 +37,10 @@ export default function NavigationNl() {
                 
                 `}
               >
-                Studio,
+                Studio
               </Link>
             </li>
-            <li>
+            {/*  <li>
               <Link
                 href='/concept'
                 target='_blank'
@@ -49,7 +49,7 @@ export default function NavigationNl() {
               >
                 Concept
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

@@ -1,4 +1,5 @@
 import '../globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import NavigationNl from '@/components/navigation-nl';
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
         <NavigationNl />
         {children}
         <Footer />
+        <GoogleAnalytics gaId='G-MH6B7ZXWP1' />
       </body>
     </html>
   );

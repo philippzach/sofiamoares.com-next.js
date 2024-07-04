@@ -99,6 +99,7 @@ const Blocks = ({ block }) => {
         return <DifferentSize3VideoCarousel {...block} />;
       case 'EmptyimageblockRecord':
         return <EmptyImage {...block} />;
+
       default:
         return null;
     }

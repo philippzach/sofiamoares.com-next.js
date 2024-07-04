@@ -175,6 +175,7 @@ const PAGE_CONTENT_QUERY = `
         }
         ... on ImageoffcenterRecord {
           id
+          flip
           image {
             id
             responsiveImage (imgixParams: {fm: jpg}){
@@ -185,6 +186,7 @@ const PAGE_CONTENT_QUERY = `
         }
         ... on VideooffcenterRecord {
           id
+          flip
           video {
             id
             video {
