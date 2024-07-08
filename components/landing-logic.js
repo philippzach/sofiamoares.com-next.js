@@ -90,6 +90,7 @@ export default function LandingLogic({ data, hasVisited }) {
                   sources: [
                     { src: data[activeIndex].videolink, type: 'video/mp4' },
                   ],
+                  poster: data[activeIndex].videolink + '.png',
                   autoplay: 'muted',
                   controls: false,
                   loop: true,
