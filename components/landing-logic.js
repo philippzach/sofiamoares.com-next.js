@@ -4,10 +4,13 @@ import Navigation from './navigation';
 import { useState, useEffect } from 'react';
 import { Image as DatocmsImage } from 'react-datocms';
 import MuxPlayer from '@mux/mux-player-react';
+import ReactPlayer from 'react-player';
+import VideoJS from './video-player';
 import Link from 'next/link';
 
 import Cookies from 'js-cookie';
 import Loading from './loading';
+import { he } from 'date-fns/locale';
 
 export default function LandingLogic({ data, hasVisited }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -83,13 +86,17 @@ export default function LandingLogic({ data, hasVisited }) {
             }`}
           >
             {isVideo ? (
-              <MuxPlayer
-                playbackId={data[activeIndex].media.video.muxPlaybackId}
-                metadata={{}}
-                autoPlay='muted'
-                loop='true'
-                preload='auto'
-                className='w-full h-full object-contain object-center'
+              <VideoJS
+                options={{
+                  sources: [
+                    { src: data[activeIndex].videolink, type: 'video/mp4' },
+                  ],
+                  autoplay: 'muted',
+                  controls: false,
+                  loop: true,
+                  preload: 'auto',
+                  loadingSpinner: false,
+                }}
               />
             ) : (
               <div className='p-10 md:p-48'>

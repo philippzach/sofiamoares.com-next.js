@@ -20,3 +20,7 @@ mux-player {
   /* Hide the loading indicator */
   --loading-indicator: none;
 }
+
+.video-js {
+  background-color: white !important;
+}

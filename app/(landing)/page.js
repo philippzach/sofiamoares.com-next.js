@@ -25,6 +25,7 @@ const PAGE_CONTENT_QUERY = `
       client
       description
       urltoproject
+      videolink
       media {
         id
         alt
