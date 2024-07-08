@@ -24,3 +24,7 @@ mux-player {
 .video-js {
   background-color: white !important;
 }
+
+.vjs-tech {
+  object-fit: cover;
+}

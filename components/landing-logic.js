@@ -96,6 +96,7 @@ export default function LandingLogic({ data, hasVisited }) {
                   loop: true,
                   preload: 'auto',
                   loadingSpinner: false,
+                  height: '1200',
                 }}
               />
             ) : (
