@@ -4,7 +4,6 @@ import Navigation from './navigation';
 import { useState, useEffect } from 'react';
 import { Image as DatocmsImage } from 'react-datocms';
 import MuxPlayer from '@mux/mux-player-react';
-import ReactPlayer from 'react-player';
 import VideoJS from './video-player';
 import Link from 'next/link';
 
