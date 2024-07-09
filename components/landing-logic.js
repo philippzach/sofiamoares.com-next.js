@@ -85,31 +85,24 @@ export default function LandingLogic({ data, hasVisited }) {
             }`}
           >
             {isVideo ? (
-              <div>
-                <DatocmsImage
-                  data={{
-                    ...responsiveImage,
-                    alt: `Cover Image for ${title}`,
-                  }}
-                  className='h-[1300px] placeholder top-0 left-0 z-10 object-center'
-                />
+              <>
                 <VideoJS
                   options={{
                     sources: [
                       { src: data[activeIndex].videolink, type: 'video/mp4' },
                     ],
+
                     autoplay: 'muted',
                     controls: false,
                     loop: true,
                     preload: 'auto',
-                    loadingSpinner: false,
-                    height: '1300',
+                    height: window.innerHeight.toString(),
                   }}
-                  className='videoPlayer'
+                  className='animate-fadeIn'
                 />
-              </div>
+              </>
             ) : (
-              <div className='p-10 md:p-48'>
+              <div className='p-6 sm:p-8 md:p-32 lg:p-32'>
                 <DatocmsImage
                   data={{
                     ...responsiveImage,
