@@ -34,8 +34,8 @@ export default function Loading() {
 
   return (
     <>
-      <div className='fade opacity-100 flex items-center h-screen justify-center bg-gray-500'>
-        <div className='flex flex-col text-left justify-center items-start min-w-[50%] h-screen leading-20 text-black text-7xl font-extrabold leading-[0.9] tracking-tighter overflow-hidden'>
+      <div className='fade opacity-100 flex items-center h-screen justify-center bg-[#2E2F2C]'>
+        <div className='flex flex-col text-left justify-center items-start min-w-[50%] h-screen leading-20 text-[#FFFFFE] text-7xl font-extrabold leading-[0.9] tracking-tighter overflow-hidden'>
           <div className='text-gray-50 h-1/2' ref={container}>
             <div className='outer opacity-0 translate-x-5'>
               <div className='inner h-0'>

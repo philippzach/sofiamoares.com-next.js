@@ -85,24 +85,25 @@ export default function LandingLogic({ data, hasVisited }) {
             }`}
           >
             {isVideo ? (
-              <>
-                <VideoJS
-                  options={{
-                    sources: [
-                      { src: data[activeIndex].videolink, type: 'video/mp4' },
-                    ],
-
-                    autoplay: 'muted',
-                    controls: false,
-                    loop: true,
-                    preload: 'auto',
-                    height: window.innerHeight.toString(),
-                  }}
-                  className='animate-fadeIn'
-                />
-              </>
+              <MuxPlayer
+                playbackId={data[activeIndex].videolink}
+                metadata={{}}
+                autoPlay='muted'
+                loop='true'
+                preload='auto'
+                className='w-full h-full object-contain object-center'
+                placeholder={
+                  <DatocmsImage
+                    data={{
+                      ...responsiveImage,
+                      alt: `Cover Image for ${title}`,
+                    }}
+                    className='w-full h-full object-contain object-center'
+                  />
+                }
+              />
             ) : (
-              <div className='p-6 sm:p-8 md:p-32 lg:p-32'>
+              <div className='p-8 sm:p-12 md:p-44 lg:p-44'>
                 <DatocmsImage
                   data={{
                     ...responsiveImage,
