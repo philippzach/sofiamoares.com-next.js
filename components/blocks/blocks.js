@@ -1,5 +1,6 @@
 import FullImage from './fullimage';
 import FullVideo from './fullvideo';
+import FullVideoOffCenter from './fullvideo-offcenter';
 import SquareVideo from './squarevideo';
 import BigText from './bigtext';
 import withFlip from './flip';
@@ -57,7 +58,7 @@ const Blocks = ({ block }) => {
         const OffcenteredMedia = offCenter(FullImage);
         return <OffcenteredMedia {...block} />;
       case 'VideooffcenterRecord':
-        const OffcenteredVideo = offCenter(FullVideo);
+        const OffcenteredVideo = offCenter(FullVideoOffCenter);
         return <OffcenteredVideo {...block} />;
       case 'HalfvideovideoRecord':
         return <VideoVideo {...block} />;

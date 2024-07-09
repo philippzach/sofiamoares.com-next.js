@@ -7,7 +7,7 @@ export default function FullVideo(props) {
     <div>
       <VideoJS
         options={{
-          sources: [{ src: props.video.videolink, type: 'video/mp4' }],
+          sources: [{ src: props.videolink, type: 'video/mp4' }],
           fluid: true,
           autoplay: 'muted',
           controls: false,

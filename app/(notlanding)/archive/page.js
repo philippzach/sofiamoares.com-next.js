@@ -12,7 +12,7 @@ query {
         ...metaTagsFragment
       }
     }
-  allArchives {
+  allArchives(first: 50) {
     slug
     media {
       responsiveImage {

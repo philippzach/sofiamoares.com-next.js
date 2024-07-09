@@ -1,6 +1,7 @@
 import { Image as DatocmsImage } from 'react-datocms';
 
 export default function ArchiveGrid({ archives }) {
+  console.log(archives);
   return (
     <div className='columns-1 md:columns-2 lg:columns-3 gap-4'>
       {archives.map((archive) => (
