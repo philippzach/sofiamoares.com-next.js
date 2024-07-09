@@ -55,16 +55,16 @@ export default function LandingLogic({ data, hasVisited }) {
           <div
             role='button'
             aria-label='previous'
-            className='absolute w-[50%] z-20 bottom-0 top-0 cursor-w-resize left-0'
+            className='absolute w-[50%] z-30 bottom-0 top-0 cursor-w-resize left-0'
             onClick={prevSlide}
           ></div>
           <div
             role='button'
             aria-label='next'
-            className='absolute w-[50%] z-20 bottom-0 top-0 cursor-e-resize right-0'
+            className='absolute w-[50%] z-30 bottom-0 top-0 cursor-e-resize right-0'
             onClick={nextSlide}
           ></div>
-          <ul className='absolute z-10 bottom-16 top-0 right-0 left-0 flex flex-row items-end justify-center gap-2'>
+          <ul className='absolute z-20 bottom-16 top-0 right-0 left-0 flex flex-row items-end justify-center gap-2'>
             {data.map((_, index) => (
               <li
                 key={index}
@@ -85,20 +85,29 @@ export default function LandingLogic({ data, hasVisited }) {
             }`}
           >
             {isVideo ? (
-              <VideoJS
-                options={{
-                  sources: [
-                    { src: data[activeIndex].videolink, type: 'video/mp4' },
-                  ],
-                  poster: data[activeIndex].videolink + '.png',
-                  autoplay: 'muted',
-                  controls: false,
-                  loop: true,
-                  preload: 'auto',
-                  loadingSpinner: false,
-                  height: '1200',
-                }}
-              />
+              <div>
+                <DatocmsImage
+                  data={{
+                    ...responsiveImage,
+                    alt: `Cover Image for ${title}`,
+                  }}
+                  className='h-[1300px] placeholder top-0 left-0 z-10 object-center'
+                />
+                <VideoJS
+                  options={{
+                    sources: [
+                      { src: data[activeIndex].videolink, type: 'video/mp4' },
+                    ],
+                    autoplay: 'muted',
+                    controls: false,
+                    loop: true,
+                    preload: 'auto',
+                    loadingSpinner: false,
+                    height: '1300',
+                  }}
+                  className='videoPlayer'
+                />
+              </div>
             ) : (
               <div className='p-10 md:p-48'>
                 <DatocmsImage
