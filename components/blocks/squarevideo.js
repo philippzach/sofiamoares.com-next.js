@@ -1,18 +1,22 @@
 'use client';
-import MuxPlayer from '@mux/mux-player-react';
+import { tr } from 'date-fns/locale';
+import VideoJS from '../video-player';
 import Image from 'next/image';
 
 export default function FullVideo(props) {
-  const { video } = props.video;
+  const { videolink } = props;
   return (
     <>
-      <MuxPlayer
-        autoPlay='muted'
-        loop='true'
-        preload='auto'
-        className='w-full object-contain object-center aspect-square'
-        playbackId={video.muxPlaybackId}
-        placeholder={<Image src={video.blurUpThumb} alt='video thumbnail' />}
+      <VideoJS
+        options={{
+          sources: [{ src: videolink, type: 'video/mp4' }],
+          fluid: true,
+          autoplay: 'muted',
+          controls: false,
+          loop: true,
+          preload: 'auto',
+        }}
+        className='animate-fadeIn'
       />
     </>
   );

@@ -11,6 +11,7 @@ export default function PostHeader({
   excerpt,
   isVideo,
   urlToClient,
+  videoLink,
 }) {
   return (
     <>
@@ -57,7 +58,7 @@ export default function PostHeader({
 
       <div className='mb-4 md:mb-4 -mx-5 aspect-video'>
         {isVideo ? (
-          <PostHeaderVideo data={coverImage} />
+          <PostHeaderVideo data={videoLink} />
         ) : (
           <CoverImage
             title={title}

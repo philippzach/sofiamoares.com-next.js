@@ -27,6 +27,7 @@ export function PostPage({ data }) {
         role={post.role}
         isVideo={post.isvideo}
         urlToClient={post.urltoclient}
+        videoLink={post.videolink}
       />
       <section className='flex flex-col gap-4'>
         {sortedBlocks.map((block, index) => (

@@ -50,6 +50,7 @@ const PAGE_CONTENT_QUERY = `
         url(imgixParams: {fm: jpg, fit: crop, w: 2000, h: 1000 })
       }
       isvideo
+      videolink
       headerimage {
         responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 2500, h: 1250 }) {
           ...responsiveImageFragment
@@ -98,6 +99,7 @@ const PAGE_CONTENT_QUERY = `
         }
         ... on VideoblockRecord {
           id
+          videolink
         singlevideo {
           video {
             alt
@@ -187,8 +189,10 @@ const PAGE_CONTENT_QUERY = `
         ... on VideooffcenterRecord {
           id
           flip
+          videolink
           video {
             id
+            
             video {
               muxPlaybackId
               blurUpThumb
@@ -231,6 +235,7 @@ const PAGE_CONTENT_QUERY = `
       ... on CarouselvideoRecord {
         id
         flip
+        videolink
         carousel {
           id
           responsiveImage (imgixParams: {fm: jpg, fit: crop, w: 1000, h: 1000 }){
@@ -378,6 +383,7 @@ const PAGE_CONTENT_QUERY = `
         ... on ImagevideoblockRecord {
           id
           flip
+          videolink
           _createdAt
           image {
             responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 1200, h: 1200 }){

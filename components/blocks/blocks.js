@@ -30,7 +30,7 @@ const Blocks = ({ block }) => {
         return <FullImage image={block.image} />;
       // ... handle other specific block types
       case 'VideoblockRecord':
-        return <FullVideo video={block.singlevideo.video} />;
+        return <FullVideo video={block} />;
       case 'BigtextblockRecord':
         return <BigText textBlock={block} />;
       case 'SmalltextRecord':
@@ -58,7 +58,7 @@ const Blocks = ({ block }) => {
         return <OffcenteredMedia {...block} />;
       case 'VideooffcenterRecord':
         const OffcenteredVideo = offCenter(FullVideo);
-        return <OffcenteredVideo {...block.video} />;
+        return <OffcenteredVideo {...block} />;
       case 'HalfvideovideoRecord':
         return <VideoVideo {...block} />;
       case 'CarouselimageRecord':
