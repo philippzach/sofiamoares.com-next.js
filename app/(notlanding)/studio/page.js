@@ -56,7 +56,7 @@ export default async function Page() {
         <section className='mb-20 md:mb-40'>
           <p className='font-secondary text-base md:text-lg'>Contact</p>
           <a
-            href='mailto:sofiamoraes@gmail.com'
+            href='mailto:sofiamoraes.m@gmail.com'
             className='cursor-pointer hover:underline'
           >
             {contact}
