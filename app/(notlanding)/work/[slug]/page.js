@@ -9,7 +9,7 @@ import { PostPage } from '@/components/post-page';
 export async function generateStaticParams() {
   const { allPosts } = await performRequest({ query: `{ allPosts { slug } }` });
 
-  return allPosts.map(({ slug }) => slug);
+  return allPosts.map(({ slug }) => ({ slug }));
 }
 
 const PAGE_CONTENT_QUERY = `
