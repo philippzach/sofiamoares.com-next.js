@@ -2,6 +2,7 @@ import { toNextMetadata } from 'react-datocms';
 
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
+import Image from 'next/image';
 
 const PAGE_CONTENT_QUERY = `
   {
@@ -50,9 +51,23 @@ export default async function Page() {
   return (
     <main className=''>
       <div className='text-xl sm:text-2xl md:text-4xl lg:text-5xl pt-20 pb-20 animate-fadeIn tracking-tight leading-tight'>
-        <section className='mb-24 pr-4 md:mb-56 md:max-w-screen-2xl md:pr-20'>
-          {description}
-        </section>
+        <div className='md:flex md:items-start md:gap-5 w-full'>
+          <div className='w-full md:w-1/2'>
+            <section className='mb-24 pr-4 md:mb-56 md:max-w-screen-2xl md:pr-20'>
+              {description}
+            </section>
+          </div>
+          <div className='w-full md:w-1/2'>
+            <section className='mb-4'>
+              <Image
+                src='/photos/sofia_moraes_portrait.jpg'
+                alt='Sofia Moraes Portrait'
+                width={500}
+                height={500}
+              />
+            </section>
+          </div>
+        </div>
         <section className='mb-20 md:mb-40'>
           <p className='font-secondary text-base md:text-lg'>Contact</p>
           <a
