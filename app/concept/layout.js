@@ -1,5 +1,6 @@
 import '../globals.css';
 import { toNextMetadata } from 'react-datocms';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
@@ -45,6 +46,7 @@ export default async function RootLayout({ children }) {
       <body className='text-slate-100 bg-[#1a1a1a] font-primary pr-4 pl-4'>
         <HotjarInit />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );

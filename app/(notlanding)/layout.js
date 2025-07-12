@@ -1,4 +1,5 @@
 import '../globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 import NavigationNl from '@/components/navigation-nl';
@@ -18,6 +19,7 @@ export default async function RootLayout({ children }) {
         <HotjarInit />
         <NavigationNl />
         {children}
+        <SpeedInsights />
         <Footer />
         <GoogleAnalytics gaId='G-MH6B7ZXWP1' />
       </body>

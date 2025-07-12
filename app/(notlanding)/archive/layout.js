@@ -1,4 +1,5 @@
 import Navigation from '@/components/navigation-archive';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { performRequest } from '@/lib/datocms';
 
 const allCategories = await performRequest({
@@ -10,6 +11,7 @@ export default function Layout({ children }) {
     <div className='min-h-screen pt-32 pb-32'>
       <Navigation data={allCategories} />
       {children}
+      <SpeedInsights />
     </div>
   );
 }
