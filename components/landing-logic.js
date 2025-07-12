@@ -85,25 +85,30 @@ export default function LandingLogic({ data, hasVisited }) {
             }`}
           >
             {isVideo ? (
-              <MuxPlayer
-                playbackId={data[activeIndex].videolink}
-                metadata={{}}
-                autoPlay='muted'
-                loop='true'
-                preload='auto'
-                className='w-full h-full object-contain object-center'
-                placeholder={
-                  <DatocmsImage
-                    data={{
-                      ...responsiveImage,
-                      alt: `Cover Image for ${title}`,
-                    }}
-                    className='w-full h-full object-contain object-center'
-                  />
-                }
-              />
+              (console.log(data[activeIndex].videolink),
+              (
+                <MuxPlayer
+                  playbackId={data[activeIndex].videolink}
+                  metadata={{}}
+                  autoPlay='muted'
+                  loop='true'
+                  preload='auto'
+                  className='w-full h-full object-contain object-center'
+                  placeholder={
+                    {
+                      /* <DatocmsImage
+                      data={{
+                        ...responsiveImage,
+                        alt: `Cover Image for ${title}`,
+                      }}
+                      className='w-full h-full object-contain object-center'
+                    /> */
+                    }
+                  }
+                />
+              ))
             ) : (
-              <div className='p-8 sm:p-12 md:p-44 lg:p-44'>
+              <div className='p-8 sm:p-12 md:p-44 lg:p-44 xl:p-80'>
                 <DatocmsImage
                   data={{
                     ...responsiveImage,
@@ -128,10 +133,10 @@ export default function LandingLogic({ data, hasVisited }) {
           className={`text-lg invisible md:visible flex items-end bottom-3 right-3 absolute z-20 ${textColor}`}
         >
           <li className='pr-8 font-bold tracking-tight leading-tight'>
-            <span className='font-light'>Studio</span> Madeira, Portugal
+            <span className='font-light'>Studio</span> Eastern Caribbean Time
           </li>
           <li className='cursor-pointer font-bold tracking-tight leading-tight hover:underline'>
-            <a className='' href='mailto:sofiamoraes@gmail.com'>
+            <a className='' href='mailto:hello@sofiamoraes.com'>
               hello@sofiamoraes.com
             </a>
           </li>

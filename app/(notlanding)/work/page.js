@@ -45,22 +45,22 @@ const PAGE_CONTENT_QUERY = `
   ${responsiveImageFragment}
 `;
 
-function getPageRequest() {
-  const { isEnabled } = draftMode();
+async function getPageRequest() {
+  const { isEnabled } = await draftMode();
 
   return { query: PAGE_CONTENT_QUERY, includeDrafts: isEnabled };
 }
 
 export async function generateMetadata() {
-  const { site, blog } = await performRequest(getPageRequest());
+  const { site, blog } = await performRequest(await getPageRequest());
 
   return toNextMetadata([...site.favicon, ...blog.seo]);
 }
 
 export default async function Page() {
-  const { isEnabled } = draftMode();
+  const { isEnabled } = await draftMode();
 
-  const pageRequest = getPageRequest();
+  const pageRequest = await getPageRequest();
   const data = await performRequest(pageRequest);
 
   if (isEnabled) {

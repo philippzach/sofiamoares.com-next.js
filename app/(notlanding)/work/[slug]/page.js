@@ -439,8 +439,8 @@ const PAGE_CONTENT_QUERY = `
   ${metaTagsFragment}
 `;
 
-function getPageRequest(slug) {
-  const { isEnabled } = draftMode();
+async function getPageRequest(slug) {
+  const { isEnabled } = await draftMode();
 
   return {
     query: PAGE_CONTENT_QUERY,
@@ -450,15 +450,14 @@ function getPageRequest(slug) {
 }
 
 export async function generateMetadata({ params }) {
-  const { site, post } = await performRequest(getPageRequest(params.slug));
+  const pageRequest = await getPageRequest(params.slug);
+  const { site, post } = await performRequest(pageRequest);
 
   return toNextMetadata([...site.favicon, ...post.seo]);
 }
 
 export default async function Page({ params }) {
-  const { isEnabled } = draftMode();
-
-  const pageRequest = getPageRequest(params.slug);
+  const pageRequest = await getPageRequest(params.slug);
   const data = await performRequest(pageRequest);
 
   return <PostPage data={data} />;
