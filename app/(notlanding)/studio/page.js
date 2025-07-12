@@ -150,7 +150,7 @@ export default async function Page() {
           {testimonials.map((t, idx) => (
             <blockquote key={idx} className='text-center'>
               <p className='text-lg md:text-xl font-medium mb-4 '>
-                "{t.quote}"
+                &ldquo;{t.quote}&rdquo;
               </p>
               <footer className='text-gray-600 font-light'>{t.name}</footer>
             </blockquote>

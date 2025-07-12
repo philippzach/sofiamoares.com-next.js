@@ -551,8 +551,8 @@ export default function Page() {
               directed by human intuition.
             </h2>
             <p className='text-gray-200 font-light md:text-2xl text-lg md:pe-28 pe-14'>
-              Let's transform raw ideas into immersive stories that captivate
-              and convert.
+              Let&apos;s transform raw ideas into immersive stories that
+              captivate and convert.
             </p>
 
             <div className='bg-yellow h-[90vh] w-auto md:mt-36 mt-20 -translate-x-5'>

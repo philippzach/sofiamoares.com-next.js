@@ -223,7 +223,7 @@ export default function NavigationConcept() {
                 className={`select-auto text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/concept') ? 'opacity-30' : ''}`}
               >
-                Concept
+                Concept ↵
               </Link>
             </li>
           </ul>
