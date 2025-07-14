@@ -42,15 +42,13 @@ export default async function ServicesLanding() {
     <div className='min-h-screen bg-white mt-10 py-8'>
       {/* Intro Section */}
       <div className='w-full md:w-1/2  mb-10 md:mb-16 text-left text-prim-grey'>
-        <h1 className='text-3xl md:text-4xl font-bold mb-4  leading-[1]'>
-          &quot;Design That Cuts Through the Noise &mdash; and the
-          Bullsh*t.&quot;
+        <h1 className='text-3xl md:text-4xl font-bold mb-4 leading-[1]'>
+          Your Vision is Ambitious - Your Design Should Be, Too. <br />
+          Design That Actually Moves the Numbers.
         </h1>
         <p className='text-3xl font-light leading-[1]'>
-          Multidimensional design for visionaries, soul-led creators, and
-          cultural rebels ready to evolve. This is more than branding &mdash;
-          it&apos;s alignment, activation, and aesthetic strategy for your next
-          timeline.
+          Strategic design solutions that transform ambitious ideas into
+          market-ready and aesthetic experiences that convert.
         </p>
       </div>
       {/* Services Grid */}
@@ -102,12 +100,12 @@ export default async function ServicesLanding() {
               />
             </div>
             <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-              <h2 className='text-4xl font-bold text-prim-grey group-hover:text-stone-300 transition-colors duration-200 mb-2'>
-                Essential Web/App Design
+              <h2 className='text-4xl font-bold text-prim-grey group-hover:text-stone-300 transition-colors duration-200 mb-4'>
+                Digital Experiences
               </h2>
               <p className='text-gray-500'>
-                Aesthetic consistency, state-of-the-art online store, and an
-                easy-to-launch experience.
+                Websites and apps designed to convert visitors into customers,
+                built for performance and growth.
               </p>
             </div>
           </div>
@@ -147,14 +145,14 @@ export default async function ServicesLanding() {
           <div className='flex flex-col md:flex-row w-full'>
             <div className='relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
               <Image
-                src='/photos/aiservices/mare.webp'
+                src='/photos/aiservices/aiservice2.webp'
                 alt='Creative Direction 1'
                 fill
                 className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover:opacity-0'
                 sizes='(max-width: 768px) 100vw, 50vw'
               />
               <Image
-                src='/photos/aiservices/fleur.webp'
+                src='/photos/aiservices/aiservice1.webp'
                 alt='Creative Direction 2'
                 fill
                 className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100'
@@ -162,12 +160,12 @@ export default async function ServicesLanding() {
               />
             </div>
             <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-              <h2 className='text-4xl font-bold text-prim-grey group-hover:text-stone-300 transition-colors duration-200 mb-2'>
-                Gen AI Creative Technolgist
+              <h2 className='text-4xl font-bold text-prim-grey group-hover:text-stone-300 transition-colors duration-200 mb-4'>
+                AI-Enhanced Creative
               </h2>
-              <p className=' text-gray-500'>
-                Next-gen creative solutions leveraging AI for unique,
-                future-forward results.
+              <p p className='text-gray-500'>
+                Cutting-edge creative solutions amplified by generative AI
+                workflows deliver impossible-to-ignore visuals.
               </p>
             </div>
           </div>

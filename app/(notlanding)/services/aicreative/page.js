@@ -38,16 +38,16 @@ export default async function AICreativePage() {
   const data = await performRequest(pageRequest);
 
   const images = [
-    'photo1.png',
-    'photo2.png',
-    'photo3.png',
-    'photo4.png',
-    'photo5.png',
-    'photo6.png',
-    'photo7.png',
-    'photo8.png',
-    'blackhole.webp',
-    'background.webp',
+    'aiservice.webp',
+    'aiservice1.webp',
+    'aiservice2.webp',
+    'aiservice3.webp',
+    'aiservice4.webp',
+    'aiservice5.webp',
+    'aiservice6.webp',
+    'aiservice7.webp',
+    'aiservice8.webp',
+    'aiservice9.webp',
   ];
 
   return (
@@ -113,7 +113,7 @@ export default async function AICreativePage() {
           {images.map((image, index) => (
             <div key={index} className='relative aspect-square'>
               <Image
-                src={`/photos/aigeneration/${image}`}
+                src={`/photos/aiservices/${image}`}
                 alt={`AI Creative Example ${index + 1}`}
                 fill
                 className='object-cover rounded-lg'
@@ -132,7 +132,7 @@ export default async function AICreativePage() {
             {images.map((image, index) => (
               <div key={index} className='relative aspect-square'>
                 <Image
-                  src={`/photos/aigeneration/${image}`}
+                  src={`/photos/aiservices/${image}`}
                   alt={`AI Creative Example ${index + 1}`}
                   fill
                   className='object-cover rounded-lg'
