@@ -38,16 +38,17 @@ export default async function AICreativePage() {
   const data = await performRequest(pageRequest);
 
   const images = [
-    'aiservice.webp',
-    'aiservice1.webp',
+    'ai1.webp',
     'aiservice2.webp',
+
     'aiservice3.webp',
     'aiservice4.webp',
-    'aiservice5.webp',
     'aiservice6.webp',
-    'aiservice7.webp',
-    'aiservice8.webp',
-    'aiservice9.webp',
+    'aiservice5.webp',
+    'ai4.webp',
+    'ai7.webp',
+    'ai8.webp',
+    'aiservice1.webp',
   ];
 
   return (

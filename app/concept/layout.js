@@ -43,7 +43,7 @@ export default async function RootLayout({ children }) {
   const data = await performRequest(pageRequest);
   return (
     <html lang='en' className={`${officeTimes.variable} ${aeonik.variable}`}>
-      <body className='text-slate-100 bg-[#1a1a1a] font-primary pr-4 pl-4'>
+      <body className='text-slate-100 bg-[#1a1a1a] font-primary md:pr-4 md:pl-4'>
         <HotjarInit />
         {children}
         <SpeedInsights />

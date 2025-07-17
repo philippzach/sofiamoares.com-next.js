@@ -468,7 +468,7 @@ export default function Page() {
           </main>
           {/* Second Image */}
           <Image
-            src='/photos/aigeneration/palm1.png'
+            src='/photos/aigeneration/palm1.webp'
             alt='AI Generation Background'
             id='background'
             fill
@@ -483,12 +483,12 @@ export default function Page() {
           className='w-full h-screen absolute top-0 left-0 right-0 z-[2] perspective-[500px] overflow-hidden'
         >
           <Image
-            src='/photos/aigeneration/blackhole.webp'
+            src='/photos/aigeneration/blackhole-bg.webp'
             className='w-full h-full object-cover object-center'
             id='blackhole'
             alt='Black Hole'
-            width={1500}
-            height={1500}
+            width={1512}
+            height={982}
             priority
             quality={100}
           />
@@ -516,7 +516,7 @@ export default function Page() {
       {/* Palm Tree */}
       <div className='relative h-screen w-full'>
         <Image
-          src='/photos/aigeneration/palm2.png'
+          src='/photos/aigeneration/palm2.webp'
           alt='AI Generation Background'
           fill
           priority
@@ -543,7 +543,7 @@ export default function Page() {
       <div>
         <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
           <div className='max-w-lg jason-content'>
-            <h1 className='leading-[1] font-long uppercase text-8xl mb-20'>
+            <h1 className='leading-[1] font-long uppercase text-6xl lg:text-8xl mb-20'>
               Creative Studio<span className='text-lg text-gray-200'>(AI)</span>
             </h1>
             <h2 className=' leading-[1] md:text-5xl text-3xl mb-7 md:pe-20 pe-10'>
@@ -599,7 +599,7 @@ export default function Page() {
 
       <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 pt-40 mt-60 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg lucia-content pl-10'>
-          <h1 className='leading-[1] font-long uppercase text-8xl mb-20'>
+          <h1 className='leading-[1] font-long uppercase text-6xl lg:text-8xl mb-20'>
             Visual Design<span className='text-lg text-gray-200'>+(AI)</span>
           </h1>
           <h2 className=' leading-[1] md:text-5xl text-3xl mb-7 md:pe-20 pe-10'>

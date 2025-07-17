@@ -145,14 +145,14 @@ export default async function ServicesLanding() {
           <div className='flex flex-col md:flex-row w-full'>
             <div className='relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
               <Image
-                src='/photos/aiservices/aiservice2.webp'
+                src='/photos/aiservices/ai1.webp'
                 alt='Creative Direction 1'
                 fill
                 className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover:opacity-0'
                 sizes='(max-width: 768px) 100vw, 50vw'
               />
               <Image
-                src='/photos/aiservices/aiservice1.webp'
+                src='/photos/aiservices/aiservice2.webp'
                 alt='Creative Direction 2'
                 fill
                 className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover:opacity-100'
