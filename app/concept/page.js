@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { getCloudinaryUrl } from '@/lib/cloudinary';
 import { getPaginatedImages } from '@/lib/image-data';
 
@@ -21,13 +21,28 @@ export default function Page() {
   const headlineRef = useRef();
   const maskRef = useRef();
 
+  // Mobile detection state
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if screen is mobile (<500px)
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 500);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Helper function to fetch images for InfiniteScroll component
   const fetchImages = async (page, limit) => {
     // Simulate network delay for smoother loading experience
     await new Promise((resolve) => setTimeout(resolve, 800));
 
-    // Get paginated image data
-    const images = getPaginatedImages(page, limit);
+    // Get paginated image data based on screen size
+    const images = getPaginatedImages(page, limit, isMobile);
 
     // Transform the data to include Cloudinary URLs
     return images.map((image) => ({
@@ -663,11 +678,19 @@ export default function Page() {
         fetchImages={fetchImages}
         imagesPerPage={12}
         gridId='ai-studio-grid'
-        gridConfig={{
-          columns: 'repeat(8, 12.5vw)',
-          rows: '12.5vw',
-          width: '100vw',
-        }}
+        gridConfig={
+          isMobile
+            ? {
+                columns: 'repeat(4, 22vw)',
+                rows: '22vw',
+                width: '100vw',
+              }
+            : {
+                columns: 'repeat(8, 12.5vw)',
+                rows: '12.5vw',
+                width: '100vw',
+              }
+        }
         enableVelocitySkew={true}
         enableParallax={true}
       />
