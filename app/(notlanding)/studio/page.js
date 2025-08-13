@@ -89,9 +89,9 @@ export default async function Page() {
             Start your project
           </a>
         </div>
-        <div className='hidden md:block flex-1'>
+        <div className='flex-1 pt-14 md:pt-0'>
           <Image
-            src='/photos/sofia_moraes_portrait.jpg'
+            src='/photos/sm_photo.jpg'
             alt='Sofia Moraes Portrait'
             width={600}
             height={600}
