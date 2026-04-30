@@ -46,26 +46,29 @@ export default async function WebDesignPage() {
       {/* Mobile Layout - Single Column */}
       <div className='md:hidden'>
         <div className='p-8 pt-24 pb-12 text-prim-grey'>
-          <h1 className='text-4xl font-bold mb-4'>Essential Web/App Design</h1>
+          <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
 
           <p className='text-lg font-semibold mb-6'>
-            Starting from 250 € / per Page
+            Type: One-time project. Delivery: 2 weeks
           </p>
 
           <p className='text-lg mb-6'>
-            A focused visual start: clarity, aesthetic consistency, and
-            easy-to-launch structure + a simple, elevated website that captures
-            your vibe from the first click.
+            You have a brand with a soul. It just doesn't look like it yet. The
+            Seed Kit is a complete visual brand system built from a single
+            creative session. I extract the essence — what your brand feels,
+            believes, stands for — and translate it into a full visual language:
+            identity, colour, typography, imagery direction, and a content seed
+            library you can use for months.
           </p>
 
           <div className='mb-6'>
-            <p className='font-semibold mb-3'>♦ Includes:</p>
+            <p className='font-semibold mb-3'>♦ What you receive:</p>
             <ul className='text-base space-y-1 ml-4'>
-              <li>• 1x Brand Discovery Call</li>
-              <li>• Color Palette + Font Pairing</li>
-              <li>• Page Website Design in Figma (desktop & mobile)</li>
-              <li>• Web Asset Pack (.png/.svg export, favicons, SEO image)</li>
-              <li>• 1x Video walkthrough</li>
+              <li>• Visual identity system (logo, colour, type, texture)</li>
+              <li>• Imagery direction + 30 AI-generated brand visuals</li>
+              <li>• Content seed library (30+ assets ready to deploy)</li>
+              <li>• Brand identity guidelines</li>
+              <li>• PDF brand guide</li>
             </ul>
           </div>
 
@@ -166,30 +169,29 @@ export default async function WebDesignPage() {
         {/* Right Side - Sticky Content */}
         <div className='w-1/2 sticky top-0 h-screen mb-24'>
           <div className='p-8 pt-24 text-prim-grey'>
-            <h1 className='text-4xl font-bold mb-4'>
-              Essential Web/App Design
-            </h1>
+            <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
 
             <p className='text-lg font-semibold mb-6'>
-              Starting from 250 € / per Page
+              Type: One-time project. Delivery: 2 weeks
             </p>
 
             <p className='text-lg mb-6'>
-              A focused visual start: clarity, aesthetic consistency, and
-              easy-to-launch structure + a simple, elevated website that
-              captures your vibe from the first click.
+              You have a brand with a soul. It just doesn't look like it yet.
+              The Seed Kit is a complete visual brand system built from a single
+              creative session. I extract the essence — what your brand feels,
+              believes, stands for — and translate it into a full visual
+              language: identity, colour, typography, imagery direction, and a
+              content seed library you can use for months.
             </p>
 
             <div className='mb-6'>
-              <p className='font-semibold mb-3'>♦ Includes:</p>
+              <p className='font-semibold mb-3'>♦ What you receive:</p>
               <ul className='text-base space-y-1 ml-4'>
-                <li>• 1x Brand Discovery Call</li>
-                <li>• Color Palette + Font Pairing</li>
-                <li>• Page Website Design in Figma (desktop & mobile)</li>
-                <li>
-                  • Web Asset Pack (.png/.svg export, favicons, SEO image)
-                </li>
-                <li>• 1x Video walkthrough</li>
+                <li>• Visual identity system (logo, colour, type, texture)</li>
+                <li>• Imagery direction + 30 AI-generated brand visuals</li>
+                <li>• Content seed library (30+ assets ready to deploy)</li>
+                <li>• Brand identity guidelines</li>
+                <li>• PDF brand guide</li>
               </ul>
             </div>
 

@@ -29,17 +29,7 @@ export default function NavigationNl() {
                 Work,
               </Link>
             </li>
-            <li>
-              <Link
-                href='/services'
-                className={`select-auto text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
-                ${isActive('/services') ? 'opacity-30' : ''}
-                
-                `}
-              >
-                Services,
-              </Link>
-            </li>
+
             <li>
               <Link
                 href='/studio'

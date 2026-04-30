@@ -31,17 +31,7 @@ export default function Navigation({ isBlack }) {
                 Work,
               </Link>
             </li>
-            <li>
-              <Link
-                href='/services'
-                className={`select-auto text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
-                ${isActive('/studio') ? 'opacity-30' : ''}
-                ${textColor}
-                `}
-              >
-                Services,
-              </Link>
-            </li>
+
             <li>
               <Link
                 href='/studio'

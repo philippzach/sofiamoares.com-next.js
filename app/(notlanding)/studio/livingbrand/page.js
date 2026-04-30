@@ -33,21 +33,17 @@ export async function generateMetadata() {
   return toNextMetadata([...site.favicon, ...blog.seo]);
 }
 
-export default async function BrandIdentityPage() {
+export default async function CreativeDirectionPage() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
 
   const images = [
-    'logo1.webp',
-    'logo2.webp',
-    'logo3.webp',
-    'logo4.webp',
-    'logo5.webp',
-    'logo6.webp',
-    'logo7.webp',
-    'logo8.webp',
-    'logo9.webp',
-    'logo10.webp',
+    'cd1.jpg',
+    'cd2.jpg',
+    'cd3.jpg',
+    'cd4.jpg',
+    'cd5.jpg',
+    'cd6.jpg',
   ];
 
   return (
@@ -55,41 +51,43 @@ export default async function BrandIdentityPage() {
       {/* Mobile Layout - Single Column */}
       <div className='md:hidden'>
         <div className='p-8 pt-24 pb-12 text-prim-grey'>
-          <h1 className='text-4xl font-bold mb-4'>Brand Identity</h1>
+          <h1 className='text-4xl font-bold mb-4'>The Living Brand</h1>
 
-          <p className='text-lg font-semibold mb-6'>Starting from 750 €</p>
+          <p className='text-lg font-semibold mb-6'>
+            Type: Monthly retainer. Commitment: 3 months minimum
+          </p>
 
           <p className='text-lg mb-6'>
-            A refined and minimal brand foundation — perfect for new creatives
-            who want to start aligned without the extras.
+            One creative session. Up to 12 months of content. Once a month, we
+            meet. I extract new seeds — a story, a texture, a feeling. I
+            generate a full batch of campaign-quality visuals and creative
+            direction your team can deploy across every channel. Your brand
+            grows continuously. You don't burn out.
           </p>
 
           <div className='mb-6'>
-            <p className='font-semibold mb-3'>♦ Includes:</p>
+            <p className='font-semibold mb-3'>♦ What you receive each month:</p>
             <ul className='text-base space-y-1 ml-4'>
-              <li>• 1x Brand Discovery Call</li>
-              <li>• Logo Suite (primary, alt, favicon)</li>
-              <li>• Color Palette + Font Pairing</li>
-              <li>• 1x Moodboard (directional visual language)</li>
-              <li>• Mini Brand Sheet PDF (logos, colors, fonts, usage)</li>
-              <li>• Asset Export (.png, .svg, .webp)</li>
-              <li>• Delivery via Notion Brand Vault</li>
+              <li>• 60–80 campaign-quality visual assets</li>
+              <li>• Monthly campaign direction</li>
+              <li>• Social content grid (captions + imagery)</li>
+              <li>• Story and reel creative briefs</li>
+              <li>• Creative evolution report</li>
             </ul>
           </div>
 
           <div className='mb-6'>
             <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
             <p className='text-base'>
-              New entrepreneurs, products, companies, or hotels and retreats
-              seeking an emotionally aligned, timeless brand foundation.
+              Established brands, companies or creative founders launching a new
+              phase or offering — with depth, poetry, and presence.
             </p>
           </div>
 
           <div className='mb-8'>
             <p className='font-semibold mb-2'>♦ Optional Add-ons:</p>
             <p className='text-base'>
-              Naming, brand story copy, AI-enhanced brand art, creative
-              direction for launch
+              Product Photography, Video, AI Enhanced Brand Art
             </p>
           </div>
 
@@ -97,7 +95,7 @@ export default async function BrandIdentityPage() {
             href='/studio'
             className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
           >
-            Let&apos;s start now ↵
+            Text me now ↵
           </Link>
           <div className='mb-8'>
             <p className='text-base mb-4'>
@@ -112,8 +110,8 @@ export default async function BrandIdentityPage() {
           {images.map((image, index) => (
             <div key={index} className='relative aspect-square'>
               <Image
-                src={`/photos/brandidentity/${image}`}
-                alt={`Brand Identity Example ${index + 1}`}
+                src={`/photos/creativedirection/${image}`}
+                alt={`Creative Direction Example ${index + 1}`}
                 fill
                 className='object-cover rounded-lg'
                 sizes='100vw'
@@ -131,8 +129,8 @@ export default async function BrandIdentityPage() {
             {images.map((image, index) => (
               <div key={index} className='relative aspect-square'>
                 <Image
-                  src={`/photos/brandidentity/${image}`}
-                  alt={`Brand Identity Example ${index + 1}`}
+                  src={`/photos/creativedirection/${image}`}
+                  alt={`Creative Direction Example ${index + 1}`}
                   fill
                   className='object-cover rounded-lg'
                   sizes='50vw'
@@ -145,48 +143,53 @@ export default async function BrandIdentityPage() {
         {/* Right Side - Sticky Content */}
         <div className='w-1/2 sticky top-0 h-screen mb-24'>
           <div className='p-8 pt-24 text-prim-grey'>
-            <h1 className='text-4xl font-bold mb-4'>Brand Identity</h1>
+            <h1 className='text-4xl font-bold mb-4'>The Living Brand</h1>
 
-            <p className='text-lg font-semibold mb-6'>Starting from 750 €</p>
+            <p className='text-lg font-semibold mb-6'>
+              Type: Monthly retainer. Commitment: 3 months minimum
+            </p>
 
             <p className='text-lg mb-6'>
-              A refined and minimal brand foundation — perfect for new creatives
-              who want to start aligned without the extras.
+              One creative session. Up to 12 months of content. Once a month, we
+              meet. I extract new seeds — a story, a texture, a feeling. I
+              generate a full batch of campaign-quality visuals and creative
+              direction your team can deploy across every channel. Your brand
+              grows continuously. You don't burn out.
             </p>
 
             <div className='mb-6'>
-              <p className='font-semibold mb-3'>♦ Includes:</p>
+              <p className='font-semibold mb-3'>
+                ♦ What you receive each month:
+              </p>
               <ul className='text-base space-y-1 ml-4'>
-                <li>• 1x Brand Discovery Call</li>
-                <li>• Logo Suite (primary, alt, favicon)</li>
-                <li>• Color Palette + Font Pairing</li>
-                <li>• 1x Moodboard (directional visual language)</li>
-                <li>• Mini Brand Sheet PDF (logos, colors, fonts, usage)</li>
-                <li>• Asset Export (.png, .svg, .webp)</li>
-                <li>• Delivery via Notion Brand Vault</li>
+                <li>• 60–80 campaign-quality visual assets</li>
+                <li>• Monthly campaign direction</li>
+                <li>• Social content grid (captions + imagery)</li>
+                <li>• Story and reel creative briefs</li>
+                <li>• Creative evolution report</li>
               </ul>
             </div>
 
             <div className='mb-6'>
               <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
               <p className='text-base'>
-                New entrepreneurs, products, companies, or hotels and retreats
-                seeking an emotionally aligned, timeless brand foundation.
+                Established brands, companies or creative founders launching a
+                new phase or offering — with depth, poetry, and presence.
               </p>
             </div>
 
             <div className='mb-8'>
               <p className='font-semibold mb-2'>♦ Optional Add-ons:</p>
               <p className='text-base'>
-                Naming, brand story copy, AI-enhanced brand art, creative
-                direction for launch
+                Product Photography, Video, AI Enhanced Brand Art
               </p>
             </div>
+
             <Link
               href='/studio'
               className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
             >
-              Let&apos;s start now ↵
+              Text me now ↵
             </Link>
             <div className='mb-8'>
               <p className='text-base mb-4'>

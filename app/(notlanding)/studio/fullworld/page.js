@@ -56,42 +56,27 @@ export default async function AICreativePage() {
       {/* Mobile Layout - Single Column */}
       <div className='md:hidden'>
         <div className='p-8 pt-24 pb-12 text-prim-grey'>
-          <h1 className='text-4xl font-bold mb-4'>
-            Gen-AI Creative Technologist
-          </h1>
+          <h1 className='text-4xl font-bold mb-4'>The Full World</h1>
 
-          <p className='text-lg font-semibold mb-6'>Starting from 750 €</p>
-
-          <p className='text-lg mb-6'>
-            Future-ready visuals, generated through advanced AI workflows and
-            directed by human intuition.
+          <p className='text-lg font-semibold mb-6'>
+            Type: Complete creative direction. Scope: By proposal
           </p>
 
-          <div className='mb-6'>
-            <p className='font-semibold mb-3'>♦ Includes:</p>
-            <ul className='text-base space-y-1 ml-4'>
-              <li>• 1x Discovery Call & Creative Brief</li>
-              <li>• Concept Ideation & Prompt Engineering</li>
-              <li>• Generative Imagery / Animation suite (10+ assets)</li>
-              <li>• AI Style & Asset Library (colors, textures, references)</li>
-              <li>• Usage Rights & Delivery (hi-res .png / .webp / .mp4)</li>
-              <li>• Personalized Workflow Walkthrough video</li>
-            </ul>
-          </div>
+          <p className='text-lg mb-6'>
+            For brands ready to build something that lasts. This is the full
+            engagement — brand strategy, visual world construction, content
+            system, and ongoing creative direction. We build everything from the
+            ground up, or we rebuild what exists into something coherent and
+            alive. I become your creative director, not your vendor. Every Full
+            World engagement starts with a discovery call and a tailored
+            proposal.
+          </p>
 
           <div className='mb-6'>
             <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
             <p className='text-base'>
               Visionary brands, marketing teams, and artists ready to explore
               the bleeding edge of generative design and storytelling.
-            </p>
-          </div>
-
-          <div className='mb-8'>
-            <p className='font-semibold mb-2'>♦ Optional Add-ons:</p>
-            <p className='text-base'>
-              Motion Graphics, Web Integration, Brand Identity Upgrade,
-              Copywriting
             </p>
           </div>
 
@@ -147,44 +132,27 @@ export default async function AICreativePage() {
         {/* Right Side - Sticky Content */}
         <div className='w-1/2 sticky top-0 h-screen mb-24'>
           <div className='p-8 pt-24 text-prim-grey'>
-            <h1 className='text-4xl font-bold mb-4'>
-              Gen-AI Creative Technologist
-            </h1>
+            <h1 className='text-4xl font-bold mb-4'>The Full World</h1>
 
-            <p className='text-lg font-semibold mb-6'>Starting from 750 €</p>
-
-            <p className='text-lg mb-6'>
-              Future-ready visuals, generated through advanced AI workflows and
-              directed by human intuition.
+            <p className='text-lg font-semibold mb-6'>
+              Type: Complete creative direction. Scope: By proposal
             </p>
 
-            <div className='mb-6'>
-              <p className='font-semibold mb-3'>♦ Includes:</p>
-              <ul className='text-base space-y-1 ml-4'>
-                <li>• 1x Discovery Call & Creative Brief</li>
-                <li>• Concept Ideation & Prompt Engineering</li>
-                <li>• Generative Imagery / Animation suite (10+ assets)</li>
-                <li>
-                  • AI Style & Asset Library (colors, textures, references)
-                </li>
-                <li>• Usage Rights & Delivery (hi-res .png / .webp / .mp4)</li>
-                <li>• Personalized Workflow Walkthrough video</li>
-              </ul>
-            </div>
+            <p className='text-lg mb-6'>
+              For brands ready to build something that lasts. This is the full
+              engagement — brand strategy, visual world construction, content
+              system, and ongoing creative direction. We build everything from
+              the ground up, or we rebuild what exists into something coherent
+              and alive. I become your creative director, not your vendor. Every
+              Full World engagement starts with a discovery call and a tailored
+              proposal.
+            </p>
 
             <div className='mb-6'>
               <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
               <p className='text-base'>
                 Visionary brands, marketing teams, and artists ready to explore
                 the bleeding edge of generative design and storytelling.
-              </p>
-            </div>
-
-            <div className='mb-8'>
-              <p className='font-semibold mb-2'>♦ Optional Add-ons:</p>
-              <p className='text-base'>
-                Motion Graphics, Web Integration, Brand Identity Upgrade,
-                Copywriting
               </p>
             </div>
 

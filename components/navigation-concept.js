@@ -76,7 +76,7 @@ export default function NavigationConcept() {
           ease: 'Circ.easeIn',
         },
         0.1,
-        'exit'
+        'exit',
       );
 
       // Opacity animation for exit
@@ -91,7 +91,7 @@ export default function NavigationConcept() {
           ease: 'Power1.easeIn',
         },
         0.1,
-        'exit'
+        'exit',
       );
 
       // Store the timeline on the item for cleanup
@@ -126,7 +126,7 @@ export default function NavigationConcept() {
         yPercent: 0,
         opacity: 1,
         ease: 'Circ.easeOut',
-      }
+      },
     );
   };
 
@@ -197,15 +197,7 @@ export default function NavigationConcept() {
                 Work,
               </Link>
             </li>
-            <li className='overflow-hidden'>
-              <Link
-                href='/services'
-                className={`select-auto nav-hide-item text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
-                ${isActive('/services') ? 'opacity-30' : ''}`}
-              >
-                Services,
-              </Link>
-            </li>
+
             <li className='overflow-hidden'>
               <Link
                 href='/studio'
