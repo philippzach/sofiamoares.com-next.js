@@ -230,7 +230,7 @@ export default async function Page() {
                 </h2>
                 <p className='text-gray-500'>
                   Complete creative direction from the ground up. Strategy,
-                  identity, content system, and ongoing direction. I don't just
+                  identity, content system, and ongoing direction. I don&apos;t just
                   execute, I lead the entire vision.
                 </p>
               </div>

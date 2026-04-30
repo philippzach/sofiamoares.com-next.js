@@ -62,7 +62,7 @@ export default async function CreativeDirectionPage() {
             meet. I extract new seeds — a story, a texture, a feeling. I
             generate a full batch of campaign-quality visuals and creative
             direction your team can deploy across every channel. Your brand
-            grows continuously. You don't burn out.
+            grows continuously. You don&apos;t burn out.
           </p>
 
           <div className='mb-6'>
@@ -154,7 +154,7 @@ export default async function CreativeDirectionPage() {
               meet. I extract new seeds — a story, a texture, a feeling. I
               generate a full batch of campaign-quality visuals and creative
               direction your team can deploy across every channel. Your brand
-              grows continuously. You don't burn out.
+              grows continuously. You don&apos;t burn out.
             </p>
 
             <div className='mb-6'>
