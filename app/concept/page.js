@@ -140,16 +140,16 @@ export default function Page() {
       <div>
         <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
           <div className='max-w-lg jason-content'>
-            <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-20'>
+            <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
               The world you carry inside already has a shape.
             </h1>
-            <h2 className=' leading-[1] md:text-xl text-lg mb-7 md:pe-20 pe-10 font-light'>
+            <h2 className=' leading-[1] md:text-xl text-lg mb-3 md:pe-20 pe-10 font-light'>
               You have the vision, the mission, the feeling of what it should
               be but not yet the visual language to match it. That&apos;s
               exactly where I begin.
             </h2>
 
-            <div className='bg-yellow h-[90vh] w-auto md:mt-36 mt-20 -translate-x-5'>
+            <div className='bg-yellow h-[90vh] w-auto md:mt-12 mt-6 -translate-x-5'>
               <img
                 src='/photos/aigeneration/photo1.png'
                 className='size-full object-cover [object-position:80%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
@@ -193,17 +193,17 @@ export default function Page() {
 
       <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 pt-40 mt-60 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg lucia-content pl-10'>
-          <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-20'>
+          <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
             I translate the invisible into the visible.
           </h1>
-          <h2 className=' leading-[1] md:text-xl text-lg mb-7 md:pe-20 pe-10 font-light'>
+          <h2 className=' leading-[1] md:text-xl text-lg mb-3 md:pe-20 pe-10 font-light'>
             Visual worlds aren&apos;t created they&apos;re excavated. From your
             obsessions, your contradictions, the vision you&apos;ve been
             carrying all along. What emerges doesn&apos;t feel designed. It
             feels inevitable.
           </h2>
 
-          <div className='bg-yellow h-[90vh] w-auto md:mt-36 mt-20 translate-x-5'>
+          <div className='bg-yellow h-[90vh] w-auto md:mt-12 mt-6 translate-x-5'>
             <img
               src='/photos/aigeneration/photo2.png'
               className='size-full object-cover [object-position:20%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
