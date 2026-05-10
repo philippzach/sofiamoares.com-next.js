@@ -58,16 +58,20 @@ export default function Page() {
   };
 
   useGSAP(() => {
-    // Start loading animation
-    const loadingTl = gsap.timeline({ repeat: -1, yoyo: true });
-    loadingTl.to('#blackhole', {
-      scale: 1.05,
-      duration: 2,
-      ease: 'power2.inOut',
-    });
+    const isDesktop = window.innerWidth >= 1024;
 
-    // Store timeline reference to kill it later
-    window.loadingAnimation = loadingTl;
+    if (isDesktop) {
+      // Start loading animation
+      const loadingTl = gsap.timeline({ repeat: -1, yoyo: true });
+      loadingTl.to('#blackhole', {
+        scale: 1.05,
+        duration: 2,
+        ease: 'power2.inOut',
+      });
+
+      // Store timeline reference to kill it later
+      window.loadingAnimation = loadingTl;
+    }
 
     //gsap.set('.first-vd-wrapper', { marginTop: '-150vh', opacity: 0 });
     gsap.set('.first-vd-wrapper', { opacity: 0 });
@@ -80,78 +84,81 @@ export default function Page() {
       normalizeScroll: true,
       ignoreMobileResize: true,
     });
-    gsap
-      .timeline()
-      .to('.animate1', {
-        opacity: 1,
-        duration: 0.7,
-        ease: 'power2.in',
-      })
 
-      .to('.animate2', {
-        opacity: 1,
-        duration: 0.7,
-        ease: 'power2.in',
-      })
-      .to('.animate4', {
-        opacity: 1,
-        duration: 0.7,
-        ease: 'power2.in',
-      });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '#hero-wrapper',
-          start: 'top top',
-          end: '+=150%',
-          //pin: true,
-          scrub: true,
-          // markers: true,
-        },
-      })
-      .to('.animate1', {
-        opacity: 0,
-        duration: 0.33,
-        ease: 'power2.out4',
-      })
-      .to('.animate4', {
-        opacity: 0,
-        duration: 0.33,
-        ease: 'power2.out4',
-      });
+    if (isDesktop) {
+      gsap
+        .timeline()
+        .to('.animate1', {
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power2.in',
+        })
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '#hero-wrapper',
-          start: 'top top',
-          end: '+=150%',
-          pin: true,
-          scrub: true,
-          // markers: true,
-        },
-      })
+        .to('.animate2', {
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power2.in',
+        })
+        .to('.animate4', {
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power2.in',
+        });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '#hero-wrapper',
+            start: 'top top',
+            end: '+=150%',
+            //pin: true,
+            scrub: true,
+            // markers: true,
+          },
+        })
+        .to('.animate1', {
+          opacity: 0,
+          duration: 0.33,
+          ease: 'power2.out4',
+        })
+        .to('.animate4', {
+          opacity: 0,
+          duration: 0.33,
+          ease: 'power2.out4',
+        });
 
-      .to('#blackhole', {
-        scale: 4.25,
-        z: 0,
-        transformOrigin: 'center center',
-        ease: 'power1.inOut',
-      })
-      .fromTo(
-        '#background',
-        {
-          scale: 1,
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: '#hero-wrapper',
+            start: 'top top',
+            end: '+=150%',
+            pin: true,
+            scrub: true,
+            // markers: true,
+          },
+        })
+
+        .to('#blackhole', {
+          scale: 4.25,
+          z: 0,
           transformOrigin: 'center center',
-          ease: 'power1.out',
-        },
-        {
-          scale: 1,
-          transformOrigin: 'center center',
-          ease: 'power1.out',
-        },
-        '<'
-      );
+          ease: 'power1.inOut',
+        })
+        .fromTo(
+          '#background',
+          {
+            scale: 1,
+            transformOrigin: 'center center',
+            ease: 'power1.out',
+          },
+          {
+            scale: 1,
+            transformOrigin: 'center center',
+            ease: 'power1.out',
+          },
+          '<'
+        );
+    }
 
     const videoTimeline = gsap.timeline({
       scrollTrigger: {
@@ -451,7 +458,7 @@ export default function Page() {
   return (
     <section>
       <NavigationConcept />
-      <div id='hero-wrapper' className='relative w-full z-1'>
+      <div id='hero-wrapper' className='relative w-full z-1 hidden lg:block'>
         <div
           id='content'
           className='relative z-1 overflow-x-hidden h-screen w-full '
