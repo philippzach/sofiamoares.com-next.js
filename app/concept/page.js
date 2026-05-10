@@ -1,15 +1,12 @@
 'use client';
 import NavigationConcept from '@/components/navigation-concept';
-import InfiniteScroll from '@/components/infinite-scroll';
 import Image from 'next/image';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { useRef, useState, useEffect } from 'react';
-import { getCloudinaryUrl } from '@/lib/cloudinary';
-import { getPaginatedImages } from '@/lib/image-data';
+import { useRef } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 
@@ -20,42 +17,6 @@ export default function Page() {
   const secondVideoRef = useRef(null);
   const headlineRef = useRef();
   const maskRef = useRef();
-
-  // Mobile detection state
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check if screen is mobile (<500px)
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 500);
-    };
-
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  // Helper function to fetch images for InfiniteScroll component
-  const fetchImages = async (page, limit) => {
-    // Simulate network delay for smoother loading experience
-    await new Promise((resolve) => setTimeout(resolve, 800));
-
-    // Get paginated image data based on screen size
-    const images = getPaginatedImages(page, limit, isMobile);
-
-    // Transform the data to include Cloudinary URLs
-    return images.map((image) => ({
-      ...image,
-      src: getCloudinaryUrl(image.publicId, {
-        width: 800,
-        height: 800,
-        crop: 'fill',
-        quality: 'auto',
-        format: 'auto',
-      }),
-    }));
-  };
 
   useGSAP(() => {
     const isDesktop = window.innerWidth >= 1024;
@@ -679,28 +640,6 @@ export default function Page() {
           /> */}
         </div>
       </section>
-
-      {/* Infinite Scroll Component */}
-      <InfiniteScroll
-        fetchImages={fetchImages}
-        imagesPerPage={12}
-        gridId='ai-studio-grid'
-        gridConfig={
-          isMobile
-            ? {
-                columns: 'repeat(4, 22vw)',
-                rows: '22vw',
-                width: '100vw',
-              }
-            : {
-                columns: 'repeat(8, 12.5vw)',
-                rows: '12.5vw',
-                width: '100vw',
-              }
-        }
-        enableVelocitySkew={true}
-        enableParallax={true}
-      />
     </section>
   );
 }
