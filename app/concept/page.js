@@ -14,24 +14,10 @@ export default function Page() {
   const smoothWrapper = useRef(null);
   const smoothContent = useRef(null);
   const secondVideoRef = useRef(null);
-  const headlineRef = useRef();
   const maskRef = useRef();
 
   useGSAP(() => {
     const isDesktop = window.innerWidth >= 1024;
-
-    if (isDesktop) {
-      // Start loading animation
-      const loadingTl = gsap.timeline({ repeat: -1, yoyo: true });
-      loadingTl.to('#blackhole', {
-        scale: 1.05,
-        duration: 2,
-        ease: 'power2.inOut',
-      });
-
-      // Store timeline reference to kill it later
-      window.loadingAnimation = loadingTl;
-    }
 
     gsap.set('.second-vd-wrapper', { opacity: 1 });
     gsap.set('.jason', { marginTop: '-40vh' });
@@ -42,81 +28,6 @@ export default function Page() {
       normalizeScroll: true,
       ignoreMobileResize: true,
     });
-
-    if (isDesktop) {
-      gsap
-        .timeline()
-        .to('.animate1', {
-          opacity: 1,
-          duration: 0.7,
-          ease: 'power2.in',
-        })
-
-        .to('.animate2', {
-          opacity: 1,
-          duration: 0.7,
-          ease: 'power2.in',
-        })
-        .to('.animate4', {
-          opacity: 1,
-          duration: 0.7,
-          ease: 'power2.in',
-        });
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: '#hero-wrapper',
-            start: 'top top',
-            end: '+=150%',
-            //pin: true,
-            scrub: true,
-            // markers: true,
-          },
-        })
-        .to('.animate1', {
-          opacity: 0,
-          duration: 0.33,
-          ease: 'power2.out4',
-        })
-        .to('.animate4', {
-          opacity: 0,
-          duration: 0.33,
-          ease: 'power2.out4',
-        });
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: '#hero-wrapper',
-            start: 'top top',
-            end: '+=150%',
-            pin: true,
-            scrub: true,
-            // markers: true,
-          },
-        })
-
-        .to('#blackhole', {
-          scale: 4.25,
-          z: 0,
-          transformOrigin: 'center center',
-          ease: 'power1.inOut',
-        })
-        .fromTo(
-          '#background',
-          {
-            scale: 1,
-            transformOrigin: 'center center',
-            ease: 'power1.out',
-          },
-          {
-            scale: 1,
-            transformOrigin: 'center center',
-            ease: 'power1.out',
-          },
-          '<'
-        );
-    }
 
     //Text Animation
     gsap.to(
@@ -212,41 +123,6 @@ export default function Page() {
     initializeSecondVideoScrub();
   }, []);
 
-  // Handle background image loading and fade in
-  const handleBackgroundLoad = () => {
-    // Kill loading animation
-    if (window.loadingAnimation) {
-      window.loadingAnimation.kill();
-    }
-
-    // Reset blackhole scale, hide loading indicator, and fade in background
-    gsap
-      .timeline()
-      .to('#loading-indicator', {
-        opacity: 0,
-        duration: 0.2,
-        ease: 'power2.out',
-      })
-      .to(
-        '#blackhole',
-        {
-          scale: 1,
-          duration: 0.5,
-          ease: 'power2.out',
-        },
-        '-=0.01'
-      )
-      .to(
-        '#background',
-        {
-          opacity: 1,
-          duration: 0.3,
-          ease: 'power4.out',
-        },
-        '-=0.02'
-      );
-  };
-
   const handleCtaClick = (e) => {
     e.preventDefault();
     window.location.href = '/studio';
@@ -259,83 +135,6 @@ export default function Page() {
   return (
     <section>
       <NavigationConcept />
-      <div id='hero-wrapper' className='relative w-full z-1 hidden lg:block'>
-        <div
-          id='content'
-          className='relative z-1 overflow-x-hidden h-screen w-full '
-        >
-          <main className='flex flex-col items-center  pb-10 px-2 md:px-0 max-w-5xl mx-auto w-full relative'>
-            {/* Pinned Headline Container */}
-            <div className='headline-container w-full relative z-10'>
-              <div ref={headlineRef} className='relative'>
-                <div className='animate1 opacity-0 text-center mb-6 text-lg md:text-xl font-secondary text-white/80 mt-32'>
-                  Welcome to my inner studio
-                </div>
-                {/* <h1 className='animate2 opacity-0 text-center font-bold text-[2.5rem] md:text-[4.5rem] lg:text-[5rem] leading-[1.05] tracking-tight mb-4 font-sans'>
-                  IMAGINING
-                  <br />
-                  NEW REALITIES
-                </h1> */}
-              </div>
-              <div className=' z10 relative m-auto flex flex-col items-center w-full max-w-2xl pt-[550px]'>
-                <div
-                  id='textforline'
-                  className='animate4 opacity-0 text-center text-white text-lg md:text-2xl font-light mb-8'
-                >
-                  A dedicated space where concept design, visual storytelling
-                  and technology merge to express essence, feelings and
-                  dimensions.
-                </div>
-              </div>
-            </div>
-          </main>
-          {/* Second Image */}
-          <Image
-            src='/photos/aigeneration/palm1.webp'
-            alt='AI Generation Background'
-            id='background'
-            fill
-            priority
-            className='object-cover object-center scale-100 opacity-0'
-            quality={100}
-            onLoad={handleBackgroundLoad}
-          />
-        </div>
-        <div
-          id='image-container'
-          className='w-full h-screen absolute top-0 left-0 right-0 z-[2] perspective-[500px] overflow-hidden'
-        >
-          <Image
-            src='/photos/aigeneration/blackhole-bg.webp'
-            className='w-full h-full object-cover object-center'
-            id='blackhole'
-            alt='Black Hole'
-            width={1512}
-            height={982}
-            priority
-            quality={100}
-          />
-
-          {/* Loading indicator */}
-          <div
-            id='loading-indicator'
-            className='absolute bottom-20 left-1/2 transform -translate-x-1/2 text-white text-lg opacity-70'
-          >
-            <div className='flex items-center gap-2'>
-              <div className='w-2 h-2 bg-white rounded-full animate-pulse'></div>
-              <div
-                className='w-2 h-2 bg-white rounded-full animate-pulse'
-                style={{ animationDelay: '0.2s' }}
-              ></div>
-              <div
-                className='w-2 h-2 bg-white rounded-full animate-pulse'
-                style={{ animationDelay: '0.4s' }}
-              ></div>
-              <span className='text-gray-200 ml-2'>Loading Experience</span>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Palm Tree */}
       <div className='relative h-screen w-full'>
         <Image
