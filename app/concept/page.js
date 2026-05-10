@@ -156,18 +156,6 @@ export default function Page() {
       return;
     }
 
-    // Second Video Timeline (kept for currentTime scrubbing)
-    const secondVideoTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#second-video-wrapper',
-        start: '-=90% top ',
-        end: '+=200%',
-        scrub: 1,
-        //pin: true,
-        //markers: true,
-      },
-    });
-
     // Fade the second video out as lucia-life enters
     gsap
       .timeline({
@@ -181,80 +169,47 @@ export default function Page() {
       })
       .to('.second-vd', { opacity: 0, duration: 0.5, ease: 'power1.Out' });
 
-    // Handle second video animation
-    const handleSecondVideoAnimation = () => {
-      if (
-        secondVideoRef.current &&
-        secondVideoRef.current.duration &&
-        !isNaN(secondVideoRef.current.duration)
-      ) {
-        console.log('Second Video duration:', secondVideoRef.current.duration);
+    // Scrub the second video's currentTime to scroll position.
+    // Set up only after metadata is known so the trigger maps to a real duration.
+    const initializeSecondVideoScrub = () => {
+      const video = secondVideoRef.current;
+      if (!video) return;
 
-        const videoElement = secondVideoRef.current;
-        const videoDuration = videoElement.duration;
+      const setupScrub = () => {
+        if (!video.duration || isNaN(video.duration)) return;
 
-        secondVideoTimeline.to(
-          {},
-          {
-            duration: 3.966667,
-            ease: 'none',
-            onUpdate: function () {
-              if (videoElement && videoDuration) {
-                const progress = this.progress();
-                const targetTime = Math.min(
-                  progress * videoDuration,
-                  videoDuration - 0.1
-                );
-
-                try {
-                  if (videoElement.readyState >= 2) {
-                    videoElement.currentTime = targetTime;
-                  }
-                } catch (error) {
-                  console.warn('Second video seek error:', error);
-                }
-              }
-            },
+        const proxy = { time: 0 };
+        gsap.to(proxy, {
+          time: video.duration,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#second-video-wrapper',
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1,
           },
-          '<'
-        );
+          onUpdate: () => {
+            if (video.readyState < 2) return;
+            try {
+              video.currentTime = Math.min(proxy.time, video.duration - 0.05);
+            } catch (e) {
+              // seeking can throw before buffering catches up; safe to ignore
+            }
+          },
+        });
+
+        ScrollTrigger.refresh();
+      };
+
+      video.load();
+      if (video.readyState >= 1) {
+        setupScrub();
+      } else {
+        video.addEventListener('loadedmetadata', setupScrub, { once: true });
       }
     };
 
-    // Initialize second video
-    const initializeSecondVideo = () => {
-      if (secondVideoRef.current) {
-        const video = secondVideoRef.current;
-
-        video.load();
-
-        const checkVideoReady = () => {
-          if (video.readyState >= 3) {
-            console.log('Second video ready for scrubbing');
-            handleSecondVideoAnimation();
-          } else if (video.readyState >= 1) {
-            console.log(
-              'Second video metadata loaded, waiting for more data...'
-            );
-            video.currentTime = 0;
-            setTimeout(checkVideoReady, 100);
-          }
-        };
-
-        if (video.readyState >= 3) {
-          handleSecondVideoAnimation();
-        } else {
-          video.addEventListener('loadedmetadata', checkVideoReady, {
-            once: true,
-          });
-          video.addEventListener('canplaythrough', handleSecondVideoAnimation, {
-            once: true,
-          });
-        }
-      }
-    };
-
-    initializeSecondVideo();
+    initializeSecondVideoScrub();
   }, []);
 
   // Handle background image loading and fade in
