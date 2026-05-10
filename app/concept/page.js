@@ -121,6 +121,19 @@ export default function Page() {
         );
     }
 
+    // One-shot fade-in when the first video enters view
+    gsap.to('.first-vd-wrapper', {
+      opacity: 1,
+      duration: 0.8,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '#video-wrapper',
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+      },
+    });
+
+    // Scrubbed timeline kept for video currentTime scrubbing (see handleVideoAnimation)
     const videoTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '#video-wrapper',
@@ -132,13 +145,19 @@ export default function Page() {
       },
     });
 
-    videoTimeline.to('.first-vd-wrapper', {
+    // One-shot fade-in when the second video enters view
+    gsap.to('.second-vd-wrapper', {
       opacity: 1,
-      duration: 0.5, // Much shorter for quicker fade-in
-      ease: 'power4.out',
+      duration: 0.8,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '#second-video-wrapper',
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+      },
     });
 
-    // Second Video Timeline
+    // Second Video Timeline (kept for currentTime scrubbing)
     const secondVideoTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '#second-video-wrapper',
@@ -148,12 +167,6 @@ export default function Page() {
         //pin: true,
         //markers: true,
       },
-    });
-
-    secondVideoTimeline.to('.second-vd-wrapper', {
-      opacity: 1,
-      duration: 0.5,
-      ease: 'power4.out',
     });
 
     //Text Animation
