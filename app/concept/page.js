@@ -140,7 +140,7 @@ export default function Page() {
       <div>
         <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
           <div className='max-w-lg jason-content'>
-            <h1 className='leading-[1] font-long uppercase text-6xl lg:text-8xl mb-20'>
+            <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-20'>
               The world you carry inside already has a shape.
             </h1>
             <h2 className=' leading-[1] md:text-5xl text-3xl mb-7 md:pe-20 pe-10'>
@@ -193,7 +193,7 @@ export default function Page() {
 
       <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 pt-40 mt-60 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg lucia-content pl-10'>
-          <h1 className='leading-[1] font-long uppercase text-6xl lg:text-8xl mb-20'>
+          <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-20'>
             I translate the invisible into the visible.
           </h1>
           <h2 className=' leading-[1] md:text-5xl text-3xl mb-7 md:pe-20 pe-10'>
