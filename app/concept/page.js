@@ -138,7 +138,7 @@ export default function Page() {
         />
       </div>
       <div>
-        <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
+        <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-12 lg:py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
           <div className='max-w-lg jason-content'>
             <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
               The world you carry inside already has a shape.
@@ -157,7 +157,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className='space-y-5 mt-96 img-box'>
+          <div className='space-y-5 mt-12 lg:mt-96 img-box'>
             <div className='bg-yellow lg:h-[80vh] w-auto -translate-x-5'>
               <img
                 src='/photos/aigeneration/photo8.png'
@@ -191,7 +191,7 @@ export default function Page() {
         </section>
       </div>
 
-      <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 pt-40 mt-60 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
+      <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 pt-12 lg:pt-40 mt-60 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg lucia-content pl-10'>
           <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
             I translate the invisible into the visible.
@@ -211,7 +211,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className='space-y-5 mt-96 img-box'>
+        <div className='space-y-5 mt-12 lg:mt-96 img-box'>
           <div className='bg-yellow lg:h-[80vh] w-auto translate-x-5'>
             <img
               src='/photos/aigeneration/photo4.png'
@@ -227,7 +227,7 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className='calltoaction pb-14 pt-14 flex justify-center my-60 relative z-20'>
+        <div className='calltoaction pb-14 pt-14 flex justify-center my-16 lg:my-60 relative z-20'>
           <Link
             href='/studio'
             className='text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
