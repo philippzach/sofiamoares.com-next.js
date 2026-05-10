@@ -143,7 +143,7 @@ export default function Page() {
             <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
               The world you carry inside already has a shape.
             </h1>
-            <h2 className=' leading-[1] md:text-xl text-lg mb-3 md:pe-20 pe-10 font-light'>
+            <h2 className=' leading-[1] md:text-2xl text-lg mb-3 md:pe-20 pe-10 font-light'>
               You have the vision, the mission, the feeling of what it should
               be but not yet the visual language to match it. That&apos;s
               exactly where I begin.
@@ -196,7 +196,7 @@ export default function Page() {
           <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
             I translate the invisible into the visible.
           </h1>
-          <h2 className=' leading-[1] md:text-xl text-lg mb-3 md:pe-20 pe-10 font-light'>
+          <h2 className=' leading-[1] md:text-2xl text-lg mb-3 md:pe-20 pe-10 font-light'>
             Visual worlds aren&apos;t created they&apos;re excavated. From your
             obsessions, your contradictions, the vision you&apos;ve been
             carrying all along. What emerges doesn&apos;t feel designed. It
