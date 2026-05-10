@@ -118,18 +118,6 @@ export default function Page() {
         );
     }
 
-    // Second Video Timeline (kept for currentTime scrubbing)
-    const secondVideoTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#second-video-wrapper',
-        start: '-=90% top ',
-        end: '+=200%',
-        scrub: 1,
-        //pin: true,
-        //markers: true,
-      },
-    });
-
     //Text Animation
     gsap.to(
       '.jason .img-box',
@@ -148,18 +136,6 @@ export default function Page() {
     );
 
     //Lucia Animation
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '.lucia-life',
-          start: 'top 45%',
-          end: '80% center',
-          scrub: 2,
-          //markers: true,
-        },
-      })
-      .to('.second-vd', { opacity: 0, duration: 0.5, ease: 'power1.Out' });
-
     gsap.to(
       '.lucia-life .img-box',
       {
@@ -175,6 +151,35 @@ export default function Page() {
       },
       '<'
     );
+
+    if (!isDesktop) {
+      return;
+    }
+
+    // Second Video Timeline (kept for currentTime scrubbing)
+    const secondVideoTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#second-video-wrapper',
+        start: '-=90% top ',
+        end: '+=200%',
+        scrub: 1,
+        //pin: true,
+        //markers: true,
+      },
+    });
+
+    // Fade the second video out as lucia-life enters
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: '.lucia-life',
+          start: 'top 45%',
+          end: '80% center',
+          scrub: 2,
+          //markers: true,
+        },
+      })
+      .to('.second-vd', { opacity: 0, duration: 0.5, ease: 'power1.Out' });
 
     // Handle second video animation
     const handleSecondVideoAnimation = () => {
@@ -428,7 +433,7 @@ export default function Page() {
       </div>
 
       {/* Second Video Section */}
-      <div id='second-video-wrapper' className='relative'>
+      <div id='second-video-wrapper' className='relative hidden lg:block'>
         <section className='second-vd-wrapper relative'>
           <div className='h-screen overflow-hidden'>
             <video
