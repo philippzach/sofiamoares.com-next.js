@@ -123,15 +123,6 @@ export default function Page() {
     initializeSecondVideoScrub();
   }, []);
 
-  const handleCtaClick = (e) => {
-    e.preventDefault();
-    window.location.href = '/studio';
-  };
-
-  const handleCtaClickAlt = (e) => {
-    e.preventDefault();
-    window.location.href = '/concept';
-  };
   return (
     <section>
       <NavigationConcept />
@@ -242,25 +233,13 @@ export default function Page() {
         </div>
       </section>
       <section>
-        <div className='calltoaction   pb-14 pt-14 flex justify-center my-60'>
-          <h1 className=' gap-6'>
-            <div onClick={handleCtaClick}>
-              <span className='text-6xl underline hover:opacity-30 duration-150 hover:cursor-pointer text-gray-30000'>
-                {' '}
-                Get in touch ↵
-              </span>
-            </div>
-
-            <div></div>
-          </h1>
-          {/* Vertical line positioned behind everything */}
-          {/*  <div
-            className='relative animate5 vertical-line  left-1/2 w-px bg-gradient-to-b from-white/20 via-white/10 to-transparent pointer-events-none'
-            style={{
-              height: '1500px',
-              zIndex: 0,
-            }}
-          /> */}
+        <div className='calltoaction pb-14 pt-14 flex justify-center my-60 relative z-20'>
+          <Link
+            href='/studio'
+            className='text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
+          >
+            Get in touch ↵
+          </Link>
         </div>
       </section>
     </section>
