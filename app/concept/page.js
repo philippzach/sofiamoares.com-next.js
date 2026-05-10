@@ -141,16 +141,13 @@ export default function Page() {
         <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
           <div className='max-w-lg jason-content'>
             <h1 className='leading-[1] font-long uppercase text-6xl lg:text-8xl mb-20'>
-              Creative Studio<span className='text-lg text-gray-200'>(AI)</span>
+              The world you carry inside already has a shape.
             </h1>
             <h2 className=' leading-[1] md:text-5xl text-3xl mb-7 md:pe-20 pe-10'>
-              Future-ready visuals, generated through advanced AI workflows and
-              directed by human intuition.
+              You have the vision, the mission, the feeling of what it should
+              be but not yet the visual language to match it. That&apos;s
+              exactly where I begin.
             </h2>
-            <p className='text-gray-200 font-light md:text-2xl text-lg md:pe-28 pe-14'>
-              Let&apos;s transform raw ideas into immersive stories that
-              captivate and convert.
-            </p>
 
             <div className='bg-yellow h-[90vh] w-auto md:mt-36 mt-20 -translate-x-5'>
               <img
@@ -197,17 +194,14 @@ export default function Page() {
       <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 pt-40 mt-60 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg lucia-content pl-10'>
           <h1 className='leading-[1] font-long uppercase text-6xl lg:text-8xl mb-20'>
-            Visual Design<span className='text-lg text-gray-200'>+(AI)</span>
+            I translate the invisible into the visible.
           </h1>
           <h2 className=' leading-[1] md:text-5xl text-3xl mb-7 md:pe-20 pe-10'>
-            For visionary brands, marketing teams, and founders ready to explore
-            generative design.
+            Visual worlds aren&apos;t created they&apos;re excavated. From your
+            obsessions, your contradictions, the vision you&apos;ve been
+            carrying all along. What emerges doesn&apos;t feel designed. It
+            feels inevitable.
           </h2>
-          <p className='text-gray-200 font-light md:text-2xl text-lg md:pe-28 pe-14'>
-            Algorithms don’t replace imagination — they amplify it. I fuse
-            intuitive design with generative AI to craft visuals that make
-            audiences look twice.
-          </p>
 
           <div className='bg-yellow h-[90vh] w-auto md:mt-36 mt-20 translate-x-5'>
             <img
