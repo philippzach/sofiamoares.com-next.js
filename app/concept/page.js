@@ -143,11 +143,6 @@ export default function Page() {
             <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
               The world you carry inside already has a shape.
             </h1>
-            <h2 className=' leading-[1] md:text-2xl text-lg mb-3 md:pe-20 pe-10 font-light'>
-              You have the vision, the mission, the feeling of what it should
-              be but not yet the visual language to match it. That&apos;s
-              exactly where I begin.
-            </h2>
 
             <div className='bg-yellow h-[90vh] w-auto md:mt-12 mt-6 -translate-x-5'>
               <img
@@ -155,6 +150,12 @@ export default function Page() {
                 className='size-full object-cover [object-position:80%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
               />
             </div>
+
+            <h2 className=' leading-[1] md:text-2xl text-lg mt-8 md:pe-20 pe-10 font-light'>
+              You have the vision, the mission, the feeling of what it should
+              be but not yet the visual language to match it. That&apos;s
+              exactly where I begin.
+            </h2>
           </div>
 
           <div className='space-y-5 mt-12 lg:mt-96 img-box'>
