@@ -13,7 +13,6 @@ gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 export default function Page() {
   const smoothWrapper = useRef(null);
   const smoothContent = useRef(null);
-  const videoRef = useRef(null);
   const secondVideoRef = useRef(null);
   const headlineRef = useRef();
   const maskRef = useRef();
@@ -34,9 +33,7 @@ export default function Page() {
       window.loadingAnimation = loadingTl;
     }
 
-    //gsap.set('.first-vd-wrapper', { marginTop: '-150vh', opacity: 0 });
-    gsap.set('.first-vd-wrapper', { opacity: 0 });
-    gsap.set('.second-vd-wrapper', { maringTop: '-80vh', opacity: 0 });
+    gsap.set('.second-vd-wrapper', { opacity: 1 });
     gsap.set('.jason', { marginTop: '-40vh' });
     gsap.set('.lucia-life', { marginTop: '-40vh' });
     ScrollSmoother.create({
@@ -121,42 +118,6 @@ export default function Page() {
         );
     }
 
-    // One-shot fade-in when the first video enters view
-    gsap.to('.first-vd-wrapper', {
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '#video-wrapper',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse',
-      },
-    });
-
-    // Scrubbed timeline kept for video currentTime scrubbing (see handleVideoAnimation)
-    const videoTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: '#video-wrapper',
-        start: '-=90% top ',
-        end: '+=200%', // Increased for much smoother scrolling
-        scrub: 1, // Add slight smoothing lag (0.1-2 range)
-        //pin: true,
-        //markers: true,
-      },
-    });
-
-    // One-shot fade-in when the second video enters view
-    gsap.to('.second-vd-wrapper', {
-      opacity: 1,
-      duration: 0.8,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '#second-video-wrapper',
-        start: 'top 80%',
-        toggleActions: 'play none none reverse',
-      },
-    });
-
     // Second Video Timeline (kept for currentTime scrubbing)
     const secondVideoTimeline = gsap.timeline({
       scrollTrigger: {
@@ -170,18 +131,6 @@ export default function Page() {
     });
 
     //Text Animation
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '.jason',
-          start: 'top 45%',
-          end: '80% center',
-          scrub: 2,
-          //markers: true,
-        },
-      })
-      .to('.first-vd', { opacity: 0, duration: 0.5, ease: 'power1.Out' });
-
     gsap.to(
       '.jason .img-box',
       {
@@ -227,52 +176,6 @@ export default function Page() {
       '<'
     );
 
-    // Handle video animation with proper error checking
-    const handleVideoAnimation = () => {
-      if (
-        videoRef.current &&
-        videoRef.current.duration &&
-        !isNaN(videoRef.current.duration)
-      ) {
-        console.log('Video duration:', videoRef.current.duration);
-
-        // Create a safer currentTime animation that respects buffering
-        const videoElement = videoRef.current;
-        const videoDuration = videoElement.duration;
-
-        // Use a custom animation approach for better control
-        videoTimeline.to(
-          {},
-          {
-            duration: 3.966667,
-            ease: 'none', // Linear for consistent playback
-            onUpdate: function () {
-              if (videoElement && videoDuration) {
-                // Calculate progress (0 to 1)
-                const progress = this.progress();
-                // Convert to time, but leave small buffer at end
-                const targetTime = Math.min(
-                  progress * videoDuration,
-                  videoDuration - 0.1
-                );
-
-                // Only update if the time is within buffered range
-                try {
-                  if (videoElement.readyState >= 2) {
-                    // HAVE_CURRENT_DATA or better
-                    videoElement.currentTime = targetTime;
-                  }
-                } catch (error) {
-                  console.warn('Video seek error:', error);
-                }
-              }
-            },
-          },
-          '<'
-        );
-      }
-    };
-
     // Handle second video animation
     const handleSecondVideoAnimation = () => {
       if (
@@ -313,41 +216,6 @@ export default function Page() {
       }
     };
 
-    // Wait for video to be sufficiently loaded
-    const initializeVideo = () => {
-      if (videoRef.current) {
-        const video = videoRef.current;
-
-        // Force load the video
-        video.load();
-
-        const checkVideoReady = () => {
-          if (video.readyState >= 3) {
-            // HAVE_FUTURE_DATA - can play through
-            console.log('Video ready for scrubbing');
-            handleVideoAnimation();
-          } else if (video.readyState >= 1) {
-            // HAVE_METADATA
-            console.log('Video metadata loaded, waiting for more data...');
-            // Try to preload by seeking to different positions
-            video.currentTime = 0;
-            setTimeout(checkVideoReady, 100);
-          }
-        };
-
-        if (video.readyState >= 3) {
-          handleVideoAnimation();
-        } else {
-          video.addEventListener('loadedmetadata', checkVideoReady, {
-            once: true,
-          });
-          video.addEventListener('canplaythrough', handleVideoAnimation, {
-            once: true,
-          });
-        }
-      }
-    };
-
     // Initialize second video
     const initializeSecondVideo = () => {
       if (secondVideoRef.current) {
@@ -381,7 +249,6 @@ export default function Page() {
       }
     };
 
-    initializeVideo();
     initializeSecondVideo();
   }, []);
 
@@ -519,22 +386,6 @@ export default function Page() {
           className='object-cover object-center scale-100'
           quality={100}
         />
-      </div>
-      <div id='video-wrapper' className='relative'>
-        {/* FirstVideo Section */}
-        <section className='first-vd-wrapper relative'>
-          <div className='h-screen overflow-hidden '>
-            <video
-              ref={videoRef}
-              muted
-              playsInline
-              preload='auto'
-              crossOrigin='anonymous'
-              src='/videos/animation2-video.mp4'
-              className='first-vd w-full h-full object-cover will-change-transform'
-            />
-          </div>
-        </section>
       </div>
       <div>
         <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
