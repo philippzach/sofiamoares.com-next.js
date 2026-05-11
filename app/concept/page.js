@@ -151,7 +151,7 @@ export default function Page() {
               />
             </div>
 
-            <h2 className=' leading-[1] md:text-2xl text-lg mt-8 md:pe-20 pe-10 font-light'>
+            <h2 className='hidden lg:block leading-[1] md:text-2xl text-lg mt-8 md:pe-20 pe-10 font-light'>
               You have the vision, the mission, the feeling of what it should
               be but not yet the visual language to match it. That&apos;s
               exactly where I begin.
@@ -172,6 +172,12 @@ export default function Page() {
               />
             </div>
           </div>
+
+          <h2 className='lg:hidden leading-[1] text-lg md:text-2xl mt-8 pe-10 md:pe-20 font-light max-w-lg'>
+            You have the vision, the mission, the feeling of what it should be
+            but not yet the visual language to match it. That&apos;s exactly
+            where I begin.
+          </h2>
         </section>
       </div>
 
