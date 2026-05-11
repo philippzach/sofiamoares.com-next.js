@@ -64,61 +64,6 @@ export default function Page() {
     if (!isDesktop) {
       return;
     }
-
-    // Fade the second video out as lucia-life enters
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '.lucia-life',
-          start: 'top 45%',
-          end: '80% center',
-          scrub: 2,
-          //markers: true,
-        },
-      })
-      .to('.second-vd', { opacity: 0, duration: 0.5, ease: 'power1.Out' });
-
-    // Scrub the second video's currentTime to scroll position.
-    // Set up only after metadata is known so the trigger maps to a real duration.
-    const initializeSecondVideoScrub = () => {
-      const video = secondVideoRef.current;
-      if (!video) return;
-
-      const setupScrub = () => {
-        if (!video.duration || isNaN(video.duration)) return;
-
-        const proxy = { time: 0 };
-        gsap.to(proxy, {
-          time: video.duration,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '#second-video-wrapper',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1,
-          },
-          onUpdate: () => {
-            if (video.readyState < 2) return;
-            try {
-              video.currentTime = Math.min(proxy.time, video.duration - 0.05);
-            } catch (e) {
-              // seeking can throw before buffering catches up; safe to ignore
-            }
-          },
-        });
-
-        ScrollTrigger.refresh();
-      };
-
-      video.load();
-      if (video.readyState >= 1) {
-        setupScrub();
-      } else {
-        video.addEventListener('loadedmetadata', setupScrub, { once: true });
-      }
-    };
-
-    initializeSecondVideoScrub();
   }, []);
 
   return (
@@ -179,6 +124,7 @@ export default function Page() {
           <div className='h-screen overflow-hidden'>
             <video
               ref={secondVideoRef}
+              controls
               muted
               playsInline
               preload='auto'
