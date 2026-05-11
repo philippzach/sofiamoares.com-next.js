@@ -166,7 +166,7 @@ export default function Page() {
           </div>
           <div className='bg-yellow h-[50vh] md:w-[60%] -translate-x-5'>
             <img
-              src='/photos/aigeneration/photo3.png'
+              src='/photos/aigeneration/mareopal4.jpg'
               className='size-full object-cover [object-position:42%_center] hover:scale-[0.97] transition duration-700 ease-in-out'
             />
           </div>
