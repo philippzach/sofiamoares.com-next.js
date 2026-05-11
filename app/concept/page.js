@@ -135,6 +135,18 @@ export default function Page() {
           quality={100}
         />
       </div>
+      {/* Jason text */}
+      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32'>
+        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
+          The world you carry inside already has a shape.
+        </h1>
+        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl'>
+          You have the vision, the mission, the feeling of what it should be
+          but not yet the visual language to match it. That&apos;s exactly
+          where I begin.
+        </h2>
+      </section>
+
       {/* Jason images */}
       <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-12 lg:py-40 mt-16 lg:mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg'>
@@ -161,18 +173,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Jason text */}
-      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32'>
-        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
-          The world you carry inside already has a shape.
-        </h1>
-        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl'>
-          You have the vision, the mission, the feeling of what it should be
-          but not yet the visual language to match it. That&apos;s exactly
-          where I begin.
-        </h2>
-      </section>
-
       {/* Second Video Section */}
       <div id='second-video-wrapper' className='relative hidden lg:block mt-16 lg:mt-32'>
         <section className='second-vd-wrapper relative'>
@@ -189,6 +189,19 @@ export default function Page() {
           </div>
         </section>
       </div>
+
+      {/* Lucia text */}
+      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32'>
+        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
+          I translate the invisible into the visible.
+        </h1>
+        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl'>
+          Visual worlds aren&apos;t created they&apos;re excavated. From your
+          obsessions, your contradictions, the vision you&apos;ve been
+          carrying all along. What emerges doesn&apos;t feel designed. It
+          feels inevitable.
+        </h2>
+      </section>
 
       {/* Lucia images */}
       <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 ps-10 py-12 lg:py-40 mt-16 lg:mt-32 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
@@ -214,19 +227,6 @@ export default function Page() {
             />
           </div>
         </div>
-      </section>
-
-      {/* Lucia text */}
-      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32'>
-        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4'>
-          I translate the invisible into the visible.
-        </h1>
-        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl'>
-          Visual worlds aren&apos;t created they&apos;re excavated. From your
-          obsessions, your contradictions, the vision you&apos;ve been
-          carrying all along. What emerges doesn&apos;t feel designed. It
-          feels inevitable.
-        </h2>
       </section>
       <section>
         <div className='calltoaction pb-14 pt-14 flex justify-center my-16 lg:my-60 relative z-20'>
