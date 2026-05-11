@@ -136,7 +136,7 @@ export default function Page() {
         />
       </div>
       {/* Jason text */}
-      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32'>
+      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32 -mb-8 lg:-mb-16'>
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]'>
           The world you carry inside already has a shape.
         </h1>
@@ -148,7 +148,7 @@ export default function Page() {
       </section>
 
       {/* Jason images */}
-      <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-12 lg:py-40 mt-16 lg:mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
+      <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-12 lg:py-40 mt-8 lg:mt-32 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg'>
           <div className='bg-yellow h-[90vh] w-auto -translate-x-5'>
             <img
@@ -191,7 +191,7 @@ export default function Page() {
       </div>
 
       {/* Lucia text */}
-      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32'>
+      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32 -mb-8 lg:-mb-16'>
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto'>
           I translate the invisible into the visible.
         </h1>
@@ -204,7 +204,7 @@ export default function Page() {
       </section>
 
       {/* Lucia images */}
-      <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 ps-10 py-12 lg:py-40 mt-16 lg:mt-32 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
+      <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 ps-10 py-12 lg:py-40 mt-8 lg:mt-16 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
         <div className='max-w-lg'>
           <div className='bg-yellow h-[90vh] w-auto translate-x-5'>
             <img
