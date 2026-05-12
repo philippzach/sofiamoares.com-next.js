@@ -39,7 +39,14 @@ export default async function WebDesignPage() {
 
   console.log(data);
 
-  const images = ['weblanding.jpg', 'web1.jpg', 'web2.jpg', 'web3.jpg'];
+  const images = [
+    'service1.png',
+    'service2.png',
+    'service3.png',
+    'service4.png',
+    'service5.png',
+    'service6.png',
+  ];
 
   return (
     <div className='min-h-screen bg-white'>

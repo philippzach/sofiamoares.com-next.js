@@ -148,14 +148,14 @@ export default async function Page() {
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
-                  src='/photos/webdesign/web1.jpg'
+                  src='/photos/webdesign/servicecover.png'
                   alt='Web/App Design 1'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
                 <Image
-                  src='/photos/webdesign/web2.jpg'
+                  src='/photos/webdesign/servicecover2.png'
                   alt='Web/App Design 2'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
