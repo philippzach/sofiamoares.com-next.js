@@ -125,6 +125,7 @@ export default function Page() {
             <video
               ref={secondVideoRef}
               controls
+              loop
               muted
               playsInline
               preload='auto'
