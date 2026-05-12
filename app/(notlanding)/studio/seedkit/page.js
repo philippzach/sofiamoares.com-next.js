@@ -71,6 +71,7 @@ export default async function WebDesignPage() {
           <div className='mb-6'>
             <p className='font-semibold mb-3'>♦ What you receive:</p>
             <ul className='text-base space-y-1 ml-4'>
+              <li>• Brand Soul Session (90-min discovery call)</li>
               <li>• Visual identity system (logo, colour, type, texture)</li>
               <li>• Imagery direction + 30 AI-generated brand visuals</li>
               <li>• Content seed library (30+ assets ready to deploy)</li>
@@ -194,6 +195,7 @@ export default async function WebDesignPage() {
             <div className='mb-6'>
               <p className='font-semibold mb-3'>♦ What you receive:</p>
               <ul className='text-base space-y-1 ml-4'>
+                <li>• Brand Soul Session (90-min discovery call)</li>
                 <li>• Visual identity system (logo, colour, type, texture)</li>
                 <li>• Imagery direction + 30 AI-generated brand visuals</li>
                 <li>• Content seed library (30+ assets ready to deploy)</li>
