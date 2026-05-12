@@ -97,7 +97,7 @@ export default function Page() {
         <div className='max-w-lg'>
           <div className='bg-yellow h-[90vh] w-auto -translate-x-5'>
             <img
-              src='/photos/aigeneration/photo1.png'
+              src='/photos/aigeneration/mareopal6.png'
               className='size-full object-cover [object-position:80%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
             />
           </div>
@@ -105,7 +105,7 @@ export default function Page() {
         <div className='space-y-5 mt-12 lg:mt-96 img-box'>
           <div className='bg-yellow lg:h-[80vh] w-auto -translate-x-5'>
             <img
-              src='/photos/aigeneration/photo8.png'
+              src='/photos/aigeneration/mareopal7.png'
               className='size-full object-cover [object-position:5%_center] hover:scale-[0.98] transition duration-700 ease-in-out'
             />
           </div>
