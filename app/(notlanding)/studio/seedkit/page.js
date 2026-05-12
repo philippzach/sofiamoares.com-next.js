@@ -62,8 +62,8 @@ export default async function WebDesignPage() {
           <p className='text-lg mb-6'>
             You have a brand with a soul. It just doesn&apos;t look like it yet. The
             Seed Kit is a complete visual brand system built from a single
-            creative session. I extract the essence — what your brand feels,
-            believes, stands for — and translate it into a full visual language:
+            creative session. I extract the essence what your brand feels,
+            believes, stands for and translate it into a full visual language:
             identity, colour, typography, imagery direction, and a content seed
             library you can use for months.
           </p>
@@ -186,8 +186,8 @@ export default async function WebDesignPage() {
             <p className='text-lg mb-6'>
               You have a brand with a soul. It just doesn&apos;t look like it yet.
               The Seed Kit is a complete visual brand system built from a single
-              creative session. I extract the essence — what your brand feels,
-              believes, stands for — and translate it into a full visual
+              creative session. I extract the essence what your brand feels,
+              believes, stands for and translate it into a full visual
               language: identity, colour, typography, imagery direction, and a
               content seed library you can use for months.
             </p>
