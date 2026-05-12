@@ -129,7 +129,7 @@ export default function Page() {
               playsInline
               preload='auto'
               crossOrigin='anonymous'
-              src='/videos/animation3-video.mp4'
+              src='/videos/mareopalvideo.mp4'
               className='second-vd w-full h-full object-cover will-change-transform'
             />
           </div>
