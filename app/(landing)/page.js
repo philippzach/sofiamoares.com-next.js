@@ -6,7 +6,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
 
@@ -64,6 +64,25 @@ export default function Page() {
     if (!isDesktop) {
       return;
     }
+  }, []);
+
+  useEffect(() => {
+    const video = secondVideoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -125,6 +144,7 @@ export default function Page() {
             <video
               ref={secondVideoRef}
               controls
+              autoPlay
               loop
               muted
               playsInline

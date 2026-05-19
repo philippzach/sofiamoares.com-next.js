@@ -11,7 +11,6 @@ export default function NavigationConcept() {
   const pathname = usePathname();
   const router = useRouter();
   const navRef = useRef();
-  const conceptLinkRef = useRef();
   const ctaRef = useRef();
   const [isTransformed, setIsTransformed] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -23,7 +22,7 @@ export default function NavigationConcept() {
     if (hasAnimated) return;
 
     // Get all navigation items including the concept link
-    const navItems = document.querySelectorAll('.nav-hide-item, #concept-link');
+    const navItems = document.querySelectorAll('.nav-hide-item');
 
     // Reset any existing animations
     navItems.forEach((item) => {
@@ -132,7 +131,7 @@ export default function NavigationConcept() {
 
   // Function to handle cleanup
   const cleanupAnimations = () => {
-    const navItems = document.querySelectorAll('.nav-hide-item, #concept-link');
+    const navItems = document.querySelectorAll('.nav-hide-item');
     navItems.forEach((item) => {
       if (item.anim) {
         item.anim.kill();
@@ -174,6 +173,7 @@ export default function NavigationConcept() {
         <Link
           href='/'
           className='select-auto text-base md:text-xl font-bold tracking-tight leading-tight md:pr-8 hover:opacity-30 duration-150'
+          style={{ color: '#f5f5f5' }}
           aria-current='page'
         >
           Sofia Moraes.
@@ -193,6 +193,7 @@ export default function NavigationConcept() {
                 href='/work'
                 className={`select-auto nav-hide-item text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/work') ? 'opacity-30' : ''}`}
+                style={{ color: '#f5f5f5' }}
               >
                 Work,
               </Link>
@@ -203,19 +204,9 @@ export default function NavigationConcept() {
                 href='/studio'
                 className={`select-auto nav-hide-item text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
                 ${isActive('/studio') ? 'opacity-30' : ''}`}
+                style={{ color: '#f5f5f5' }}
               >
                 Studio,
-              </Link>
-            </li>
-            <li className='overflow-hidden relative'>
-              <Link
-                href='/'
-                ref={conceptLinkRef}
-                id='concept-link'
-                className={`select-auto text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150
-                ${isActive('/concept') ? 'opacity-30' : ''}`}
-              >
-                Concept ↵
               </Link>
             </li>
           </ul>
@@ -224,6 +215,7 @@ export default function NavigationConcept() {
             className={`select-auto text-base md:text-xl font-normal tracking-tight underline cursor-pointer hover:opacity-30 duration-150 ml-auto ${
               !isTransformed ? 'hidden' : ''
             }`}
+            style={{ color: '#f5f5f5' }}
             onClick={handleCtaClick}
           >
             <span>Get in touch ↵ </span>
