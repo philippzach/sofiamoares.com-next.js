@@ -67,12 +67,12 @@ export default function Page() {
   }, []);
 
   return (
-    <section style={{backgroundColor: '#191919'}}>
+    <section style={{ backgroundColor: '#191919', margin: 0, padding: 0 }}>
       <NavigationConcept />
       {/* Palm Tree */}
       <div className='relative h-screen w-full'>
         <Image
-          src='/photos/aigeneration/palm2.webp'
+          src='/photos/aigeneration/mareopal9.jpg'
           alt='AI Generation Background'
           fill
           priority
