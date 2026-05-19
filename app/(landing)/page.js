@@ -5,27 +5,17 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { useRef, useEffect } from 'react';
 
-gsap.registerPlugin(useGSAP, ScrollSmoother, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Page() {
-  const smoothWrapper = useRef(null);
-  const smoothContent = useRef(null);
   const secondVideoRef = useRef(null);
-  const maskRef = useRef();
 
   useGSAP(() => {
     const isDesktop = window.innerWidth >= 1024;
 
     gsap.set('.second-vd-wrapper', { opacity: 1 });
-    ScrollSmoother.create({
-      smooth: 2,
-      effects: true,
-      normalizeScroll: true,
-      ignoreMobileResize: true,
-    });
 
     //Text Animation
     gsap.to(
@@ -150,7 +140,7 @@ export default function Page() {
               playsInline
               preload='auto'
               crossOrigin='anonymous'
-              src='/videos/mareopalvideo.mp4'
+              src='/videos/portfolio_mareopal_musik-2.mp4'
               className='second-vd w-full h-full object-cover will-change-transform'
             />
           </div>

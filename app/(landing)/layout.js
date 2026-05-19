@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang='en'
-      className={` overflow-hidden ${officeTimes.variable} ${aeonik.variable}`}
+      className={`${officeTimes.variable} ${aeonik.variable}`}
     >
       <body className='text-prim-grey font-primary'>
         <HotjarInit />
