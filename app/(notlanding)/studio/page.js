@@ -3,8 +3,14 @@ import Link from 'next/link';
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
 import Image from 'next/image';
+import { Cormorant_Garamond } from 'next/font/google';
 import LogoCarousel from '@/components/logo-carousel';
 import ContactForm from '@/components/contact-form';
+
+const cormorant = Cormorant_Garamond({
+  weight: '300',
+  subsets: ['latin'],
+});
 
 const PAGE_CONTENT_QUERY = `
   {
@@ -71,32 +77,11 @@ export default async function Page() {
 
   return (
     <main className='max-w-7xl mx-auto px-4 md:px-8'>
-      {/* ---------- HERO ---------- */}
-      <section className='py-28 text-center md:text-left md:flex md:items-center md:gap-16'>
-        <div className='flex-1'>
-          <h1 className='text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1] tracking-tight'>
-            I build visual worlds that feel like they were always meant to
-            exist.
-          </h1>
-          <p className='mt-6 text-lg md:text-2xl max-w-xl mx-auto md:mx-0 font-light'>
-            Your brand already exists. I make it visible.
-          </p>
-          <a
-            href='#contact'
-            className='inline-block mt-10 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
-          >
-            Start a project
-          </a>
-        </div>
-        <div className='flex-1 pt-14 md:pt-0'>
-          <Image
-            src='/photos/sm_photo.jpg'
-            alt='Sofia Moraes Portrait'
-            width={600}
-            height={600}
-            className='rounded-lg w-full h-auto object-cover'
-          />
-        </div>
+      {/* ---------- BIO ---------- */}
+      <section className='py-28'>
+        <h1 className={`${cormorant.className} text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1]`}>
+          Sofia Moraes — Creative Director. Nine years shaping visual worlds for mission-driven brands.
+        </h1>
       </section>
 
       {/* ---------- OFFERINGS ---------- */}
@@ -131,14 +116,6 @@ export default async function Page() {
           </div>
         </div>
       </section>*/}
-
-      {/* ---------- CLIENT LOGOS / SOCIAL PROOF ---------- */}
-      <section className='mb-28 text-center'>
-        <h3 className='text-xl md:text-3xl font-semibold mb-10'>
-          Trusted by teams at
-        </h3>
-        <LogoCarousel clients={clients} />
-      </section>
 
       {/* Services Grid */}
       <section>
@@ -253,6 +230,14 @@ export default async function Page() {
             </blockquote>
           ))}
         </div>
+      </section>
+
+      {/* ---------- CLIENT LOGOS / SOCIAL PROOF ---------- */}
+      <section className='mb-28 text-center'>
+        <h3 className='text-xl md:text-3xl font-semibold mb-10'>
+          Trusted by teams at
+        </h3>
+        <LogoCarousel clients={clients} />
       </section>
 
       {/* ---------- SERVICES & INDUSTRIES ---------- */}
