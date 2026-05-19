@@ -90,7 +90,7 @@ export default function Page() {
         />
       </div>
       {/* Jason text */}
-      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32 -mb-8 lg:-mb-16'>
+      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32'>
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
           The world you carry inside already has a shape.
         </h1>
@@ -102,9 +102,9 @@ export default function Page() {
       </section>
 
       {/* Jason images */}
-      <section className='jason relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-12 lg:py-40 mt-8 lg:mt-32 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
+      <section className='jason relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32 flex lg:flex-row flex-col justify-between gap-5 overflow-x-hidden'>
         <div className='max-w-lg'>
-          <div className='bg-yellow h-[90vh] w-auto -translate-x-5'>
+          <div className='bg-yellow h-[90vh] w-auto'>
             <img
               src='/photos/aigeneration/mareopal6.png'
               className='size-full object-cover [object-position:80%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
@@ -112,13 +112,13 @@ export default function Page() {
           </div>
         </div>
         <div className='space-y-5 mt-12 lg:mt-96 img-box'>
-          <div className='bg-yellow lg:h-[80vh] w-auto -translate-x-5'>
+          <div className='bg-yellow lg:h-[80vh] w-auto'>
             <img
               src='/photos/aigeneration/mareopal7.png'
               className='size-full object-cover [object-position:5%_center] hover:scale-[0.98] transition duration-700 ease-in-out'
             />
           </div>
-          <div className='bg-yellow h-[50vh] md:w-[60%] -translate-x-5'>
+          <div className='bg-yellow h-[50vh] md:w-[60%]'>
             <img
               src='/photos/aigeneration/mareopal4.jpg'
               className='size-full object-cover [object-position:42%_center] hover:scale-[0.97] transition duration-700 ease-in-out'
@@ -128,7 +128,7 @@ export default function Page() {
       </section>
 
       {/* Second Video Section */}
-      <div id='second-video-wrapper' className='relative block mt-16 lg:mt-32'>
+      <div id='second-video-wrapper' className='relative block py-16 md:py-24 lg:py-32'>
         <section className='second-vd-wrapper relative'>
           <div className='h-screen overflow-hidden'>
             <video
@@ -148,7 +148,7 @@ export default function Page() {
       </div>
 
       {/* Lucia text */}
-      <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32 -mb-8 lg:-mb-16'>
+      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32'>
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
           I translate the invisible into the visible.
         </h1>
@@ -161,9 +161,9 @@ export default function Page() {
       </section>
 
       {/* Lucia images */}
-      <section className='lucia-life relative z-10 lg:pe-40 2xl:pe-80 pe-10 ps-10 py-12 lg:py-40 mt-8 lg:mt-16 flex lg:flex-row-reverse flex-col justify-between gap-5 w-dvw overflow-x-hidden'>
+      <section className='lucia-life relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32 flex lg:flex-row-reverse flex-col justify-between gap-5 overflow-x-hidden'>
         <div className='max-w-lg'>
-          <div className='bg-yellow h-[90vh] w-auto translate-x-5'>
+          <div className='bg-yellow h-[90vh] w-auto'>
             <img
               src='/photos/aigeneration/photo2.png'
               className='size-full object-cover [object-position:20%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
@@ -171,13 +171,13 @@ export default function Page() {
           </div>
         </div>
         <div className='space-y-5 mt-12 lg:mt-96 img-box'>
-          <div className='bg-yellow lg:h-[80vh] w-auto translate-x-5'>
+          <div className='bg-yellow lg:h-[80vh] w-auto'>
             <img
               src='/photos/aigeneration/photo4.png'
               className='size-full object-cover [object-position:95%_center] hover:scale-[0.98] transition duration-700 ease-in-out'
             />
           </div>
-          <div className='bg-yellow h-[50vh] md:w-[60%] translate-x-5'>
+          <div className='bg-yellow h-[50vh] md:w-[60%]'>
             <img
               src='/photos/aigeneration/photo6.png'
               className='size-full object-cover [object-position:58%_center] hover:scale-[0.97] transition duration-700 ease-in-out'
@@ -185,8 +185,8 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section>
-        <div className='calltoaction pb-14 pt-14 flex justify-center my-16 lg:my-60 relative z-20'>
+      <section className='relative z-20 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32'>
+        <div className='calltoaction flex justify-center'>
           <Link
             href='/studio'
             className='text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
