@@ -209,7 +209,7 @@ export default function NavigationConcept() {
             </li>
             <li className='overflow-hidden relative'>
               <Link
-                href='/concept'
+                href='/'
                 ref={conceptLinkRef}
                 id='concept-link'
                 className={`select-auto text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 active:opacity-30 duration-150

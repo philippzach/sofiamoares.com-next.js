@@ -67,7 +67,7 @@ export default function Page() {
   }, []);
 
   return (
-    <section>
+    <section style={{backgroundColor: '#191919'}}>
       <NavigationConcept />
       {/* Palm Tree */}
       <div className='relative h-screen w-full'>
@@ -82,10 +82,10 @@ export default function Page() {
       </div>
       {/* Jason text */}
       <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32 -mb-8 lg:-mb-16'>
-        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]'>
+        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
           The world you carry inside already has a shape.
         </h1>
-        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px]'>
+        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
           You have the vision, the mission, the feeling of what it should be
           but not yet the visual language to match it. That&apos;s exactly
           where I begin.
@@ -139,10 +139,10 @@ export default function Page() {
 
       {/* Lucia text */}
       <section className='relative z-10 px-10 lg:px-40 2xl:px-80 mt-16 lg:mt-32 -mb-8 lg:-mb-16'>
-        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto'>
+        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
           I translate the invisible into the visible.
         </h1>
-        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto'>
+        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
           Visual worlds aren&apos;t created they&apos;re excavated. From your
           obsessions, your contradictions, the vision you&apos;ve been
           carrying all along. What emerges doesn&apos;t feel designed. It
