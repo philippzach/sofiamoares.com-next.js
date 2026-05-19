@@ -41,27 +41,6 @@ export default function NavigationNl() {
                 Studio,
               </Link>
             </li>
-            <li>
-              <Link
-                href='/concept'
-                className={`select-auto text-base md:text-xl font-bold tracking-tight mr-2 hover:opacity-30 hover:underline active:opacity-30 duration-150
-                ${isActive('/concept/aicreativestudio') ? 'opacity-30' : ''}
-                
-                `}
-              >
-                Concept ↵
-              </Link>
-            </li>
-            {/*  <li>
-              <Link
-                href='/concept'
-                target='_blank'
-                rel='noopener noreferrer'
-                className={`text-base md:text-xl font-bold tracking-tight hover:opacity-30 md:hover:after:content-['_↳'] hover:underline active:opacity-30 duration-150`}
-              >
-                Concept
-              </Link>
-            </li> */}
           </ul>
         </div>
       </nav>
