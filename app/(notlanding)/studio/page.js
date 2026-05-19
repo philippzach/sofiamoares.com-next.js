@@ -79,9 +79,12 @@ export default async function Page() {
     <main className='max-w-7xl mx-auto px-4 md:px-8'>
       {/* ---------- BIO ---------- */}
       <section className='py-28'>
-        <h1 className={`${cormorant.className} text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-[1]`}>
-          Sofia Moraes — Creative Director. Nine years shaping visual worlds for mission-driven brands.
+        <h1 className={`${cormorant.className} text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1] font-light`}>
+          There is a portal between what is felt and what is seen. I work in that space.
         </h1>
+        <p className='mt-8 text-lg md:text-xl font-light max-w-2xl'>
+          From your seed, a photograph, a feeling, a conviction, I build visual worlds that feel inevitable. Not designed. Revealed. The brand was always there. I make it visible.
+        </p>
       </section>
 
       {/* ---------- OFFERINGS ---------- */}
