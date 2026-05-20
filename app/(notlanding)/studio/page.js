@@ -79,10 +79,10 @@ export default async function Page() {
     <main className='max-w-7xl mx-auto px-4 md:px-8'>
       {/* ---------- BIO ---------- */}
       <section className='py-28'>
-        <h1 className={`${cormorant.className} text-[18px] md:text-[22px] lg:text-[30px] font-light tracking-tight leading-snug max-w-5xl`}>
+        <h1 className={`${cormorant.className} text-[24px] md:text-[24px] lg:text-[30px] font-light tracking-tight leading-snug max-w-5xl`}>
           There is a portal between what is felt and what is seen. I work in that space.
         </h1>
-        <p className={`${cormorant.className} mt-8 text-[18px] md:text-[22px] lg:text-[30px] font-light tracking-tight leading-snug max-w-5xl`}>
+        <p className={`${cormorant.className} mt-8 text-[24px] md:text-[24px] lg:text-[30px] font-light tracking-tight leading-snug max-w-5xl`}>
           From your seed, a photograph, a feeling, a conviction, I build visual worlds that feel inevitable. Not designed. Revealed. The brand was always there. I make it visible.
         </p>
         <a
