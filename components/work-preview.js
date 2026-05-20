@@ -19,7 +19,7 @@ export default function WorkPreview({
             responsiveImage={coverImage.responsiveImage}
           />
         </div>
-        <div className='whitespace-normal leading-[1] text-[1.2rem] md:text-[1.4rem] lg:text-[2rem] tracking-tight font-medium'>
+        <div className='whitespace-normal leading-[1] text-[1.125rem] md:text-[1.375rem] lg:text-[1.75rem] tracking-tight font-medium'>
           <div>{title},</div>
           <div className='group-hover:opacity-30'>{excerpt}</div>
         </div>

@@ -94,7 +94,7 @@ export default function Page() {
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
           The world you carry inside already has a shape.
         </h1>
-        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
+        <h2 className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
           You have the vision, the mission, the feeling of what it should be
           but not yet the visual language to match it. That&apos;s exactly
           where I begin.
@@ -152,7 +152,7 @@ export default function Page() {
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
           I translate the invisible into the visible.
         </h1>
-        <h2 className='leading-[1] md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
+        <h2 className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
           Visual worlds aren&apos;t created they&apos;re excavated. From your
           obsessions, your contradictions, the vision you&apos;ve been
           carrying all along. What emerges doesn&apos;t feel designed. It
@@ -161,7 +161,7 @@ export default function Page() {
       </section>
 
       {/* Lucia images */}
-      <section className='lucia-life relative z-10 py-16 md:py-24 lg:py-12 flex lg:flex-row-reverse flex-col justify-between gap-5 overflow-x-hidden'>
+      <section className='lucia-life relative z-10 pt-16 md:pt-24 lg:pt-12 flex lg:flex-row-reverse flex-col justify-between gap-5 overflow-x-hidden'>
         <div className='max-w-lg'>
           <div className='bg-yellow h-[90vh] w-auto'>
             <img
@@ -185,13 +185,19 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className='relative z-20 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-12'>
-        <div className='calltoaction flex justify-center'>
+      <section className='relative z-20 px-6 pb-16 md:px-16 md:pb-24 lg:px-6 lg:pb-12'>
+        <div className='calltoaction flex flex-row justify-center items-center gap-6 md:gap-12'>
+          <Link
+            href='/work'
+            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
+          >
+            See my work ↵
+          </Link>
           <Link
             href='/studio'
-            className='text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
+            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
           >
-            Get in touch ↵
+            Start a project ↵
           </Link>
         </div>
       </section>
