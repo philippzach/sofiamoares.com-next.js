@@ -79,18 +79,20 @@ export default function Page() {
     <section style={{ backgroundColor: '#191919', margin: 0, padding: 0 }}>
       <NavigationConcept />
       {/* Palm Tree */}
-      <div className='relative h-screen w-full'>
-        <Image
-          src='/photos/aigeneration/mareopal9.jpg'
-          alt='AI Generation Background'
-          fill
-          priority
-          className='object-cover object-center scale-100'
-          quality={100}
-        />
+      <div className='px-6 md:px-16 lg:px-6'>
+        <div className='relative h-screen w-full'>
+          <Image
+            src='/photos/aigeneration/mareopal9.jpg'
+            alt='AI Generation Background'
+            fill
+            priority
+            className='object-cover object-center scale-100'
+            quality={100}
+          />
+        </div>
       </div>
       {/* Jason text */}
-      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32'>
+      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-16'>
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
           The world you carry inside already has a shape.
         </h1>
@@ -102,7 +104,7 @@ export default function Page() {
       </section>
 
       {/* Jason images */}
-      <section className='jason relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32 flex lg:flex-row flex-col justify-between gap-5 overflow-x-hidden'>
+      <section className='jason relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-16 flex lg:flex-row flex-col justify-between gap-5 overflow-x-hidden'>
         <div className='max-w-lg'>
           <div className='bg-yellow h-[90vh] w-auto'>
             <img
@@ -128,7 +130,7 @@ export default function Page() {
       </section>
 
       {/* Second Video Section */}
-      <div id='second-video-wrapper' className='relative block py-16 md:py-24 lg:py-32'>
+      <div id='second-video-wrapper' className='relative block px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-16'>
         <section className='second-vd-wrapper relative'>
           <div className='h-screen overflow-hidden'>
             <video
@@ -148,7 +150,7 @@ export default function Page() {
       </div>
 
       {/* Lucia text */}
-      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32'>
+      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-16'>
         <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
           I translate the invisible into the visible.
         </h1>
@@ -161,7 +163,7 @@ export default function Page() {
       </section>
 
       {/* Lucia images */}
-      <section className='lucia-life relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32 flex lg:flex-row-reverse flex-col justify-between gap-5 overflow-x-hidden'>
+      <section className='lucia-life relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-16 flex lg:flex-row-reverse flex-col justify-between gap-5 overflow-x-hidden'>
         <div className='max-w-lg'>
           <div className='bg-yellow h-[90vh] w-auto'>
             <img
@@ -185,7 +187,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className='relative z-20 px-6 py-16 md:px-16 md:py-24 lg:px-24 lg:py-32'>
+      <section className='relative z-20 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-16'>
         <div className='calltoaction flex justify-center'>
           <Link
             href='/studio'
