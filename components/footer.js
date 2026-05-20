@@ -57,7 +57,7 @@ export default function Footer() {
         </h3>
         <div className='flex flex-row justify-end items-center md:pl-4 md:w-1/2'>
           <a
-            href='https://www.instagram.com/sofiamoraes.studio/'
+            href='https://www.instagram.com/smoraes.studio/'
             className='mx-3 font-bold hover:underline group social'
             target='_blank'
             rel='noopener noreferrer'
