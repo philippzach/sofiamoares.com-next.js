@@ -45,7 +45,7 @@ export default async function WebDesignPage() {
     'service3.png',
     'service4.png',
     'service5.png',
-    'service6.png',
+    'serviceEvita9.jpg',
   ];
 
   return (

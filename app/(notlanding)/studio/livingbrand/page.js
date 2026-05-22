@@ -40,11 +40,11 @@ export default async function CreativeDirectionPage() {
   const images = [
     'livingbrand1.jpg',
     'livingbrand2.jpg',
-    'livingbrand3.jpg',
     'livingbrand4.jpg',
     'livingbrand5.jpg',
     'livingbrand6.png',
     'livingbrand8.png',
+    'livingbrand3.jpg',
     'livingbrand9.png',
   ];
 
