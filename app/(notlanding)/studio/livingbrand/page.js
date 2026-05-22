@@ -38,15 +38,12 @@ export default async function CreativeDirectionPage() {
   const data = await performRequest(pageRequest);
 
   const images = [
-    'c_lb1.jpg',
-    'c_lb2.jpg',
     'livingbrand1.jpg',
     'livingbrand2.jpg',
     'livingbrand3.jpg',
     'livingbrand4.jpg',
     'livingbrand5.jpg',
     'livingbrand6.png',
-    'livingbrand7.jpg',
     'livingbrand8.png',
     'livingbrand9.png',
   ];
@@ -113,29 +110,14 @@ export default async function CreativeDirectionPage() {
         {/* Mobile Images Grid */}
         <div className='grid grid-cols-1 gap-4 p-8'>
           {images.map((image, index) => (
-            <div key={index} className='relative'>
-              {index < 2 ? (
-                <div className='w-full'>
-                  <Image
-                    src={`/photos/creativedirection/${image}`}
-                    alt={`Living Brand Example ${index + 1}`}
-                    width={800}
-                    height={1200}
-                    className='object-cover rounded-lg w-full h-auto'
-                    sizes='100vw'
-                  />
-                </div>
-              ) : (
-                <div className='aspect-square'>
-                  <Image
-                    src={`/photos/creativedirection/${image}`}
-                    alt={`Living Brand Example ${index + 1}`}
-                    fill
-                    className='object-cover rounded-lg'
-                    sizes='100vw'
-                  />
-                </div>
-              )}
+            <div key={index} className='relative aspect-square'>
+              <Image
+                src={`/photos/creativedirection/${image}`}
+                alt={`Living Brand Example ${index + 1}`}
+                fill
+                className='object-cover rounded-lg'
+                sizes='100vw'
+              />
             </div>
           ))}
         </div>
@@ -147,29 +129,14 @@ export default async function CreativeDirectionPage() {
         <div className='w-1/2'>
           <div className='grid grid-cols-1 gap-4 p-8 pt-24'>
             {images.map((image, index) => (
-              <div key={index} className='relative'>
-                {index < 2 ? (
-                  <div className='w-full'>
-                    <Image
-                      src={`/photos/creativedirection/${image}`}
-                      alt={`Living Brand Example ${index + 1}`}
-                      width={800}
-                      height={1200}
-                      className='object-cover rounded-lg w-full h-auto'
-                      sizes='50vw'
-                    />
-                  </div>
-                ) : (
-                  <div className='aspect-square'>
-                    <Image
-                      src={`/photos/creativedirection/${image}`}
-                      alt={`Living Brand Example ${index + 1}`}
-                      fill
-                      className='object-cover rounded-lg'
-                      sizes='50vw'
-                    />
-                  </div>
-                )}
+              <div key={index} className='relative aspect-square'>
+                <Image
+                  src={`/photos/creativedirection/${image}`}
+                  alt={`Living Brand Example ${index + 1}`}
+                  fill
+                  className='object-cover rounded-lg'
+                  sizes='50vw'
+                />
               </div>
             ))}
           </div>

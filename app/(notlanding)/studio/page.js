@@ -165,15 +165,15 @@ export default async function Page() {
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
-                  src='/photos/creativedirection/cd1.jpg'
-                  alt='Creative Direction 1'
+                  src='/photos/creativedirection/c_lb1.jpg'
+                  alt='The Living Brand'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
                 <Image
-                  src='/photos/creativedirection/cd2.jpg'
-                  alt='Creative Direction 2'
+                  src='/photos/creativedirection/c_lb2.jpg'
+                  alt='The Living Brand hover'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
                   sizes='(max-width: 768px) 100vw, 50vw'
