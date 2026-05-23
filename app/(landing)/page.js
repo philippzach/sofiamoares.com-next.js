@@ -185,7 +185,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section className='relative z-20 px-6 pb-16 md:px-16 md:pb-24 lg:px-6 lg:pb-12'>
+      <section className='relative z-20 px-6 pb-16 mt-16 md:px-16 md:pb-24 lg:px-6 lg:pb-12'>
         <div className='calltoaction flex flex-row justify-center items-center gap-6 md:gap-12'>
           <Link
             href='/work'
