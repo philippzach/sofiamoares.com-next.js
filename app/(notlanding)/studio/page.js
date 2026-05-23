@@ -44,7 +44,11 @@ function getPageRequest() {
 export async function generateMetadata() {
   const { site, blog } = await performRequest(getPageRequest());
 
-  return toNextMetadata([...site.favicon, ...blog.seo]);
+  return {
+    ...toNextMetadata([...site.favicon, ...blog.seo]),
+    title: 'Brand Strategy and Creative Direction, Three Ways to Build',
+    description: 'Seed Kit, Living Brand, Full World. Three tiers of creative direction. Brand architecture from identity system to complete visual world. Start where you are.',
+  };
 }
 
 export default async function Page() {

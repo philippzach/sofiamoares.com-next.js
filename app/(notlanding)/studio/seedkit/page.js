@@ -30,7 +30,11 @@ function getPageRequest() {
 export async function generateMetadata() {
   const { site, blog } = await performRequest(getPageRequest());
 
-  return toNextMetadata([...site.favicon, ...blog.seo]);
+  return {
+    ...toNextMetadata([...site.favicon, ...blog.seo]),
+    title: 'The Seed Kit, Complete Brand Identity in One Week. Sofia Moraes',
+    description: "One session. A complete visual world in One week. Identity, imagery direction, and a content library built from your brand's essence.",
+  };
 }
 
 export default async function WebDesignPage() {

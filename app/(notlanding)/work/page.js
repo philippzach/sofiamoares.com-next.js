@@ -54,7 +54,11 @@ async function getPageRequest() {
 export async function generateMetadata() {
   const { site, blog } = await performRequest(await getPageRequest());
 
-  return toNextMetadata([...site.favicon, ...blog.seo]);
+  return {
+    ...toNextMetadata([...site.favicon, ...blog.seo]),
+    title: 'Brand Identity Systems and Visual Architecture, Sofia Moraes',
+    description: 'Complete visual brand systems for conscious brands, eco-luxury, and mission-driven founders. From strategy to the visual language that makes your brand undeniable.',
+  };
 }
 
 export default async function Page() {

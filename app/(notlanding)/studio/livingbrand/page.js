@@ -30,7 +30,11 @@ function getPageRequest() {
 export async function generateMetadata() {
   const { site, blog } = await performRequest(getPageRequest());
 
-  return toNextMetadata([...site.favicon, ...blog.seo]);
+  return {
+    ...toNextMetadata([...site.favicon, ...blog.seo]),
+    title: 'The Living Brand, Monthly Creative Direction. Sofia Moraes',
+    description: 'One creative session a month. Up to 12 months of campaign visuals, social assets, and creative direction always on brand.',
+  };
 }
 
 export default async function CreativeDirectionPage() {

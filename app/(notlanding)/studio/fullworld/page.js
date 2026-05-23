@@ -30,7 +30,11 @@ function getPageRequest() {
 export async function generateMetadata() {
   const { site, blog } = await performRequest(getPageRequest());
 
-  return toNextMetadata([...site.favicon, ...blog.seo]);
+  return {
+    ...toNextMetadata([...site.favicon, ...blog.seo]),
+    title: 'The Full World, Complete Creative Direction. Sofia Moraes',
+    description: 'Complete creative direction from the ground up. Strategy, identity, content system, and ongoing direction.',
+  };
 }
 
 export default async function AICreativePage() {
