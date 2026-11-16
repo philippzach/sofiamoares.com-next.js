@@ -85,10 +85,10 @@ export default async function AICreativePage() {
           </div>
 
           <Link
-            href='/studio'
+            href='/studio#contact'
             className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
           >
-            Book a call ↵
+            Start your project ↵
           </Link>
           <div className='mb-8'>
             <p className='text-base mb-4'>
@@ -161,10 +161,10 @@ export default async function AICreativePage() {
             </div>
 
             <Link
-              href='/studio'
+              href='/studio#contact'
               className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
             >
-              Book a call ↵
+              Start your project ↵
             </Link>
             <div className='mb-8'>
               <p className='text-base mb-4'>

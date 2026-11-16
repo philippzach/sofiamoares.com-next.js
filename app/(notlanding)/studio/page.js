@@ -91,9 +91,9 @@ export default async function Page() {
         </p>
         <a
           href='#contact'
-          className='mt-8 inline-block text-lg md:text-xl font-light underline hover:opacity-30 duration-150'
+          className='mt-8 inline-block bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
         >
-          Get in touch ↵
+          Start your project ↵
         </a>
       </section>
 

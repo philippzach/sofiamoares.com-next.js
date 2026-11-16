@@ -14,7 +14,7 @@ export default async function RootLayout({ children }) {
   const { isEnabled } = await draftMode();
 
   return (
-    <html lang='en' className={`${officeTimes.variable} ${aeonik.variable}`}>
+    <html lang='en' className={`${officeTimes.variable} ${aeonik.variable} scroll-smooth`}>
       <body className='text-prim-grey font-primary pr-4 pl-4'>
         <HotjarInit />
         <NavigationNl />

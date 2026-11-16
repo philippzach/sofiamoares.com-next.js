@@ -194,10 +194,10 @@ export default function Page() {
             See my work ↵
           </Link>
           <Link
-            href='/studio'
+            href='/studio#contact'
             className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
           >
-            Start a project ↵
+            Start your project ↵
           </Link>
         </div>
       </section>

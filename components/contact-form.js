@@ -81,8 +81,12 @@ export default function ContactForm() {
         </label>
         <input
           id='email'
-          type='email'
+          type='text'
           name='email'
+          inputMode='text'
+          pattern='^([^\s@]+@[^\s@]+\.[^\s@]+|[+\d][+\d\s]{5,})$'
+          title='Enter a valid email address or a phone number (digits, +, spaces).'
+          placeholder='you@example.com or +41 79 123 45 67'
           required
           className='w-full border border-gray-300 rounded px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black/20'
         />
