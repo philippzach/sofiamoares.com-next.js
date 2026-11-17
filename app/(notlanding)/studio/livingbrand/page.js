@@ -83,11 +83,11 @@ export default async function CreativeDirectionPage() {
               <li>• One creative session a month</li>
               <li>• 60–80 campaign-quality visuals</li>
               <li>
-                • Social content grid — captions and imagery, ready to post
+                • Social content grid: captions and imagery, ready to post
               </li>
               <li>• Reel and story direction, filmed or generated</li>
               <li>
-                • Website updates — new pages, campaigns, seasonal shifts
+                • Website updates: new pages, campaigns, seasonal shifts
               </li>
               <li>
                 • I run your AI direction system so everything stays on brand
@@ -112,18 +112,16 @@ export default async function CreativeDirectionPage() {
             </p>
           </div>
 
+          <p className='text-base mb-4'>
+            Tell me where your brand is now and I&apos;ll come back with what
+            the first month would look like.
+          </p>
           <Link
             href='/studio#contact'
-            className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+            className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
           >
             Start your project ↵
           </Link>
-          <div className='mb-8'>
-            <p className='text-base mb-4'>
-              Are you in? let&apos;s connect. A short call helps us get to know
-              each other and see how I can support your vision.
-            </p>
-          </div>
         </div>
 
         {/* Mobile Images Grid */}
@@ -192,11 +190,11 @@ export default async function CreativeDirectionPage() {
                 <li>• One creative session a month</li>
                 <li>• 60–80 campaign-quality visuals</li>
                 <li>
-                  • Social content grid — captions and imagery, ready to post
+                  • Social content grid: captions and imagery, ready to post
                 </li>
                 <li>• Reel and story direction, filmed or generated</li>
                 <li>
-                  • Website updates — new pages, campaigns, seasonal shifts
+                  • Website updates: new pages, campaigns, seasonal shifts
                 </li>
                 <li>
                   • I run your AI direction system so everything stays on brand
@@ -221,18 +219,16 @@ export default async function CreativeDirectionPage() {
               </p>
             </div>
 
+            <p className='text-base mb-4'>
+              Tell me where your brand is now and I&apos;ll come back with
+              what the first month would look like.
+            </p>
             <Link
               href='/studio#contact'
-              className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+              className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
             >
               Start your project ↵
             </Link>
-            <div className='mb-8'>
-              <p className='text-base mb-4'>
-                Are you in? let&apos;s connect. A short call helps us get to
-                know each other and see how I can support your vision.
-              </p>
-            </div>
           </div>
         </div>
       </div>

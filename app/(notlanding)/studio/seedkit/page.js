@@ -58,7 +58,7 @@ export default async function WebDesignPage() {
           <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
 
           <p className='text-lg font-semibold'>
-            Type: One-time project. Delivery: 1 week
+            Type: One-time project
           </p>
           <p className='text-lg font-semibold mb-6'>$1,500 · 1 week</p>
 
@@ -72,8 +72,8 @@ export default async function WebDesignPage() {
           <p className='text-lg mb-6'>
             You have a brand with a soul. It just doesn&apos;t look like it yet. The
             Seed Kit is a complete visual brand system built from a single
-            creative session. I extract the essence what your brand feels,
-            believes, stands for and translate it into a full visual language:
+            creative session. I extract the essence of what your brand feels,
+            believes and stands for, and translate it into a full visual language:
             identity, colour, typography, imagery direction, and a content seed
             library you can use for months.
           </p>
@@ -106,18 +106,16 @@ export default async function WebDesignPage() {
             </p>
           </div>
 
+          <p className='text-base mb-4'>
+            Tell me what you&apos;re building and I&apos;ll come back with how
+            I&apos;d find its seed.
+          </p>
           <Link
             href='/studio#contact'
-            className=' inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+            className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
           >
             Start your project ↵
           </Link>
-          <div className='mb-8'>
-            <p className='text-base mb-4'>
-              Are you in? let&apos;s connect. A short call helps us get to know
-              each other and see how I can support your vision.
-            </p>
-          </div>
         </div>
 
         {/* Mobile Images Grid */}
@@ -191,7 +189,7 @@ export default async function WebDesignPage() {
             <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
 
             <p className='text-lg font-semibold'>
-              Type: One-time project. Delivery: 1 week
+              Type: One-time project
             </p>
             <p className='text-lg font-semibold mb-6'>$1,500 · 1 week</p>
 
@@ -205,8 +203,8 @@ export default async function WebDesignPage() {
             <p className='text-lg mb-6'>
               You have a brand with a soul. It just doesn&apos;t look like it yet.
               The Seed Kit is a complete visual brand system built from a single
-              creative session. I extract the essence what your brand feels,
-              believes, stands for and translate it into a full visual
+              creative session. I extract the essence of what your brand feels,
+              believes and stands for, and translate it into a full visual
               language: identity, colour, typography, imagery direction, and a
               content seed library you can use for months.
             </p>
@@ -239,18 +237,16 @@ export default async function WebDesignPage() {
               </p>
             </div>
 
+            <p className='text-base mb-4'>
+              Tell me what you&apos;re building and I&apos;ll come back with
+              how I&apos;d find its seed.
+            </p>
             <Link
               href='/studio#contact'
-              className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+              className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
             >
               Start your project ↵
             </Link>
-            <div className='mb-8'>
-              <p className='text-base mb-4'>
-                Are you in? let&apos;s connect. A short call helps us get to
-                know each other and see how I can support your vision.
-              </p>
-            </div>
           </div>
         </div>
       </div>

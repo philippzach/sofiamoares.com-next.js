@@ -75,8 +75,8 @@ export default async function AICreativePage() {
 
           <p className='text-lg mb-6'>
             Your identity, and the place people land when they find you. I
-            build the whole world — strategy, visual system, and a website
-            ready to launch — plus the system that lets you keep making new
+            build the whole world: strategy, visual system, and a website
+            ready to launch, plus the system that lets you keep making new
             work without losing the thread.
           </p>
 
@@ -85,17 +85,17 @@ export default async function AICreativePage() {
             <ul className='text-base space-y-1 ml-4'>
               <li>• Everything in the Seed Kit</li>
               <li>
-                • Brand strategy foundation — positioning, audience, and the
+                • Brand strategy foundation: positioning, audience, and the
                 one sentence your brand has to make people feel
               </li>
               <li>
-                • Complete identity system — logo and marks, colour,
+                • Complete identity system: logo and marks, colour,
                 typography, texture, art direction
               </li>
               <li>• Website designed and built, ready to launch</li>
-              <li>• Imagery world — 40+ brand visuals built from your seed</li>
+              <li>• Imagery world: 40+ brand visuals built from your seed</li>
               <li>
-                • Your AI direction system — the references, prompts and
+                • Your AI direction system: the references, prompts and
                 guardrails that let you generate new visuals without losing the
                 identity
               </li>
@@ -112,15 +112,13 @@ export default async function AICreativePage() {
             </p>
           </div>
 
+          <p className='text-base mb-4'>Tell me what you&apos;re building.</p>
           <Link
             href='/studio#contact'
-            className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+            className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
           >
             Start your project ↵
           </Link>
-          <div className='mb-8'>
-            <p className='text-base mb-4'>Tell me what you&apos;re building.</p>
-          </div>
         </div>
 
         {/* Mobile Images Grid */}
@@ -176,8 +174,8 @@ export default async function AICreativePage() {
 
             <p className='text-lg mb-6'>
               Your identity, and the place people land when they find you. I
-              build the whole world — strategy, visual system, and a website
-              ready to launch — plus the system that lets you keep making new
+              build the whole world: strategy, visual system, and a website
+              ready to launch, plus the system that lets you keep making new
               work without losing the thread.
             </p>
 
@@ -186,19 +184,19 @@ export default async function AICreativePage() {
               <ul className='text-base space-y-1 ml-4'>
                 <li>• Everything in the Seed Kit</li>
                 <li>
-                  • Brand strategy foundation — positioning, audience, and the
+                  • Brand strategy foundation: positioning, audience, and the
                   one sentence your brand has to make people feel
                 </li>
                 <li>
-                  • Complete identity system — logo and marks, colour,
+                  • Complete identity system: logo and marks, colour,
                   typography, texture, art direction
                 </li>
                 <li>• Website designed and built, ready to launch</li>
                 <li>
-                  • Imagery world — 40+ brand visuals built from your seed
+                  • Imagery world: 40+ brand visuals built from your seed
                 </li>
                 <li>
-                  • Your AI direction system — the references, prompts and
+                  • Your AI direction system: the references, prompts and
                   guardrails that let you generate new visuals without losing
                   the identity
                 </li>
@@ -215,17 +213,15 @@ export default async function AICreativePage() {
               </p>
             </div>
 
+            <p className='text-base mb-4'>
+              Tell me what you&apos;re building.
+            </p>
             <Link
               href='/studio#contact'
-              className='inline-block my-5 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+              className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
             >
               Start your project ↵
             </Link>
-            <div className='mb-8'>
-              <p className='text-base mb-4'>
-                Tell me what you&apos;re building.
-              </p>
-            </div>
           </div>
         </div>
       </div>
