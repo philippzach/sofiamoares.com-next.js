@@ -133,51 +133,84 @@ export default async function Page() {
       {/* Services Grid */}
       <section>
         <div className='w-full flex flex-col gap-8'>
-          {/* Web/App Design */}
+          {/* The Seed Kit */}
           <Link href='/studio/seedkit' className='group/link block w-full'>
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
                   src='/photos/webdesign/servicecover.png'
-                  alt='Web/App Design 1'
+                  alt='The Seed Kit 1'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
                 <Image
                   src='/photos/webdesign/servicecover2.png'
-                  alt='Web/App Design 2'
+                  alt='The Seed Kit 2'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
               </div>
               <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-4'>
+                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
                   The Seed Kit
                 </h2>
+                <p className='text-sm text-gray-400 mb-3'>$1,500 · 1 week</p>
                 <p className='text-gray-500'>
-                  One session. A complete visual world in one week. Identity,
-                  imagery direction, and a content library built from your
-                  brands essence.
+                  Your identity, revealed. One session, one week, a complete
+                  visual language built from your brand&apos;s seed.
                 </p>
               </div>
             </div>
           </Link>
-          {/* Creative Direction */}
+          {/* The Full World */}
+          <Link href='/studio/fullworld' className='group/link block w-full'>
+            <div className='flex flex-col md:flex-row w-full'>
+              <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
+                <Image
+                  src='/photos/aiservices/ai1.webp'
+                  alt='The Full World 1'
+                  fill
+                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+                <Image
+                  src='/photos/aiservices/aiservice2.webp'
+                  alt='The Full World 2'
+                  fill
+                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+              <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
+                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
+                  The Full World
+                </h2>
+                <p className='text-sm text-gray-400 mb-3'>
+                  $2,500–4,500 · 3–4 weeks
+                </p>
+                <p className='text-gray-500'>
+                  Identity and the place people land. Strategy, a full visual
+                  system, and a website built and ready to launch.
+                </p>
+              </div>
+            </div>
+          </Link>
+          {/* The Living Brand */}
           <Link href='/studio/livingbrand' className='group/link block w-full'>
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
                   src='/photos/creativedirection/c_lb1.jpg'
-                  alt='The Living Brand'
+                  alt='The Living Brand 1'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
                 <Image
                   src='/photos/creativedirection/c_lb2.jpg'
-                  alt='The Living Brand hover'
+                  alt='The Living Brand 2'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
                   sizes='(max-width: 768px) 100vw, 50vw'
@@ -187,41 +220,12 @@ export default async function Page() {
                 <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
                   The Living Brand
                 </h2>
-                <p className='text-gray-500'>
-                  One creative session a month. Up to 12 months of content.
-                  Campaign visuals, social assets, and creative direction
-                  continuously generated, always on brand.
+                <p className='text-sm text-gray-400 mb-3'>
+                  From $1,200 / month · 3-month minimum
                 </p>
-              </div>
-            </div>
-          </Link>
-          {/* AI Creative */}
-          <Link href='/studio/fullworld' className='group/link block w-full'>
-            <div className='flex flex-col md:flex-row w-full'>
-              <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
-                <Image
-                  src='/photos/aiservices/ai1.webp'
-                  alt='Creative Direction 1'
-                  fill
-                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
-                <Image
-                  src='/photos/aiservices/aiservice2.webp'
-                  alt='Creative Direction 2'
-                  fill
-                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
-              </div>
-              <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-4'>
-                  The Full World
-                </h2>
                 <p className='text-gray-500'>
-                  Complete creative direction from the ground up. Strategy,
-                  identity, content system, and ongoing direction. I don&apos;t just
-                  execute, I lead the entire vision.
+                  Your world, kept alive. One session a month and a continuous
+                  flow of campaign visuals, content and direction.
                 </p>
               </div>
             </div>

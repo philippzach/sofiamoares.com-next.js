@@ -60,24 +60,38 @@ export default async function CreativeDirectionPage() {
           <h1 className='text-4xl font-bold mb-4'>The Living Brand</h1>
 
           <p className='text-lg font-semibold mb-6'>
-            Type: Monthly retainer. Commitment: 3 months minimum
+            Type: Monthly retainer · From $1,200 / month · Commitment: 3 months
+            minimum
           </p>
 
+          <Link
+            href='/studio#contact'
+            className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+          >
+            Start your project ↵
+          </Link>
+
           <p className='text-lg mb-6'>
-            One creative session. Up to 12 months of content. Once a month, we
-            meet. I extract new seeds — a story, a texture, a feeling. I
-            generate a full batch of campaign-quality visuals and creative
-            direction your team can deploy across every channel. Your brand
-            grows continuously. You don&apos;t burn out.
+            You have the world. Now it has to keep speaking. Once a month we
+            meet, I pull a new seed from where the brand actually is, and I
+            build everything that comes from it.
           </p>
 
           <div className='mb-6'>
             <p className='font-semibold mb-3'>♦ What you receive each month:</p>
             <ul className='text-base space-y-1 ml-4'>
-              <li>• 60–80 campaign-quality visual assets</li>
-              <li>• Monthly campaign direction</li>
-              <li>• Social content grid (captions + imagery)</li>
-              <li>• Story and reel creative briefs</li>
+              <li>• One creative session a month</li>
+              <li>• 60–80 campaign-quality visuals</li>
+              <li>
+                • Social content grid — captions and imagery, ready to post
+              </li>
+              <li>• Reel and story direction, filmed or generated</li>
+              <li>
+                • Website updates — new pages, campaigns, seasonal shifts
+              </li>
+              <li>
+                • I run your AI direction system so everything stays on brand
+              </li>
               <li>• Creative evolution report</li>
             </ul>
           </div>
@@ -85,8 +99,9 @@ export default async function CreativeDirectionPage() {
           <div className='mb-6'>
             <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
             <p className='text-base'>
-              Established brands, companies or creative founders launching a new
-              phase or offering — with depth, poetry, and presence.
+              Brands that have launched and need to keep producing at the level
+              they launched with. Founders who don&apos;t want to burn out making
+              content.
             </p>
           </div>
 
@@ -152,15 +167,21 @@ export default async function CreativeDirectionPage() {
             <h1 className='text-4xl font-bold mb-4'>The Living Brand</h1>
 
             <p className='text-lg font-semibold mb-6'>
-              Type: Monthly retainer. Commitment: 3 months minimum
+              Type: Monthly retainer · From $1,200 / month · Commitment: 3
+              months minimum
             </p>
 
+            <Link
+              href='/studio#contact'
+              className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+            >
+              Start your project ↵
+            </Link>
+
             <p className='text-lg mb-6'>
-              One creative session. Up to 12 months of content. Once a month, we
-              meet. I extract new seeds — a story, a texture, a feeling. I
-              generate a full batch of campaign-quality visuals and creative
-              direction your team can deploy across every channel. Your brand
-              grows continuously. You don&apos;t burn out.
+              You have the world. Now it has to keep speaking. Once a month we
+              meet, I pull a new seed from where the brand actually is, and I
+              build everything that comes from it.
             </p>
 
             <div className='mb-6'>
@@ -168,10 +189,18 @@ export default async function CreativeDirectionPage() {
                 ♦ What you receive each month:
               </p>
               <ul className='text-base space-y-1 ml-4'>
-                <li>• 60–80 campaign-quality visual assets</li>
-                <li>• Monthly campaign direction</li>
-                <li>• Social content grid (captions + imagery)</li>
-                <li>• Story and reel creative briefs</li>
+                <li>• One creative session a month</li>
+                <li>• 60–80 campaign-quality visuals</li>
+                <li>
+                  • Social content grid — captions and imagery, ready to post
+                </li>
+                <li>• Reel and story direction, filmed or generated</li>
+                <li>
+                  • Website updates — new pages, campaigns, seasonal shifts
+                </li>
+                <li>
+                  • I run your AI direction system so everything stays on brand
+                </li>
                 <li>• Creative evolution report</li>
               </ul>
             </div>
@@ -179,8 +208,9 @@ export default async function CreativeDirectionPage() {
             <div className='mb-6'>
               <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
               <p className='text-base'>
-                Established brands, companies or creative founders launching a
-                new phase or offering — with depth, poetry, and presence.
+                Brands that have launched and need to keep producing at the
+                level they launched with. Founders who don&apos;t want to burn
+                out making content.
               </p>
             </div>
 

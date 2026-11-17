@@ -41,8 +41,6 @@ export default async function WebDesignPage() {
   const pageRequest = getPageRequest();
   const data = await performRequest(pageRequest);
 
-  console.log(data);
-
   const images = [
     'service1.png',
     'service2.png',
@@ -59,9 +57,17 @@ export default async function WebDesignPage() {
         <div className='p-8 pt-24 pb-12 text-prim-grey'>
           <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
 
-          <p className='text-lg font-semibold mb-6'>
-            Type: One-time project. Delivery: 2 weeks
+          <p className='text-lg font-semibold'>
+            Type: One-time project. Delivery: 1 week
           </p>
+          <p className='text-lg font-semibold mb-6'>$1,500 · 1 week</p>
+
+          <Link
+            href='/studio#contact'
+            className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+          >
+            Start your project ↵
+          </Link>
 
           <p className='text-lg mb-6'>
             You have a brand with a soul. It just doesn&apos;t look like it yet. The
@@ -87,8 +93,9 @@ export default async function WebDesignPage() {
           <div className='mb-6'>
             <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
             <p className='text-base'>
-              New entrepreneurs, products, companies, or hotels and retreats who
-              need a clean, elevated web presence without the complexity.
+              Founders with a product, a mission and a story, but no visual
+              identity that matches it yet. New brands, small product
+              companies, hotels and retreats.
             </p>
           </div>
 
@@ -183,9 +190,17 @@ export default async function WebDesignPage() {
           <div className='p-8 pt-24 text-prim-grey'>
             <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
 
-            <p className='text-lg font-semibold mb-6'>
-              Type: One-time project. Delivery: 2 weeks
+            <p className='text-lg font-semibold'>
+              Type: One-time project. Delivery: 1 week
             </p>
+            <p className='text-lg font-semibold mb-6'>$1,500 · 1 week</p>
+
+            <Link
+              href='/studio#contact'
+              className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+            >
+              Start your project ↵
+            </Link>
 
             <p className='text-lg mb-6'>
               You have a brand with a soul. It just doesn&apos;t look like it yet.
@@ -211,8 +226,9 @@ export default async function WebDesignPage() {
             <div className='mb-6'>
               <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
               <p className='text-base'>
-                New entrepreneurs, products, companies, or hotels and retreats
-                who need a clean, elevated web presence without the complexity.
+                Founders with a product, a mission and a story, but no visual
+                identity that matches it yet. New brands, small product
+                companies, hotels and retreats.
               </p>
             </div>
 

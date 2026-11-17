@@ -63,24 +63,52 @@ export default async function AICreativePage() {
           <h1 className='text-4xl font-bold mb-4'>The Full World</h1>
 
           <p className='text-lg font-semibold mb-6'>
-            Type: Complete creative direction. Scope: By proposal
+            Type: One-time project · $2,500–4,500 · 3–4 weeks
           </p>
 
+          <Link
+            href='/studio#contact'
+            className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+          >
+            Start your project ↵
+          </Link>
+
           <p className='text-lg mb-6'>
-            For brands ready to build something that lasts. This is the full
-            engagement — brand strategy, visual world construction, content
-            system, and ongoing creative direction. We build everything from the
-            ground up, or we rebuild what exists into something coherent and
-            alive. I become your creative director, not your vendor. Every Full
-            World engagement starts with a discovery call and a tailored
-            proposal.
+            Your identity, and the place people land when they find you. I
+            build the whole world — strategy, visual system, and a website
+            ready to launch — plus the system that lets you keep making new
+            work without losing the thread.
           </p>
+
+          <div className='mb-6'>
+            <p className='font-semibold mb-3'>♦ What you receive:</p>
+            <ul className='text-base space-y-1 ml-4'>
+              <li>• Everything in the Seed Kit</li>
+              <li>
+                • Brand strategy foundation — positioning, audience, and the
+                one sentence your brand has to make people feel
+              </li>
+              <li>
+                • Complete identity system — logo and marks, colour,
+                typography, texture, art direction
+              </li>
+              <li>• Website designed and built, ready to launch</li>
+              <li>• Imagery world — 40+ brand visuals built from your seed</li>
+              <li>
+                • Your AI direction system — the references, prompts and
+                guardrails that let you generate new visuals without losing the
+                identity
+              </li>
+              <li>• Brand guidelines and a handover session</li>
+            </ul>
+          </div>
 
           <div className='mb-6'>
             <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
             <p className='text-base'>
-              Visionary brands, marketing teams, and artists ready to explore
-              the bleeding edge of generative design and storytelling.
+              Founder-led brands with a strong mission and no visual language
+              that matches it yet. Companies rebuilding into something
+              coherent, and brands entering a new phase.
             </p>
           </div>
 
@@ -91,10 +119,7 @@ export default async function AICreativePage() {
             Start your project ↵
           </Link>
           <div className='mb-8'>
-            <p className='text-base mb-4'>
-              Ready to pioneer with AI? Let&apos;s talk about your vision and
-              craft a roadmap together.
-            </p>
+            <p className='text-base mb-4'>Tell me what you&apos;re building.</p>
           </div>
         </div>
 
@@ -139,24 +164,54 @@ export default async function AICreativePage() {
             <h1 className='text-4xl font-bold mb-4'>The Full World</h1>
 
             <p className='text-lg font-semibold mb-6'>
-              Type: Complete creative direction. Scope: By proposal
+              Type: One-time project · $2,500–4,500 · 3–4 weeks
             </p>
 
+            <Link
+              href='/studio#contact'
+              className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
+            >
+              Start your project ↵
+            </Link>
+
             <p className='text-lg mb-6'>
-              For brands ready to build something that lasts. This is the full
-              engagement — brand strategy, visual world construction, content
-              system, and ongoing creative direction. We build everything from
-              the ground up, or we rebuild what exists into something coherent
-              and alive. I become your creative director, not your vendor. Every
-              Full World engagement starts with a discovery call and a tailored
-              proposal.
+              Your identity, and the place people land when they find you. I
+              build the whole world — strategy, visual system, and a website
+              ready to launch — plus the system that lets you keep making new
+              work without losing the thread.
             </p>
+
+            <div className='mb-6'>
+              <p className='font-semibold mb-3'>♦ What you receive:</p>
+              <ul className='text-base space-y-1 ml-4'>
+                <li>• Everything in the Seed Kit</li>
+                <li>
+                  • Brand strategy foundation — positioning, audience, and the
+                  one sentence your brand has to make people feel
+                </li>
+                <li>
+                  • Complete identity system — logo and marks, colour,
+                  typography, texture, art direction
+                </li>
+                <li>• Website designed and built, ready to launch</li>
+                <li>
+                  • Imagery world — 40+ brand visuals built from your seed
+                </li>
+                <li>
+                  • Your AI direction system — the references, prompts and
+                  guardrails that let you generate new visuals without losing
+                  the identity
+                </li>
+                <li>• Brand guidelines and a handover session</li>
+              </ul>
+            </div>
 
             <div className='mb-6'>
               <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
               <p className='text-base'>
-                Visionary brands, marketing teams, and artists ready to explore
-                the bleeding edge of generative design and storytelling.
+                Founder-led brands with a strong mission and no visual language
+                that matches it yet. Companies rebuilding into something
+                coherent, and brands entering a new phase.
               </p>
             </div>
 
@@ -168,8 +223,7 @@ export default async function AICreativePage() {
             </Link>
             <div className='mb-8'>
               <p className='text-base mb-4'>
-                Ready to pioneer with AI? Let&apos;s talk about your vision and
-                craft a roadmap together.
+                Tell me what you&apos;re building.
               </p>
             </div>
           </div>

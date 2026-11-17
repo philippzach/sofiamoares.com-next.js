@@ -153,7 +153,7 @@ export default function Page() {
           I translate the invisible into the visible.
         </h1>
         <h2 className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
-          Visual worlds aren&apos;t created they&apos;re excavated. From your
+          Visual worlds aren&apos;t created. They&apos;re excavated. From your
           obsessions, your contradictions, the vision you&apos;ve been
           carrying all along. What emerges doesn&apos;t feel designed. It
           feels inevitable.
