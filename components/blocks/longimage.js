@@ -1,6 +1,10 @@
 import { Image as DatocmsImage } from 'react-datocms';
 
 export default function LoImage({ image }) {
+  if (!image?.responsiveImage) {
+    console.warn('LoImage: missing image or responsiveImage; skipping block', { image });
+    return null;
+  }
   const { responsiveImage, title } = image;
   return (
     <>

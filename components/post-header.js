@@ -44,7 +44,7 @@ export default function PostHeader({
           <p className='flex flex-wrap font-semibold justify-end'>
             {role.map((singleRole, index, array) => (
               <Link
-                key={singleRole}
+                key={singleRole.slug}
                 href={`/archive/${singleRole.slug}`}
                 className='hover:underline whitespace-pre-wrap pl-1'
               >
