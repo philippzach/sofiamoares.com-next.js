@@ -4,12 +4,17 @@ import Image from 'next/image';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef, useEffect } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function LandingAnimated() {
+  const secondVideoRef = useRef(null);
+
   useGSAP(() => {
     const isDesktop = window.innerWidth >= 1024;
+
+    gsap.set('.second-vd-wrapper', { opacity: 1 });
 
     gsap.to(
       '.jason .img-box',
@@ -30,6 +35,25 @@ export default function LandingAnimated() {
     if (!isDesktop) {
       return;
     }
+  }, []);
+
+  useEffect(() => {
+    const video = secondVideoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -69,7 +93,7 @@ export default function LandingAnimated() {
         <div className='max-w-lg'>
           <div className='bg-yellow h-[90vh] w-auto'>
             <img
-              src='/photos/aigeneration/mareopal6.png'
+              src='/photos/aigeneration/photo5.png'
               className='size-full object-cover [object-position:80%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
             />
           </div>
@@ -89,6 +113,29 @@ export default function LandingAnimated() {
           </div>
         </div>
       </section>
+
+      {/* Second Video Section */}
+      <div
+        id='second-video-wrapper'
+        className='relative block py-16 md:py-24 lg:py-12'
+      >
+        <section className='second-vd-wrapper relative'>
+          <div className='h-screen overflow-hidden'>
+            <video
+              ref={secondVideoRef}
+              controls
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload='metadata'
+              crossOrigin='anonymous'
+              src='/videos/portfolio_mareopal_musik-2.mp4'
+              className='second-vd w-full h-full object-cover will-change-transform'
+            />
+          </div>
+        </section>
+      </div>
 
       {/* Lucia text */}
       <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-12'>
