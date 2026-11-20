@@ -1,198 +1,83 @@
-'use client';
-import NavigationConcept from '@/components/navigation-concept';
-import Image from 'next/image';
+import { performRequest } from '@/lib/datocms';
+import { responsiveImageFragment } from '@/lib/fragments';
 import Link from 'next/link';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useRef, useEffect } from 'react';
+import LandingAnimated from '@/components/landing-animated';
+import LandingScrollTracker from '@/components/landing-scroll-tracker';
+import WorkPreview from '@/components/work-preview';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-export default function Page() {
-  const secondVideoRef = useRef(null);
-
-  useGSAP(() => {
-    const isDesktop = window.innerWidth >= 1024;
-
-    gsap.set('.second-vd-wrapper', { opacity: 1 });
-
-    //Text Animation
-    gsap.to(
-      '.jason .img-box',
-      {
-        scrollTrigger: {
-          trigger: '.jason',
-          start: 'top center',
-          end: '80% center',
-          scrub: 2,
-        },
-        y: -300,
-        duration: 1,
-        ease: 'power1.inOut',
-      },
-      '<'
-    );
-
-    //Lucia Animation
-    gsap.to(
-      '.lucia-life .img-box',
-      {
-        scrollTrigger: {
-          trigger: '.lucia-life',
-          start: 'top center',
-          end: '80% center',
-          scrub: 2,
-        },
-        y: -300,
-        duration: 1,
-        ease: 'power1.inOut',
-      },
-      '<'
-    );
-
-    if (!isDesktop) {
-      return;
-    }
-  }, []);
-
-  useEffect(() => {
-    const video = secondVideoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play().catch(() => {});
-        } else {
-          video.pause();
+const FEATURED_WORK_QUERY = `
+  query {
+    allPosts(
+      filter: {featuredOnLanding: {eq: true}}
+      orderBy: date_DESC
+      first: 3
+    ) {
+      title
+      slug
+      excerpt
+      date
+      coverImage {
+        responsiveImage {
+          ...responsiveImageFragment
         }
-      },
-      { threshold: 0.25 }
-    );
+      }
+    }
+  }
+  ${responsiveImageFragment}
+`;
 
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
+export default async function Page() {
+  let featuredWork = [];
+  try {
+    const data = await performRequest({ query: FEATURED_WORK_QUERY });
+    featuredWork = data?.allPosts || [];
+  } catch (err) {
+    console.warn(
+      'Featured work query failed. Confirm "featured_on_landing" boolean exists on the Post model in DatoCMS.',
+      err?.message || err
+    );
+  }
 
   return (
     <section style={{ backgroundColor: '#191919', margin: 0, padding: 0 }}>
-      <NavigationConcept />
-      {/* Palm Tree */}
-      <div className='relative h-screen w-full'>
-        <Image
-          src='/photos/aigeneration/mareopal9.jpg'
-          alt='AI Generation Background'
-          fill
-          priority
-          className='object-cover object-center scale-100'
-          quality={100}
-        />
-      </div>
-      {/* Jason text */}
-      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-12'>
-        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
-          The world you carry inside already has a shape.
-        </h1>
-        <h2 className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px]' style={{ color: '#f5f5f5' }}>
-          You have the vision, the mission, the feeling of what it should be
-          but not yet the visual language to match it. That&apos;s exactly
-          where I begin.
-        </h2>
-      </section>
+      <LandingAnimated />
 
-      {/* Jason images */}
-      <section className='jason relative z-10 py-16 md:py-24 lg:py-12 flex lg:flex-row flex-col justify-between gap-5 overflow-x-hidden'>
-        <div className='max-w-lg'>
-          <div className='bg-yellow h-[90vh] w-auto'>
-            <img
-              src='/photos/aigeneration/mareopal6.png'
-              className='size-full object-cover [object-position:80%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
-            />
+      {featuredWork.length > 0 && (
+        <section
+          id='landing-work-section'
+          className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-12'
+        >
+          <h2
+            className='font-long uppercase text-5xl lg:text-6xl mb-10 lg:mb-14'
+            style={{ color: '#f5f5f5' }}
+          >
+            Recent work
+          </h2>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 text-gray-300'>
+            {featuredWork.map((post) => (
+              <WorkPreview
+                key={post.slug}
+                title={post.title}
+                slug={post.slug}
+                excerpt={post.excerpt}
+                date={post.date}
+                coverImage={post.coverImage}
+              />
+            ))}
           </div>
-        </div>
-        <div className='space-y-5 mt-12 lg:mt-96 img-box'>
-          <div className='bg-yellow lg:h-[80vh] w-auto'>
-            <img
-              src='/photos/aigeneration/mareopal7.png'
-              className='size-full object-cover [object-position:5%_center] hover:scale-[0.98] transition duration-700 ease-in-out'
-            />
-          </div>
-          <div className='bg-yellow h-[50vh] md:w-[60%]'>
-            <img
-              src='/photos/aigeneration/mareopal4.jpg'
-              className='size-full object-cover [object-position:42%_center] hover:scale-[0.97] transition duration-700 ease-in-out'
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Second Video Section */}
-      <div id='second-video-wrapper' className='relative block py-16 md:py-24 lg:py-12'>
-        <section className='second-vd-wrapper relative'>
-          <div className='h-screen overflow-hidden'>
-            <video
-              ref={secondVideoRef}
-              controls
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload='auto'
-              crossOrigin='anonymous'
-              src='/videos/portfolio_mareopal_musik-2.mp4'
-              className='second-vd w-full h-full object-cover will-change-transform'
-            />
+          <div className='mt-16 flex justify-center'>
+            <Link
+              href='/work'
+              className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
+            >
+              See all work ↵
+            </Link>
           </div>
         </section>
-      </div>
+      )}
 
-      {/* Lucia text */}
-      <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-12'>
-        <h1 className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
-          I translate the invisible into the visible.
-        </h1>
-        <h2 className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto' style={{ color: '#f5f5f5' }}>
-          Visual worlds aren&apos;t created. They&apos;re excavated. From your
-          obsessions, your contradictions, the vision you&apos;ve been
-          carrying all along. What emerges doesn&apos;t feel designed. It
-          feels inevitable.
-        </h2>
-      </section>
-
-      {/* Lucia images */}
-      <section className='lucia-life relative z-10 pt-16 md:pt-24 lg:pt-12 flex lg:flex-row-reverse flex-col justify-between gap-5 overflow-x-hidden'>
-        <div className='max-w-lg'>
-          <div className='bg-yellow h-[90vh] w-auto'>
-            <img
-              src='/photos/aigeneration/photo2.png'
-              className='size-full object-cover [object-position:20%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
-            />
-          </div>
-        </div>
-        <div className='space-y-5 mt-12 lg:mt-96 img-box'>
-          <div className='bg-yellow lg:h-[80vh] w-auto'>
-            <img
-              src='/photos/aigeneration/photo4.png'
-              className='size-full object-cover [object-position:95%_center] hover:scale-[0.98] transition duration-700 ease-in-out'
-            />
-          </div>
-          <div className='bg-yellow h-[50vh] md:w-[60%]'>
-            <img
-              src='/photos/aigeneration/photo6.png'
-              className='size-full object-cover [object-position:58%_center] hover:scale-[0.97] transition duration-700 ease-in-out'
-            />
-          </div>
-        </div>
-      </section>
       <section className='relative z-20 px-6 pb-16 mt-16 md:px-16 md:pb-24 lg:px-6 lg:pb-12'>
         <div className='calltoaction flex flex-row justify-center items-center gap-6 md:gap-12'>
-          <Link
-            href='/work'
-            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
-          >
-            See my work ↵
-          </Link>
           <Link
             href='/studio#contact'
             className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
@@ -201,6 +86,8 @@ export default function Page() {
           </Link>
         </div>
       </section>
+
+      <LandingScrollTracker />
     </section>
   );
 }
