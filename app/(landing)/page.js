@@ -65,19 +65,17 @@ export default async function Page() {
               />
             ))}
           </div>
-          <div className='mt-16 flex justify-center'>
-            <Link
-              href='/work'
-              className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
-            >
-              See all work ↵
-            </Link>
-          </div>
         </section>
       )}
 
       <section className='relative z-20 px-6 pb-16 mt-16 md:px-16 md:pb-24 lg:px-6 lg:pb-12'>
-        <div className='calltoaction flex flex-row justify-center items-center gap-6 md:gap-12'>
+        <div className='calltoaction flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20'>
+          <Link
+            href='/work'
+            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
+          >
+            See all work ↵
+          </Link>
           <Link
             href='/studio#contact'
             className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
