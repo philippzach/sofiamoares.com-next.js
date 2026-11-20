@@ -89,9 +89,8 @@ export default async function Page() {
             href='/archive'
             className='group-hover:text-stone-700 underline underline-offset-1 '
           >
-            View project index{' '}
+            Keep looking ↵
           </Link>
-          containing +48 additional works.
         </p>
       </section>
     </div>
