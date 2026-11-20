@@ -4,6 +4,7 @@ import Link from 'next/link';
 import LandingAnimated from '@/components/landing-animated';
 import LandingScrollTracker from '@/components/landing-scroll-tracker';
 import WorkPreview from '@/components/work-preview';
+import Footer from '@/components/footer';
 
 const FEATURED_WORK_QUERY = `
   query {
@@ -68,22 +69,24 @@ export default async function Page() {
         </section>
       )}
 
-      <section className='relative z-20 px-6 pb-16 mt-16 md:px-16 md:pb-24 lg:px-6 lg:pb-12'>
+      <section className='relative z-20 px-6 pb-32 mt-32 md:px-16 md:pb-40 md:mt-40 lg:px-6 lg:pb-32 lg:mt-32'>
         <div className='calltoaction flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20'>
           <Link
             href='/work'
-            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
+            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-white'
           >
             See all work ↵
           </Link>
           <Link
             href='/studio#contact'
-            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-gray-300'
+            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-white'
           >
             Start your project ↵
           </Link>
         </div>
       </section>
+
+      <Footer variant='dark' />
 
       <LandingScrollTracker />
     </section>

@@ -3,7 +3,7 @@
 import Container from './container';
 import { useState, useEffect } from 'react';
 
-function Clock() {
+function Clock({ variant = 'default' }) {
   const [time, setTime] = useState('');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -44,16 +44,29 @@ function Clock() {
 
   if (!isVisible) return null;
 
-  return <span className='text-sm text-gray-500'> {time}</span>;
+  return (
+    <span
+      className={`text-sm ${variant === 'dark' ? 'text-gray-300' : 'text-gray-500'}`}
+    >
+      {' '}
+      {time}
+    </span>
+  );
 }
 
-export default function Footer() {
+export default function Footer({ variant = 'default' }) {
+  const dark = variant === 'dark';
+  const footerCls = dark
+    ? 'bg-transparent border-t border-white/20 text-white'
+    : 'bg-accent-1 border-t border-accent-2';
   return (
-    <footer className='bg-accent-1 border-t border-accent-2'>
-      <div className='pt-8 pb-10 md:pt-8 md:pb-10 flex flex-col md:flex-row items-center'>
+    <footer className={footerCls}>
+      <div
+        className={`pt-8 pb-10 md:pt-8 md:pb-10 flex flex-col md:flex-row items-center ${dark ? 'px-6 md:px-16 lg:px-6' : ''}`}
+      >
         <h3 className='text-xl font-bold tracking-tight leading-tight text-center md:text-left mb-10 md:mb-0 lg:pr-4 md:w-1/2'>
           <span className='font-light'>Studio</span> Eastern Caribbean Time
-          <Clock />
+          <Clock variant={variant} />
         </h3>
         <div className='flex flex-row justify-end items-center md:pl-4 md:w-1/2'>
           <a
@@ -251,10 +264,11 @@ export default function Footer() {
       <style jsx>{`
         .social svg * {
           transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+          ${dark ? 'fill: #ffffff;' : ''}
         }
         .social:hover svg * {
-          fill: rgb(214, 211, 209);
-          stroke: rgb(214, 211, 209);
+          fill: ${dark ? 'rgba(255, 255, 255, 0.5)' : 'rgb(214, 211, 209)'};
+          stroke: ${dark ? 'rgba(255, 255, 255, 0.5)' : 'rgb(214, 211, 209)'};
         }
       `}</style>
     </footer>

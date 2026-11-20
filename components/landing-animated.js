@@ -73,13 +73,13 @@ export default function LandingAnimated() {
       {/* Jason text */}
       <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-12'>
         <h1
-          className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]'
+          className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto'
           style={{ color: '#f5f5f5' }}
         >
           The world you carry inside already has a shape.
         </h1>
         <h2
-          className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px]'
+          className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto'
           style={{ color: '#f5f5f5' }}
         >
           You have the mission, the point of view, the way of doing things
@@ -140,13 +140,13 @@ export default function LandingAnimated() {
       {/* One real thing text */}
       <section className='relative z-10 px-6 py-16 md:px-16 md:py-24 lg:px-6 lg:py-12'>
         <h1
-          className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px]'
+          className='leading-[1] font-long uppercase text-5xl lg:text-6xl mb-4 lg:max-w-[450px] lg:ml-auto'
           style={{ color: '#f5f5f5' }}
         >
           One real thing becomes a whole world.
         </h1>
         <h2
-          className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px]'
+          className='leading-relaxed md:text-2xl text-lg font-light max-w-3xl lg:max-w-[450px] lg:ml-auto'
           style={{ color: '#f5f5f5' }}
         >
           I start from something that already exists inside the brand: a
