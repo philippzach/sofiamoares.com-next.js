@@ -12,9 +12,9 @@ export default function Navigation({ data }) {
         <ul className='flex flex-wrap m-0 p-0 '>
           <li>
             <Link
-              href='/archive'
+              href='/work'
               className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mr-3 text-stone-300 hover:text-stone-700 duration-150
-                                ${isActive('/archive') ? 'text-stone-700' : ''}
+                                ${isActive('/work') ? 'text-stone-700' : ''}
                                 
                                 `}
             >

@@ -16,6 +16,12 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      // Exact path only; /archive/<category> pages are unaffected.
+      { source: '/archive', destination: '/work', permanent: true },
+    ];
+  },
 };
 
 module.exports = nextConfig;
