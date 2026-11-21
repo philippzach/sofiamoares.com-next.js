@@ -98,7 +98,8 @@ export default function LandingAnimated() {
       </section>
 
       {/* Jason images */}
-      <section className='jason relative z-10 pt-16 pb-0 md:pt-24 md:pb-0 lg:pt-12 lg:pb-0 flex lg:flex-row flex-col justify-between gap-5 overflow-x-hidden'>
+      {/* mb-[-300px] cancels the layout space left behind by the GSAP y:-300 on .img-box above */}
+      <section className='jason relative z-10 pt-16 pb-0 md:pt-24 md:pb-0 lg:pt-12 lg:pb-0 mb-[-300px] flex lg:flex-row flex-col justify-between gap-5 overflow-x-hidden'>
         <div className='w-full max-w-lg px-6 md:px-16 lg:px-6'>
           <div className='bg-yellow w-full'>
             <img
@@ -126,7 +127,7 @@ export default function LandingAnimated() {
       {/* Second Video Section */}
       <div
         id='second-video-wrapper'
-        className='relative block pt-6 pb-16 md:pt-10 md:pb-24 lg:pt-4 lg:pb-12'
+        className='relative block pt-16 pb-16 md:pt-24 md:pb-24 lg:pt-12 lg:pb-12'
       >
         <section className='second-vd-wrapper relative'>
           <div className='h-screen overflow-hidden'>
