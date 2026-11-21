@@ -12,14 +12,10 @@ export default function ArchiveGrid({ archives }) {
           return null;
         }
         return (
-        <a
+        <div
           key={archive.slug}
-          href='https://www.pinterest.com/sofiamoraesmm/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='block break-inside-avoid mb-4 transition-opacity duration-200 hover:opacity-80 cursor-pointer'
+          className='block break-inside-avoid mb-4'
           style={{ breakInside: 'avoid' }}
-          aria-label='Open Sofia Moraes Pinterest in a new tab'
         >
           <DatocmsImage
             data={{
@@ -28,7 +24,7 @@ export default function ArchiveGrid({ archives }) {
             }}
             className='w-auto h-auto object-cover'
           />
-        </a>
+        </div>
         );
       })}
     </div>

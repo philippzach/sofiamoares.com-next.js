@@ -80,6 +80,14 @@ export function PostPage({ data }) {
             </div>
           </div>
         </section>
+        <section className='pt-16 pb-16 md:pt-24 md:pb-24'>
+          <Link
+            href='/studio#contact'
+            className='text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
+          >
+            Start your project ↵
+          </Link>
+        </section>
         {morePosts.length > 0 && <NextPrev posts={randomPosts} />}
       </article>
     </div>

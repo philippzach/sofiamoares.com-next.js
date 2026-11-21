@@ -1,5 +1,4 @@
 import { toNextMetadata } from 'react-datocms';
-import Link from 'next/link';
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
 import Image from 'next/image';
@@ -133,83 +132,58 @@ export default async function Page() {
       {/* Services Grid */}
       <section>
         <div className='w-full flex flex-col gap-8'>
-          {/* The Seed Kit */}
-          <Link href='/studio/seedkit' className='group/link block w-full'>
+          {/* Tier 1 — The Seed */}
+          <div className='block w-full'>
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
                   src='/photos/webdesign/servicecover.png'
-                  alt='The Seed Kit 1'
+                  alt='The Seed 1'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
                 <Image
                   src='/photos/webdesign/servicecover2.png'
-                  alt='The Seed Kit 2'
+                  alt='The Seed 2'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
               </div>
               <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
-                  The Seed Kit
+                <h2 className='text-4xl font-bold text-prim-grey mb-2'>
+                  The Seed
                 </h2>
                 <p className='text-sm text-gray-400 mb-3'>$1,500 · 1 week</p>
                 <p className='text-gray-500'>
                   Your identity, revealed. One session, one week, a complete
                   visual language built from your brand&apos;s seed.
                 </p>
+                <a
+                  href='https://www.pinterest.com/sofiamoraesmm/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='self-start mt-6 text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
+                >
+                  More inspiration ↵
+                </a>
               </div>
             </div>
-          </Link>
-          {/* The Full World */}
-          <Link href='/studio/fullworld' className='group/link block w-full'>
+          </div>
+          {/* Tier 2 — The Living Brand */}
+          <div className='block w-full'>
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
                   src='/photos/aiservices/ai1.webp'
-                  alt='The Full World 1'
-                  fill
-                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
-                <Image
-                  src='/photos/aiservices/aiservice2.webp'
-                  alt='The Full World 2'
-                  fill
-                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
-                  sizes='(max-width: 768px) 100vw, 50vw'
-                />
-              </div>
-              <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
-                  The Full World
-                </h2>
-                <p className='text-sm text-gray-400 mb-3'>
-                  $2,500–4,500 · 3–4 weeks
-                </p>
-                <p className='text-gray-500'>
-                  Identity and the place people land. Strategy, a full visual
-                  system, and a website built and ready to launch.
-                </p>
-              </div>
-            </div>
-          </Link>
-          {/* The Living Brand */}
-          <Link href='/studio/livingbrand' className='group/link block w-full'>
-            <div className='flex flex-col md:flex-row w-full'>
-              <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
-                <Image
-                  src='/photos/creativedirection/c_lb1.jpg'
                   alt='The Living Brand 1'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
                   sizes='(max-width: 768px) 100vw, 50vw'
                 />
                 <Image
-                  src='/photos/creativedirection/c_lb2.jpg'
+                  src='/photos/aiservices/aiservice2.webp'
                   alt='The Living Brand 2'
                   fill
                   className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
@@ -217,19 +191,65 @@ export default async function Page() {
                 />
               </div>
               <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
+                <h2 className='text-4xl font-bold text-prim-grey mb-2'>
                   The Living Brand
                 </h2>
-                <p className='text-sm text-gray-400 mb-3'>
-                  From $1,200 / month · 3-month minimum
-                </p>
+                <p className='text-sm text-gray-400 mb-3'>$2,500–4,500 · 3–4 weeks</p>
                 <p className='text-gray-500'>
-                  Your world, kept alive. One session a month and a continuous
-                  flow of campaign visuals, content and direction.
+                  Identity and the place people land. Strategy, a full visual
+                  system, and a website built and ready to launch.
                 </p>
+                <a
+                  href='https://www.pinterest.com/sofiamoraesmm/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='self-start mt-6 text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
+                >
+                  More inspiration ↵
+                </a>
               </div>
             </div>
-          </Link>
+          </div>
+          {/* Tier 3 — The Full World */}
+          <div className='block w-full'>
+            <div className='flex flex-col md:flex-row w-full'>
+              <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
+                <Image
+                  src='/photos/creativedirection/c_lb1.jpg'
+                  alt='The Full World 1'
+                  fill
+                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-100 group-hover/image:opacity-0'
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+                <Image
+                  src='/photos/creativedirection/c_lb2.jpg'
+                  alt='The Full World 2'
+                  fill
+                  className='object-cover rounded-lg transition-opacity duration-700 ease-in-out opacity-0 group-hover/image:opacity-100'
+                  sizes='(max-width: 768px) 100vw, 50vw'
+                />
+              </div>
+              <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
+                <h2 className='text-4xl font-bold text-prim-grey mb-2'>
+                  The Full World
+                </h2>
+                <p className='text-sm text-gray-400 mb-3'>From $4,500 · continues at $1,200 / month</p>
+                <p className='text-gray-500'>
+                  Everything above, plus the direction that keeps it alive: one
+                  session a month and a continuous flow of campaign visuals,
+                  content and direction.
+                </p>
+                <a
+                  href='https://www.pinterest.com/sofiamoraesmm/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='self-start mt-6 text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
+                >
+                  More inspiration ↵
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       {/* ---------- TESTIMONIALS ---------- */}

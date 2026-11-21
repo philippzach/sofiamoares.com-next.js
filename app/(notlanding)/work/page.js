@@ -84,14 +84,22 @@ export default async function Page() {
     <div className='pt-[120px] lg:pt-[200px] pb-6'>
       <section className='min-h-screen'>
         <WorkIndex data={data} />
-        <p className='group text-stone-300 font-bold text-3xl mt-44 mb-32 md:text-5xl lg:text-6xl leading-[0.95]'>
+        <div className='flex flex-col md:flex-row md:items-baseline gap-10 md:gap-20 mt-44 mb-32'>
+          <p className='group text-stone-300 font-bold text-3xl md:text-5xl lg:text-6xl leading-[0.95]'>
+            <Link
+              href='/archive'
+              className='group-hover:text-stone-700 underline underline-offset-1 '
+            >
+              Keep looking ↵
+            </Link>
+          </p>
           <Link
-            href='/archive'
-            className='group-hover:text-stone-700 underline underline-offset-1 '
+            href='/studio#contact'
+            className='text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
           >
-            Keep looking ↵
+            Start your project ↵
           </Link>
-        </p>
+        </div>
       </section>
     </div>
   );

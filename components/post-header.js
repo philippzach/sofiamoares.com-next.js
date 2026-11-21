@@ -20,6 +20,12 @@ export default function PostHeader({
         <div className='max-w-md md:max-w-2xl lg:max-w-5xl text-balance'>
           <p>{excerpt}</p>
         </div>
+        <Link
+          href='/studio#contact'
+          className='inline-block mt-8 md:mt-12 tracking-normal text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
+        >
+          Start your project ↵
+        </Link>
       </section>
       <section className='flex flex-col mb-1 justify-between md:flex-row md:item-start md:items-center '>
         <div className='flex order-1 items-end  flex-col lg:gap-1 md:flex-col lg:items-baseline lg:flex-row md:w-2/12'>
