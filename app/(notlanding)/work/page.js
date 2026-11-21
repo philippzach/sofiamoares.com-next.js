@@ -93,17 +93,17 @@ export default async function Page() {
     <div className='pt-[120px] lg:pt-[200px] pb-6'>
       <section className='min-h-screen'>
         <WorkIndex data={data} />
-        <div className='mt-40 md:mt-56'>
+        <section className='mt-32 md:mt-40 lg:mt-32 pt-16 md:pt-24 lg:pt-12'>
+          <h2 className='font-long uppercase text-5xl lg:text-6xl mb-10 lg:mb-14'>
+            More work
+          </h2>
           <ArchiveGrid
             archives={data.allArchives}
             columnsClassName='columns-2 md:columns-3 lg:columns-4'
             sizes='(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw'
           />
-        </div>
+        </section>
         <div className='flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 mt-24 mb-32 md:mt-32'>
-          <Link href='/archive' className='text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'>
-            Keep looking ↵
-          </Link>
           <a
             href='https://www.pinterest.com/sofiamoraesmm/'
             target='_blank'
