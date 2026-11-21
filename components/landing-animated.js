@@ -1,6 +1,7 @@
 'use client';
 import NavigationConcept from '@/components/navigation-concept';
 import Image from 'next/image';
+import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -86,15 +87,23 @@ export default function LandingAnimated() {
           nobody else has. What&apos;s missing is the visual language that
           makes people feel it. That&apos;s where I begin.
         </h2>
+        <div className='mt-10 lg:max-w-[450px] lg:ml-auto'>
+          <Link
+            href='/studio'
+            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-white'
+          >
+            See how I work ↵
+          </Link>
+        </div>
       </section>
 
       {/* Jason images */}
       <section className='jason relative z-10 pt-16 pb-0 md:pt-24 md:pb-0 lg:pt-12 lg:pb-0 flex lg:flex-row flex-col justify-between gap-5 overflow-x-hidden'>
-        <div className='max-w-lg'>
-          <div className='bg-yellow h-[90vh] w-auto'>
+        <div className='w-full max-w-lg px-6 md:px-16 lg:px-6'>
+          <div className='bg-yellow w-full'>
             <img
               src='/photos/aigeneration/photo2.png'
-              className='size-full object-cover [object-position:80%_center] hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
+              className='block w-full h-auto object-contain hover:scale-x-[0.97] hover:scale-y-[0.98] transition duration-700 ease-in-out'
             />
           </div>
         </div>
@@ -155,6 +164,14 @@ export default function LandingAnimated() {
           without losing the thread. One week for the seed. Three to four for
           the whole world.
         </h2>
+        <div className='mt-10 lg:max-w-[450px] lg:ml-auto'>
+          <Link
+            href='/studio#contact'
+            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-white'
+          >
+            Start your project ↵
+          </Link>
+        </div>
       </section>
     </>
   );
