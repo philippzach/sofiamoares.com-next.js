@@ -32,8 +32,8 @@ export async function generateMetadata() {
 
   return {
     ...toNextMetadata([...site.favicon, ...blog.seo]),
-    title: 'The Living Brand, Monthly Creative Direction. Sofia Moraes',
-    description: 'One creative session a month. Up to 12 months of campaign visuals, social assets, and creative direction always on brand.',
+    title: 'The Living Brand, Complete Creative Direction. Sofia Moraes',
+    description: 'Complete creative direction from the ground up. Strategy, identity, content system, and a website ready to launch.',
   };
 }
 
@@ -60,8 +60,7 @@ export default async function CreativeDirectionPage() {
           <h1 className='text-4xl font-bold mb-4'>The Living Brand</h1>
 
           <p className='text-lg font-semibold mb-6'>
-            Type: Monthly retainer · From $1,200 / month · Commitment: 3 months
-            minimum
+            Type: One-time project · $2,500–4,500 · 3–4 weeks
           </p>
 
           <Link
@@ -72,50 +71,45 @@ export default async function CreativeDirectionPage() {
           </Link>
 
           <p className='text-lg mb-6'>
-            You have the world. Now it has to keep speaking. Once a month we
-            meet, I pull a new seed from where the brand actually is, and I
-            build everything that comes from it.
+            Your identity, and the place people land when they find you. I
+            build the whole world: strategy, visual system, and a website
+            ready to launch, plus the system that lets you keep making new
+            work without losing the thread.
           </p>
 
           <div className='mb-6'>
-            <p className='font-semibold mb-3'>♦ What you receive each month:</p>
+            <p className='font-semibold mb-3'>♦ What you receive:</p>
             <ul className='text-base space-y-1 ml-4'>
-              <li>• One creative session a month</li>
-              <li>• 60–80 campaign-quality visuals</li>
+              <li>• Everything in The Seed</li>
               <li>
-                • Social content grid: captions and imagery, ready to post
-              </li>
-              <li>• Reel and story direction, filmed or generated</li>
-              <li>
-                • Website updates: new pages, campaigns, seasonal shifts
+                • Brand strategy foundation: positioning, audience, and the
+                one sentence your brand has to make people feel
               </li>
               <li>
-                • I run your AI direction system so everything stays on brand
+                • Complete identity system: logo and marks, colour,
+                typography, texture, art direction
               </li>
-              <li>• Creative evolution report</li>
+              <li>• Website designed and built, ready to launch</li>
+              <li>• Imagery world: 40+ brand visuals built from your seed</li>
+              <li>
+                • Your AI direction system: the references, prompts and
+                guardrails that let you generate new visuals without losing the
+                identity
+              </li>
+              <li>• Brand guidelines and a handover session</li>
             </ul>
           </div>
 
           <div className='mb-6'>
             <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
             <p className='text-base'>
-              Brands that have launched and need to keep producing at the level
-              they launched with. Founders who don&apos;t want to burn out making
-              content.
+              Founder-led brands with a strong mission and no visual language
+              that matches it yet. Companies rebuilding into something
+              coherent, and brands entering a new phase.
             </p>
           </div>
 
-          <div className='mb-8'>
-            <p className='font-semibold mb-2'>♦ Optional Add-ons:</p>
-            <p className='text-base'>
-              Product Photography, Video, AI Enhanced Brand Art
-            </p>
-          </div>
-
-          <p className='text-base mb-4'>
-            Tell me where your brand is now and I&apos;ll come back with what
-            the first month would look like.
-          </p>
+          <p className='text-base mb-4'>Tell me what you&apos;re building.</p>
           <Link
             href='/studio#contact'
             className='inline-block mb-8 bg-black text-white rounded-md py-4 px-8 text-lg hover:bg-gray-800 transition'
@@ -160,13 +154,12 @@ export default async function CreativeDirectionPage() {
         </div>
 
         {/* Right Side - Sticky Content */}
-        <div className='w-1/2 sticky top-0 h-screen mb-24'>
+        <div className='w-1/2 sticky top-0 self-start max-h-screen overflow-y-auto mb-24'>
           <div className='p-8 pt-24 text-prim-grey'>
             <h1 className='text-4xl font-bold mb-4'>The Living Brand</h1>
 
             <p className='text-lg font-semibold mb-6'>
-              Type: Monthly retainer · From $1,200 / month · Commitment: 3
-              months minimum
+              Type: One-time project · $2,500–4,500 · 3–4 weeks
             </p>
 
             <Link
@@ -177,51 +170,48 @@ export default async function CreativeDirectionPage() {
             </Link>
 
             <p className='text-lg mb-6'>
-              You have the world. Now it has to keep speaking. Once a month we
-              meet, I pull a new seed from where the brand actually is, and I
-              build everything that comes from it.
+              Your identity, and the place people land when they find you. I
+              build the whole world: strategy, visual system, and a website
+              ready to launch, plus the system that lets you keep making new
+              work without losing the thread.
             </p>
 
             <div className='mb-6'>
-              <p className='font-semibold mb-3'>
-                ♦ What you receive each month:
-              </p>
+              <p className='font-semibold mb-3'>♦ What you receive:</p>
               <ul className='text-base space-y-1 ml-4'>
-                <li>• One creative session a month</li>
-                <li>• 60–80 campaign-quality visuals</li>
+                <li>• Everything in The Seed</li>
                 <li>
-                  • Social content grid: captions and imagery, ready to post
-                </li>
-                <li>• Reel and story direction, filmed or generated</li>
-                <li>
-                  • Website updates: new pages, campaigns, seasonal shifts
+                  • Brand strategy foundation: positioning, audience, and the
+                  one sentence your brand has to make people feel
                 </li>
                 <li>
-                  • I run your AI direction system so everything stays on brand
+                  • Complete identity system: logo and marks, colour,
+                  typography, texture, art direction
                 </li>
-                <li>• Creative evolution report</li>
+                <li>• Website designed and built, ready to launch</li>
+                <li>
+                  • Imagery world: 40+ brand visuals built from your seed
+                </li>
+                <li>
+                  • Your AI direction system: the references, prompts and
+                  guardrails that let you generate new visuals without losing
+                  the identity
+                </li>
+                <li>• Brand guidelines and a handover session</li>
               </ul>
             </div>
 
             <div className='mb-6'>
               <p className='font-semibold mb-2'>♦ Who It&apos;s For:</p>
               <p className='text-base'>
-                Brands that have launched and need to keep producing at the
-                level they launched with. Founders who don&apos;t want to burn
-                out making content.
-              </p>
-            </div>
-
-            <div className='mb-8'>
-              <p className='font-semibold mb-2'>♦ Optional Add-ons:</p>
-              <p className='text-base'>
-                Product Photography, Video, AI Enhanced Brand Art
+                Founder-led brands with a strong mission and no visual language
+                that matches it yet. Companies rebuilding into something
+                coherent, and brands entering a new phase.
               </p>
             </div>
 
             <p className='text-base mb-4'>
-              Tell me where your brand is now and I&apos;ll come back with
-              what the first month would look like.
+              Tell me what you&apos;re building.
             </p>
             <Link
               href='/studio#contact'

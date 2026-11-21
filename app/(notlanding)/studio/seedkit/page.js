@@ -32,7 +32,7 @@ export async function generateMetadata() {
 
   return {
     ...toNextMetadata([...site.favicon, ...blog.seo]),
-    title: 'The Seed Kit, Complete Brand Identity in One Week. Sofia Moraes',
+    title: 'The Seed, Complete Brand Identity in One Week. Sofia Moraes',
     description: "One session. A complete visual world in One week. Identity, imagery direction, and a content library built from your brand's essence.",
   };
 }
@@ -55,7 +55,7 @@ export default async function WebDesignPage() {
       {/* Mobile Layout - Single Column */}
       <div className='md:hidden'>
         <div className='p-8 pt-24 pb-12 text-prim-grey'>
-          <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
+          <h1 className='text-4xl font-bold mb-4'>The Seed</h1>
 
           <p className='text-lg font-semibold'>
             Type: One-time project
@@ -71,7 +71,7 @@ export default async function WebDesignPage() {
 
           <p className='text-lg mb-6'>
             You have a brand with a soul. It just doesn&apos;t look like it yet. The
-            Seed Kit is a complete visual brand system built from a single
+            Seed is a complete visual brand system built from a single
             creative session. I extract the essence of what your brand feels,
             believes and stands for, and translate it into a full visual language:
             identity, colour, typography, imagery direction, and a content seed
@@ -184,9 +184,9 @@ export default async function WebDesignPage() {
         </div>
 
         {/* Right Side - Sticky Content */}
-        <div className='w-1/2 sticky top-0 h-screen mb-24'>
+        <div className='w-1/2 sticky top-0 self-start max-h-screen overflow-y-auto mb-24'>
           <div className='p-8 pt-24 text-prim-grey'>
-            <h1 className='text-4xl font-bold mb-4'>The Seed Kit</h1>
+            <h1 className='text-4xl font-bold mb-4'>The Seed</h1>
 
             <p className='text-lg font-semibold'>
               Type: One-time project
@@ -202,7 +202,7 @@ export default async function WebDesignPage() {
 
             <p className='text-lg mb-6'>
               You have a brand with a soul. It just doesn&apos;t look like it yet.
-              The Seed Kit is a complete visual brand system built from a single
+              The Seed is a complete visual brand system built from a single
               creative session. I extract the essence of what your brand feels,
               believes and stands for, and translate it into a full visual
               language: identity, colour, typography, imagery direction, and a

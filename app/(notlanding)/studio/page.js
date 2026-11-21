@@ -1,4 +1,5 @@
 import { toNextMetadata } from 'react-datocms';
+import Link from 'next/link';
 import { performRequest } from '@/lib/datocms';
 import { metaTagsFragment } from '@/lib/fragments';
 import Image from 'next/image';
@@ -46,7 +47,7 @@ export async function generateMetadata() {
   return {
     ...toNextMetadata([...site.favicon, ...blog.seo]),
     title: 'Brand Strategy and Creative Direction, Three Ways to Build',
-    description: 'Seed Kit, Living Brand, Full World. Three tiers of creative direction. Brand architecture from identity system to complete visual world. Start where you are.',
+    description: 'The Seed, The Living Brand, The Full World. Three tiers of creative direction. Brand architecture from identity system to complete visual world. Start where you are.',
   };
 }
 
@@ -133,7 +134,7 @@ export default async function Page() {
       <section>
         <div className='w-full flex flex-col gap-8'>
           {/* Tier 1 — The Seed */}
-          <div className='block w-full'>
+          <Link href='/studio/seedkit' className='group/link block w-full'>
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
@@ -152,7 +153,7 @@ export default async function Page() {
                 />
               </div>
               <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey mb-2'>
+                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
                   The Seed
                 </h2>
                 <p className='text-sm text-gray-400 mb-3'>$1,500 · 1 week</p>
@@ -160,19 +161,11 @@ export default async function Page() {
                   Your identity, revealed. One session, one week, a complete
                   visual language built from your brand&apos;s seed.
                 </p>
-                <a
-                  href='https://www.pinterest.com/sofiamoraesmm/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='self-start mt-6 text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
-                >
-                  More inspiration ↵
-                </a>
               </div>
             </div>
-          </div>
+          </Link>
           {/* Tier 2 — The Living Brand */}
-          <div className='block w-full'>
+          <Link href='/studio/livingbrand' className='group/link block w-full'>
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
@@ -191,7 +184,7 @@ export default async function Page() {
                 />
               </div>
               <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey mb-2'>
+                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
                   The Living Brand
                 </h2>
                 <p className='text-sm text-gray-400 mb-3'>$2,500–4,500 · 3–4 weeks</p>
@@ -199,19 +192,11 @@ export default async function Page() {
                   Identity and the place people land. Strategy, a full visual
                   system, and a website built and ready to launch.
                 </p>
-                <a
-                  href='https://www.pinterest.com/sofiamoraesmm/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='self-start mt-6 text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
-                >
-                  More inspiration ↵
-                </a>
               </div>
             </div>
-          </div>
+          </Link>
           {/* Tier 3 — The Full World */}
-          <div className='block w-full'>
+          <Link href='/studio/fullworld' className='group/link block w-full'>
             <div className='flex flex-col md:flex-row w-full'>
               <div className='group/image relative w-full md:w-1/2 mb-4 md:mb-0 aspect-[1.5/1]'>
                 <Image
@@ -230,7 +215,7 @@ export default async function Page() {
                 />
               </div>
               <div className='flex flex-col justify-center text-left w-full md:w-1/2 p-6'>
-                <h2 className='text-4xl font-bold text-prim-grey mb-2'>
+                <h2 className='text-4xl font-bold text-prim-grey group-hover/link:text-stone-300 transition-colors duration-200 mb-2'>
                   The Full World
                 </h2>
                 <p className='text-sm text-gray-400 mb-3'>From $4,500 · continues at $1,200 / month</p>
@@ -239,17 +224,9 @@ export default async function Page() {
                   session a month and a continuous flow of campaign visuals,
                   content and direction.
                 </p>
-                <a
-                  href='https://www.pinterest.com/sofiamoraesmm/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='self-start mt-6 text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer'
-                >
-                  More inspiration ↵
-                </a>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
       {/* ---------- TESTIMONIALS ---------- */}

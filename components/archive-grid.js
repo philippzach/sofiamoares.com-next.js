@@ -1,8 +1,12 @@
 import { Image as DatocmsImage } from 'react-datocms';
 
-export default function ArchiveGrid({ archives }) {
+export default function ArchiveGrid({
+  archives,
+  columnsClassName = 'columns-1 md:columns-2 lg:columns-3',
+  sizes,
+}) {
   return (
-    <div className='columns-1 md:columns-2 lg:columns-3 gap-4'>
+    <div className={`${columnsClassName} gap-4`}>
       {archives.map((archive) => {
         if (!archive?.media?.responsiveImage) {
           console.warn('ArchiveGrid: missing media or responsiveImage; skipping record', {
@@ -23,6 +27,8 @@ export default function ArchiveGrid({ archives }) {
               alt: `Cover Image for ${archive.slug}`,
             }}
             className='w-auto h-auto object-cover'
+            lazyLoad
+            {...(sizes ? { sizes } : {})}
           />
         </div>
         );
