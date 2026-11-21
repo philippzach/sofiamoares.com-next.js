@@ -90,7 +90,7 @@ export default function LandingAnimated() {
         <div className='mt-10 lg:max-w-[450px] lg:ml-auto'>
           <Link
             href='/studio'
-            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-white'
+            className='text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer text-white'
           >
             See how I work ↵
           </Link>
@@ -168,7 +168,7 @@ export default function LandingAnimated() {
         <div className='mt-10 lg:max-w-[450px] lg:ml-auto'>
           <Link
             href='/studio#contact'
-            className='text-3xl md:text-5xl lg:text-6xl underline hover:opacity-30 duration-150 cursor-pointer text-white'
+            className='text-base md:text-2xl lg:text-3xl font-light underline decoration-1 underline-offset-4 md:underline-offset-[6px] transition-opacity duration-300 ease-out hover:opacity-60 cursor-pointer text-white'
           >
             Start your project ↵
           </Link>
