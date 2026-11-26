@@ -1,9 +1,23 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { sendGAEvent } from '@next/third-parties/google';
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm('mwpqeelb'); // Formspree form ID
+  const leadTracked = useRef(false);
+
+  // Fire conversion events once, only after Formspree confirms the send.
+  // No form contents (name, email, message) are included.
+  useEffect(() => {
+    if (!state.succeeded || leadTracked.current) return;
+    leadTracked.current = true;
+    sendGAEvent('event', 'generate_lead', { form: 'contact' });
+    if (window.pintrk) {
+      window.pintrk('track', 'lead');
+    }
+  }, [state.succeeded]);
 
   if (state.submitting) {
     return (
