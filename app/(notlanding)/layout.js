@@ -4,6 +4,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 
 import NavigationNl from '@/components/navigation-nl';
 import HotjarInit from '@/components/hotjar-init';
+import PinterestTag from '@/components/pinterest-tag';
 
 import { draftMode } from 'next/headers';
 
@@ -17,6 +18,7 @@ export default async function RootLayout({ children }) {
     <html lang='en' className={`${officeTimes.variable} ${aeonik.variable} scroll-smooth`}>
       <body className='text-prim-grey font-primary pr-4 pl-4'>
         <HotjarInit />
+        <PinterestTag />
         <NavigationNl />
         {children}
         <SpeedInsights />

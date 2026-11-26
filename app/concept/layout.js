@@ -7,6 +7,7 @@ import { metaTagsFragment } from '@/lib/fragments';
 
 import NavigationNl from '@/components/navigation-nl';
 import HotjarInit from '@/components/hotjar-init';
+import PinterestTag from '@/components/pinterest-tag';
 
 import { officeTimes, aeonik } from 'app/styles/fonts';
 
@@ -45,6 +46,7 @@ export default async function RootLayout({ children }) {
     <html lang='en' className={`${officeTimes.variable} ${aeonik.variable}`}>
       <body className='text-slate-100 bg-[#1a1a1a] font-primary md:pr-4 md:pl-4'>
         <HotjarInit />
+        <PinterestTag />
         {children}
         <SpeedInsights />
       </body>

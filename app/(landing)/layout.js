@@ -5,6 +5,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { draftMode } from 'next/headers';
 import { officeTimes, aeonik } from 'app/styles/fonts';
 import HotjarInit from '@/components/hotjar-init';
+import PinterestTag from '@/components/pinterest-tag';
 
 export const metadata = {
   title: 'Sofia Moraes. I Translate Essences Into Visual Worlds',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
     >
       <body className='text-prim-grey font-primary'>
         <HotjarInit />
+        <PinterestTag />
         {children}
         <SpeedInsights />
       </body>
